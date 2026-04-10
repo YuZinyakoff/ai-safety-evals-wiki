@@ -1,0 +1,3 @@
+Текст Игоря Иванова, исследователя из Meridian Cambridge (https://www.meridiancambridge.org/) и одного из менторов этого курса, предлагает более точную рамку того, что вообще считать evaluation, и объясняет, почему от этого определения зависит, какие прикладные задачи мы относим к evals и как это влияет на ограничения области, построенной вокруг них.
+ 
+🔗 What is an evaluation, and why this definition matters (https://www.alignmentforum.org/posts/E9fvqHEDzfLDJTGyq/what-is-an-evaluation-and-why-this-definition-matters) — Igor Ivanov, AI Alignment Forum
