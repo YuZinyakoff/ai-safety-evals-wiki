@@ -1,5 +1,10 @@
 # Журнал изменений
 
+## 2026-04-10 | policy | raw normalization
+- Зафиксирована policy, что ingest по возможности опирается на локально доступный текст источника, а не только на URL или бинарный файл
+- Для `raw/` утвержден приоритет: clipped `.md` -> sidecar `filename.ext.md` -> URL-only как временно неполное состояние
+- В `README.md` и `AGENTS.md` добавлен явный шаг `normalize` перед ingest
+
 ## 2026-04-10 | ingest | week-02
 - Разобраны все текущие материалы `raw/week-02/`: 3 theory, 1 notebook и 1 extra
 - Созданы 5 source pages, 5 новых concept pages и 1 synthesis
