@@ -11,6 +11,7 @@ Use this skill when the task is to create or run a repo-local conversion workflo
 - converts them with MarkItDown
 - writes Markdown sidecars next to the originals
 - never modifies `wiki/`
+- produces fallback extracted text, not an automatic canonical replacement for better raw formats
 
 ## What this skill provides
 
@@ -40,6 +41,9 @@ python3 .agents/skills/raw-markitdown-convert/convert_raw_with_markitdown.py "ra
 - The script skips existing sidecars unless `--force` is used.
 - The default output path is `original_name.ext.md`.
 - Use `--replace-extension` only when you explicitly want `original_name.md`.
+- Generated sidecars should be reviewed before ingest, especially for PDFs with tables, formulas, figures, or complex layout.
+- If a good clipped `.md` or another higher-fidelity text source already exists, prefer that source for ingest.
+- If the sidecar is clearly worse than an existing clipped/HTML/TeX source, do not keep it just to satisfy a normalization step.
 
 ## MarkItDown dependency
 

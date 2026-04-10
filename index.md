@@ -10,7 +10,7 @@
 - Для полной картины первой недели лучше идти через hub-page недели, а не через этот файл.
 
 ## Текущее покрытие
-- `week-01` разобрана по theory, notebook и extra-материалам.
+- `week-01` разобрана по theory, notebook и extra-материалам и дополнительно усилена clipped / normalized raw-текстами для ключевых источников.
 - `week-02` тоже разобрана по theory, notebook и extra-материалам.
 - Для `week-01` есть 7 source pages, 7 concept pages и 1 synthesis.
 - Для `week-02` есть 5 source pages, 5 новых concept pages и 1 synthesis.

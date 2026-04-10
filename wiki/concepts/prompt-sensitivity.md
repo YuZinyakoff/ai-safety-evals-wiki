@@ -9,6 +9,7 @@ Week-01 много говорит про under-elicitation и limits of behavior
 ## Что видно по источникам
 - [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) формализует prompt sensitivity как benchmark problem и вводит задачу Prompt Sensitivity Prediction.
 - [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает, что slight prompt variations могут менять answerability даже при сохранении одного information need.
+- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) опирается на PromptSET, где для одного information need сравниваются близкие formulations, а не совсем разные запросы.
 - [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) подчеркивает важность prompting и LLM steering как базовых навыков evaluator.
 - [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) на практике работает с `prompt_template`, solver design и несколькими типами prompt formatting.
 

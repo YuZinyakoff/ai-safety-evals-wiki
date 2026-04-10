@@ -2,9 +2,9 @@
 
 - Тип источника: theory
 - Неделя: week-02
-- Raw: `raw/week-02/theory/2411.00640v1.pdf`
+- Raw: `raw/week-02/theory/Adding Error Bars to Evals A Statistical Approach to Language Model Evaluations.md` + `raw/week-02/theory/2411.00640v1.pdf` + `raw/week-02/theory/arXiv-2411.00640v1.tar.gz`
 - Оригинал: https://arxiv.org/abs/2411.00640
-- Полнота raw: PDF статьи
+- Полнота raw: clipped HTML-версия, PDF статьи и TeX source archive
 
 ## Зачем источник в базе
 Это опорный текст недели для статистической части evals. Он нужен, чтобы не читать benchmark score как самодостаточный результат и помнить, что language model evaluation надо рассматривать как эксперимент с шумом, неопределенностью и ограниченной мощностью.

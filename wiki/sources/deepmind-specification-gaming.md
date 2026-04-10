@@ -2,7 +2,7 @@
 
 - Тип источника: extra
 - Неделя: week-01
-- Raw: `raw/week-01/extra/Specifiation Gamind.md`
+- Raw: `raw/week-01/extra/Specifiation Gaming.md`
 - Оригинал: https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
 - Полнота raw: текстовый клип статьи
 

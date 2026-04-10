@@ -8,9 +8,10 @@
 
 ## Что видно по источникам
 - [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) задает базовое определение evals и основные различия внутри поля.
+- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) также показывает, что evals — это не только benchmark artifacts, но и исследовательско-инженерная практика capability elicitation, measurement и interpretation.
 - [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) показывает, что evals полезны для lower bounds, misuse assessment при сильных условиях и policy coordination.
 - [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) фиксирует, что evals и standards становятся центральной частью разговора о безопасности advanced models.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что само определение "что считается evaluation" неочевидно и важно для разговора про evaluation awareness.
+- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что само определение "что считается evaluation" неочевидно и полезно раскладывать его на intent, benchmark-likeness и consequences.
 - [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) переводит разговор об evals в concrete workflow: `Task`, dataset, solver, scorer и логирование результатов.
 - [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md) различает model safety и contextual safety evaluations и добавляет design frame `what / how / what it means`.
 - [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md) показывает, что evaluation results нужно читать как noisy estimates, а не как self-explanatory scores.
@@ -20,6 +21,7 @@
 ## Что удобно помнить при повторении
 - Evals полезнее всего мыслить как decision-support layer, а не как автоматическую safety guarantee.
 - Особенно важно не путать "мы что-то померили" и "мы теперь можем делать сильный вывод о безопасности или превосходстве модели".
+- Evals почти всегда включают не только measurement, но и elicitation: score зависит и от модели, и от того, как именно мы пытались ее раскрыть.
 - Если становится непонятно, о каком именно типе eval идет речь, сначала полезно восстановить различия ниже.
 
 Именно поэтому эта страница полезна как стартовая: она не отвечает на все вопросы о reliability evals, но помогает не потерять базовую опору, без которой остальные страницы недели начинают смешиваться между собой.

@@ -9,10 +9,10 @@ Week-01 почти целиком крутится вокруг силы и пр
 ## Что видно по источникам
 - [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) отмечает, что современные evals в основном являются behavioral measurements.
 - [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) прямо предупреждает, что такие оценки покрывают только малую часть input space и уменьшают неопределенность лишь частично.
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) утверждает, что behavioral evaluations недостаточны как final standard for alignment, потому что опасная система может скрывать свои свойства.
+- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) утверждает, что behavioral evaluations недостаточны как final standard for alignment, потому что опасная система может скрывать свои свойства, а проверять deception может быть труднее, чем предотвращать ее.
 - [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) показывает, что behavioral evals надежнее всего устанавливают lower bounds, но не upper bounds на capabilities.
 - [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) отдельно подчеркивает проблемы under-elicitation, sandbagging, weak forecasting и unknown unknown threat vectors.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что модели могут распознавать benchmark-like prompt features и вести себя по-разному в eval-like и deployment-like contexts.
+- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что из самого transcript часто нельзя восстановить intent или stakes, а модели могут реагировать именно на benchmark-like prompt features.
 - [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает, что результаты модели могут заметно меняться даже при slight prompt variations.
 
 ## Как этим пользоваться при повторении

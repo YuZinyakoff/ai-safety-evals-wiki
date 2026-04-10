@@ -3,3 +3,4 @@
 *:Zone.Identifier
 .venv/
 __pycache__/
+.local-browser-proxy.md
