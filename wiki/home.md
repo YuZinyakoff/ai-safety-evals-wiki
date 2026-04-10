@@ -2,16 +2,17 @@
 
 Это рабочая база знаний по курсу AI Safety & Evals.
 Wiki уже вышла из чисто стартового состояния: материалы `week-01` разобраны по theory, notebook и extra-слоям, а остальные недели пока остаются на уровне каркаса.
+Внутренние ссылки в wiki ведутся в относительном Markdown-формате, чтобы база одинаково читалась в Obsidian, VS Code и GitHub.
 
 ## Навигация
 
-- [[weeks/week-01]]
-- [[weeks/week-02]]
-- [[weeks/week-03]]
-- [[weeks/week-04]]
-- [[weeks/week-05]]
-- [[index]]
-- [[log]]
+- [weeks/week-01](weeks/week-01.md)
+- [weeks/week-02](weeks/week-02.md)
+- [weeks/week-03](weeks/week-03.md)
+- [weeks/week-04](weeks/week-04.md)
+- [weeks/week-05](weeks/week-05.md)
+- [index](../index.md)
+- [log](../log.md)
 
 ## Текущее покрытие
 
