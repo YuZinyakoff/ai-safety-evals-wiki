@@ -1,5 +1,11 @@
 # Журнал изменений
 
+## 2026-04-10 | ingest | week-02
+- Разобраны все текущие материалы `raw/week-02/`: 3 theory, 1 notebook и 1 extra
+- Созданы 5 source pages, 5 новых concept pages и 1 synthesis
+- `wiki/weeks/week-02.md` собрана как hub-page по benchmarking, statistical rigor и evaluation design
+- Обновлены `wiki/home.md`, `index.md`, `log.md`, а также общие concept pages `evals` и `inspect-ai`
+
 ## 2026-04-10 | polish | week-01 wiki
 - `wiki/weeks/week-01.md` дополнена пояснением, как читать набор источников и где raw полон, а где это только note-with-link
 - Source pages week-01 получили явную пометку о полноте raw-артефакта
