@@ -1,35 +1,34 @@
 # Toward Generalizable Evaluation In The LLM Era: A Survey Beyond Benchmarks
 
-- Тип источника: theory
-- Неделя: week-02
-- Raw: `raw/week-02/theory/2504.18838v1.pdf`
-- Оригинал: https://arxiv.org/abs/2504.18838
-- Полнота raw: PDF статьи
+- **Тип источника:** theory
+- **Неделя:** week-02
+- **Raw:** [clipped `.md`](<../../raw/week-02/theory/Toward Generalizable Evaluation in the LLM Era A Survey Beyond Benchmarks.md>), [PDF](<../../raw/week-02/theory/2504.18838v1.pdf>), [TeX source](<../../raw/week-02/theory/arXiv-2504.18838v1.tar.gz>)
+- **Оригинал:** [arXiv](https://arxiv.org/abs/2504.18838)
+- **Полнота raw:** clipped Markdown, PDF и TeX source
+
+## Ключевая мысль
+> **Даже хорошо устроенный benchmark pipeline остается bounded, а модели становятся все менее bounded.** Отсюда и возникает проблема `evaluation generalization`.
 
 ## Зачем источник в базе
-Это самый широкий обзорный источник недели. Он нужен, чтобы не застрять на уровне одного benchmark или одной статистической техники и увидеть, как поле evaluation меняется под давлением scaling, contamination, open-ended tasks и автоматизированного judging.
+Это самый широкий обзорный источник недели. Он нужен, чтобы не застрять на уровне одного benchmark или одной статистической техники и увидеть, как поле evaluation меняется под давлением scaling, contamination, open-ended tasks и automated judging.
 
 ## Краткое содержание
-Большой survey по evaluation в эпоху LLM, который пытается выйти за пределы простого перечисления benchmark datasets. Центральная мысль состоит в том, что evaluation field переживает несколько переходов: от статических benchmarks к более динамическим протоколам, от ручной оценки к automated evaluators вроде `LLMs-as-a-judge`, и от удобной, но ограниченной benchmark practice к проблеме оценки все более сильных моделей при bounded evaluation pipeline. На этом фоне survey систематизирует направления evaluation для knowledge, reasoning, coding и других задач и подчеркивает, что простое накопление benchmark lists не решает вопрос generalizable assessment.
+Survey устроен как попытка посмотреть на evaluation field уже не изнутри одного benchmark family, а на уровне всей evolving practice. Сначала авторы описывают, как классическая benchmark logic работала на более ранних этапах и почему `static benchmarks` долго были удобным default. Затем paper систематизирует основные pressure points LLM era: contamination, saturation, open-ended outputs, high cost of human judgment и growing mismatch между bounded tests и growing model capability. После этого обзор проходит по направлениям ответа: dynamic and time-aware benchmarks, richer task settings, automated evaluators вроде `LLMs-as-a-judge`, а также более широкая идея generalizable assessment across domains like knowledge, reasoning and coding. В финале survey поднимает главный structural question: как строить evaluation pipelines, которые успевают за scaling и дают выводы, generalizing better than today’s static suites.
 
-## Ключевые идеи
-- Статические benchmarks полезны, но быстро сталкиваются с contamination, saturation и ограниченным coverage.
-- Dynamic benchmarks и time-aware evaluation помогают частично бороться с leakage и memorization.
-- Open-ended model outputs делают human judgment дорогим и толкают поле к `LLMs-as-a-judge`.
-- Возникает проблема `evaluation generalization`: bounded tests пытаются измерять все менее bounded model capacity.
-- Чем сильнее модели, тем острее становится mismatch между real capabilities и тем, что покрывает evaluation pipeline.
-
-## Опорные тезисы из источника
-- В abstract survey прямо позиционируется как обзор `beyond benchmarks`.
-- Текст обсуждает переход от закрытых benchmark tasks к более generalizable evaluation settings.
-- Среди ответов на contamination и benchmark overfitting выделяются dynamic benchmarks и time-aware protocols.
-- Для open-ended responses рассматриваются automated evaluators, включая `LLMs-as-a-judge`.
-- Survey показывает, что knowledge, reasoning, coding и другие categories требуют разных benchmark families и разных критериев валидности.
-- В тексте явно проговаривается tension между scaling laws и bounded evaluation practice.
-- Из этого tension авторы выводят более общую проблему: по мере роста model capacity evaluation pipelines не масштабируются с той же скоростью.
+## Что здесь особенно важно
+- **Static benchmarks** полезны, но быстро сталкиваются с contamination, saturation и limited coverage.
+- **`LLMs-as-a-judge`** появляются как ответ на scale problem open-ended evaluation, но сами приносят новые validity questions.
+- **Dynamic / time-aware protocols** интересны не как модный апгрейд, а как попытка бороться с leakage и boundedness.
+- **Evaluation generalization** — это не generalization модели, а generalization самого evaluation conclusion.
+- **Больше benchmark lists** не значит автоматически better assessment.
 
 ## Что это добавляет к теме недели
-Источник расширяет week-02 от тактического разговора о `MMLU + confidence interval` до стратегического разговора о будущем evaluation. Он показывает, что проблема не только в том, как аккуратно посчитать uncertainty на текущем benchmark, но и в том, насколько сами benchmarks, judging methods и coverage assumptions остаются валидными по мере роста моделей. Для повторения курса эта страница полезна как напоминание, что benchmark engineering и benchmark criticism должны идти вместе.
+Источник расширяет week-02 от тактического разговора о `MMLU + confidence interval` до более стратегического разговора о будущем evaluation. Он показывает, что проблема не только в том, как аккуратно посчитать uncertainty на текущем benchmark, но и в том, насколько сами benchmarks, judging methods и coverage assumptions остаются валидными по мере роста моделей. Это делает страницу особенно полезной как дальнюю рамку для всей недели.
+
+## Что стоит запомнить при повторении
+- **Bounded evaluation pipelines** не масштабируются автоматически вместе с model capability.
+- **Static benchmark excellence** не гарантирует strong external validity.
+- **Generalizable evaluation** требует думать не только о статистике внутри suite, но и о переносимости conclusions за его пределы.
 
 ## Связанные концепты
 - [concepts/benchmarking](../concepts/benchmarking.md)
@@ -38,7 +37,7 @@
 - [concepts/evals](../concepts/evals.md)
 
 ## Что осталось неясным / спорным
-- Насколько надежны `LLMs-as-a-judge` в качестве долговременного ответа на open-ended evaluation?
+- Насколько надежны `LLMs-as-a-judge` как долговременный ответ на open-ended evaluation?
 - Какие practical criteria показывают, что benchmark suite действительно generalizes, а не просто выглядит более разнообразной?
 
 ## Связанные страницы

@@ -5,13 +5,19 @@
 - [log](log.md) — краткая история изменений
 
 ## Как читать этот индекс
-- Здесь собраны только стабильные входы, а не полный инвентарь всех страниц.
+- Здесь собраны стабильные входы и полезные маршруты, а не полный инвентарь всех страниц.
 - Внутренние ссылки ведутся в относительном Markdown-формате, чтобы одинаково открываться в Obsidian, VS Code и GitHub.
-- Для полной картины первой недели лучше идти через hub-page недели, а не через этот файл.
+- Для полного понимания конкретной недели лучше идти через ее hub-page, а не пытаться читать wiki линейно из этого файла.
+
+## Быстрые маршруты
+- Если нужен **вход в limits of evals**, начинай с [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
+- Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
+- Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md), [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md) и [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md).
 
 ## Текущее покрытие
 - `week-01` разобрана по theory, notebook и extra-материалам и дополнительно усилена clipped / normalized raw-текстами для ключевых источников.
 - `week-02` тоже разобрана по theory, notebook и extra-материалам.
+- Для ключевых arXiv-материалов первых двух недель теперь в основном есть более сильный raw: clipped Markdown, PDF и `TeX Source`.
 - Для `week-01` есть 7 source pages, 7 concept pages и 1 synthesis.
 - Для `week-02` есть 5 source pages, 5 новых concept pages и 1 synthesis.
 - `week-03`..`week-05` пока остаются стартовыми страницами.

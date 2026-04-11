@@ -1,123 +1,87 @@
 # Неделя 01
 
-## Навигация
-- [home](../home.md)
-- [index](../../index.md)
+## Ключевая мысль
+> **Неделя 01 нужна для калибровки ожиданий от evals.** Она не спорит с тем, что оценки нужны; она спорит с более опасной мыслью, будто удачный behavioral test уже почти равен надежному safety verdict.
 
 ## Зачем открывать эту страницу
-Это hub-page первой недели. Ее удобно использовать как точку входа для повторения: отсюда можно быстро вернуть базовый словарь evals, вспомнить, где именно ломаются простые behavioral claims, перейти к дополнительным failure modes и отдельно вернуться к практическому notebook. Если через месяц останется только общее ощущение, что "неделя была про evals и их ограничения", эта страница должна помочь снова разложить тему на понятные части.
+Это hub-page первой недели. Ее лучше читать не как список материалов, а как карту вопросов, вокруг которых строится неделя. Если через месяц в памяти останется только общий тезис "неделя была про evals и их ограничения", именно отсюда проще всего восстановить целую линию рассуждения.
 
-## Быстрый маршрут
-- Если нужно быстро вернуть базовые определения: начни с [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) и [concepts/evals](../concepts/evals.md).
-- Если нужно вспомнить, почему behavioral evidence ограничено: смотри [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md), [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) и [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md).
-- Если нужно повторить дополнительные failure modes: переходи к [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md), [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) и [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md).
-- Если нужен практический вход: открывай [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) и [concepts/inspect-ai](../concepts/inspect-ai.md).
+## Главные вопросы недели
+- **Что вообще такое evals?** Неделя начинает с базового словаря: что измеряют evals, чем различаются `red-teaming`, `benchmarking`, `capability evals` и `alignment evals`.
+- **Что именно можно заключить по наблюдаемому поведению?** Почти сразу становится видно, что behavioral evidence полезно, но его очень легко переоценить.
+- **Почему тест может измерять не то, что нам кажется?** Здесь появляются `evaluation awareness`, `prompt sensitivity` и `specification gaming`.
+- **Как это выглядит на практике?** Ноутбук по `Inspect AI` показывает, что все эти проблемы живут в конкретных design choices: prompt, solver, scorer и логи.
 
-## Статус
-- Теоретические материалы из `raw/week-01/theory/` разобраны и связаны с source pages.
-- Для Apollo и Hubinger появились clipped Markdown-версии полных текстов; source pages теперь опираются на них как на preferred raw.
-- Для Prompt Sensitivity теперь есть более качественный raw-набор: clipped HTML-версия, PDF и TeX source archive.
-- Для Barnett-Thiergart пока локально доступен только PDF и fallback-sidecar, поэтому этот источник стоит считать менее удобным для точечной сверки.
-- Ноутбук из `raw/week-01/notebooks/` разобран и вынесен в отдельную source page.
-- Дополнительные материалы из `raw/week-01/extra/` разобраны и связаны с concept pages.
-- Для текста Иванова теперь тоже есть clipped Markdown-версия полного поста.
+## Если нужно быстро вспомнить неделю
+- Если нужен **входной словарь**, начни с [Apollo](../sources/apollo-starter-guide-evals.md) и [concepts/evals](../concepts/evals.md).
+- Если нужен **самый сильный аргумент про пределы behavioral evidence**, смотри [Hubinger](../sources/hubinger-understanding-based-safety-evals.md), [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) и [synthesis](../syntheses/evals-scope-and-limits.md).
+- Если нужно вернуть **механизмы, из-за которых eval ломается**, переходи к [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md), [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) и [Specification Gaming](../sources/deepmind-specification-gaming.md).
+- Если нужен **практический слой**, открывай [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md) и [concepts/inspect-ai](../concepts/inspect-ai.md).
 
-## Как читать набор материалов
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md), [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) и [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) теперь опираются на clipped Markdown-версии полных текстов. Это не отменяет полезности source pages как учебных маршрутов, но делает их заметно ближе к исходной аргументации.
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) теперь опирается на clipped HTML raw и TeX source, так что его удобнее перечитывать и сверять.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) по-прежнему сильнее зависит от PDF, чем другие ключевые источники недели.
-- [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md) и [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) по-прежнему хорошо работают как полные raw-артефакты для восстановления примеров и структуры.
+## Картина недели
+Если собрать материалы в одну линию, получится такой ход. Сначала evals вводятся как почти неизбежный инструмент для понимания моделей и улучшения решений вокруг них. Затем неделя быстро показывает, что сам факт тестирования еще не дает сильного safety claim: модель можно недораскрыть, можно случайно измерить поведение только в benchmark-like контексте, можно получить результат, который чувствителен к phrasing prompt, и можно вообще оптимизировать не ту цель, которая нас реально интересует. Практический notebook важен в этой картине потому, что он переводит разговор из уровня абстрактных оговорок в уровень конкретного workflow.
 
-## Фокус недели
-Неделя вводит базовый язык evals, но быстро усложняет картину. Источники вместе проходят путь от базовых определений и роли evaluator к критике purely behavioral tests, к вопросу о том, что вообще считать evaluation, к prompt-level failure modes и specification-level failure modes, а затем показывают и практический слой через Inspect AI.
+## Как материалы собираются в одну линию
+- **Apollo** задает базовый язык области и полезную рамку: evals важны как `decision-support layer`, а не как гарантия безопасности.
+- **Hubinger** повышает планку и спрашивает, почему одного наблюдаемого поведения может быть недостаточно именно для alignment claims.
+- **Barnett-Thiergart** добавляет дисциплину вывода: не просто "у evals есть limits", а "какие именно claims они поддерживают, а какие нет".
+- **Ivanov** уточняет, что само слово `evaluation` не такое простое, как кажется, и что модель может распознавать не намерение исследователя, а лишь benchmark-likeness среды.
+- **Prompt Sensitivity paper** показывает на конкретном benchmark-примере, что даже при фиксированной модели результат зависит от phrasing.
+- **Specification Gaming** расширяет рамку: проблема может быть не только в измерении, но и в самой цели.
+- **Inspect AI tutorial** заземляет все это в практику: `dataset -> solver -> scorer -> logs`.
 
-## Картина недели в одном абзаце
-Если совсем сжать материал недели, получается такая линия. Сначала evals вводятся как полезный и почти неизбежный инструмент: без них трудно понимать, что умеет модель и как принимать решения вокруг нее. Затем источники шаг за шагом показывают, что этого инструмента легко потребовать слишком много: поведение модели может быть неполным evidence, prompt может исказить наблюдаемый результат, сама модель может распознавать режим оценки, а целевая метрика вообще может не совпадать с тем, что мы реально хотели получить. Практический notebook нужен в этой картине затем, чтобы было видно: все эти проблемы живут не только в теории, но и в конкретном дизайне task, prompt, scorer и анализа логов.
+## Что нужно уметь объяснить своими словами
+- **Почему evals не равны safety.** Они уменьшают неопределенность и помогают принимать решения, но не превращают поведенческий тест в достаточное основание для сильного safety verdict.
+- **Почему behavioral evidence сильнее для lower bounds, чем для upper bounds.** Успех на тесте показывает, что модель что-то уже продемонстрировала; провал не показывает, что способности нет.
+- **Почему context matters.** Модель может реагировать на признаки eval-like среды, а не просто на содержимое задания.
+- **Почему prompt matters.** Один и тот же information need может давать разный observed capability в зависимости от формулировки.
+- **Почему objective matters.** Хороший score по proxy не гарантирует, что система делает то, что нам на самом деле нужно.
 
-## Карта недели
-- Вход в тему: [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) задает словарь области и базовые различия внутри evals.
-- Уточнение границ: [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) и [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) показывают, почему простого наблюдения за поведением недостаточно для сильных safety claims.
-- Дополнительные failure modes: [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) проясняет проблему evaluation awareness, [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает зависимость результатов от phrasing, а [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md) переносит внимание на mismatch между proxy objective и intended outcome.
-- Практический слой: [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) переводит разговор из уровня концептов в уровень task design, solver/scorer pipelines и просмотра логов.
+## Практический слой
+Практика в этой неделе не вторична. Она нужна, чтобы не читать ограничения evals как чисто философские. Ноутбук по `Inspect AI` показывает, что reliability живет в очень конкретных местах:
+- как сформулирован prompt;
+- какой `solver` используется;
+- что именно считает `scorer`;
+- какие логи мы смотрим после запуска;
+- где мы случайно создаем слишком удобный proxy для настоящей задачи.
 
-## Источники
+Поэтому первую неделю полезно помнить не только как набор аргументов против наивного benchmark thinking, но и как первую точку, где эти аргументы становятся инженерными.
+
+## Источники недели
 ### Theory
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) — стартовая рамка: что такое evals, какие у них базовые типы и чем занимается evaluator
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) — критика purely behavioral standards и аргумент в пользу understanding-based evaluations
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) — систематическая карта того, какие claims о catastrophic risks evals поддерживают, а какие нет
+- [Apollo](../sources/apollo-starter-guide-evals.md) — базовый словарь evals и образ evaluator как research-engineering роли
+- [Hubinger](../sources/hubinger-understanding-based-safety-evals.md) — почему behavior-only testing слишком слабо для alignment standard
+- [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) — какие claims о catastrophic risk evals реально поддерживают
 
 ### Notebooks
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) — практический tutorial по Inspect AI, `Task`, solver/scorer pipelines и `inspect view`
+- [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md) — первый практический workflow: `Task`, solver/scorer pipelines и `inspect view`
 
 ### Extra
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) — почему само определение evaluation важно для разговора про awareness и gaming
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) — как prompt formulation влияет на answerability и reliability measurement
-- [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md) — как цель может быть оптимизирована буквально, но не по intended outcome
+- [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md) — что именно считать evaluation и почему это важно для awareness
+- [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) — как phrasing prompt влияет на answerability и надежность измерения
+- [Specification Gaming](../sources/deepmind-specification-gaming.md) — как proxy objective расходится с intended outcome
 
-## Что стоит вынести
-Неделя не спорит с тем, что evals нужны. Она спорит с более сильной и опасной мыслью: будто удачно устроенный behavioral test уже почти равен надежному safety verdict.
+## Куда идти дальше внутри wiki
+- Если нужен **общий синтез недели**, смотри [Scope, Failure Modes, And Practice Of Evals](../syntheses/evals-scope-and-limits.md).
+- Если нужно быстро пройтись по **ключевым концептам**, открой [evals](../concepts/evals.md), [behavioral evals](../concepts/behavioral-evals.md), [understanding-based evals](../concepts/understanding-based-evals.md), [evaluation awareness](../concepts/evaluation-awareness.md), [prompt sensitivity](../concepts/prompt-sensitivity.md), [specification gaming](../concepts/specification-gaming.md) и [Inspect AI](../concepts/inspect-ai.md).
 
-### Базовая рамка
-- Evals описываются как систематическое измерение свойств AI-систем, включая их способности и склонности.
-- Уже на вводном уровне различаются red-teaming и benchmarking, а также capability evals и alignment evals.
-- Apollo полезно добавляет еще один слой: evals — это не только taxonomy, но и практическая область, где prompting, scaffolding, fine-tuning и experimental design прямо влияют на качество измерения.
-- Определение самого evaluation неочевидно: intent исследователя, consequences interaction и surface features benchmark-like среды не совпадают.
-- Поведенческие evals полезны как способ получить lower bounds на наблюдаемые способности модели и улучшить decision-making.
-
-### Где ломаются простые выводы
-- Для misuse risk текущих моделей evals в принципе могут быть полезны, но только при сильных предпосылках о capability elicitation, threat modeling и преимуществах evaluators над attackers.
-- Behavioral evals плохо поддерживают отрицательные claims: провал теста не доказывает отсутствия способности, а успех на безопасном поведении не доказывает alignment.
-- Для misalignment и автономных рисков проблема усиливается из-за sandbagging, under-elicitation и слабого понимания внутренних propensities модели; Hubinger дополнительно подчеркивает, что надежно проверять deception может быть труднее, чем вообще не допустить ее возникновения.
-- Небольшие изменения prompt formulation могут заметно менять answerability, даже если information need остается тем же.
-- Вопрос "что считать evaluation?" сам по себе распадается на несколько слоев: intent, benchmark-likeness и consequences, а модель может реагировать в основном на второй.
-- Specification gaming показывает, что агент может удовлетворять proxy objective и все равно уходить от intended outcome.
-
-### Как это интерпретировать
-- Центральное напряжение недели такое: evals нужны, но их легко переоценить как safety standard.
-- Чем выше stakes и capabilities моделей, тем менее убедительными становятся выводы вида "ничего опасного не нашли, значит опасности нет".
-- Идея understanding-based evaluations появляется как ответ на ограниченность behavior-only подхода, особенно в сценариях deception и hidden capabilities.
-- Дополнительные материалы уточняют, что unreliable evidence может возникать на разных слоях: в определении eval context, в phrasing prompt и в самой постановке objective.
-- Поэтому качество evals зависит не только от "хорошего теста", но и от conceptual clarity, elicitation quality и engineering discipline.
-
-Проще говоря, неделя 01 нужна для калибровки ожиданий. После нее полезно держать в голове не только вопрос "как устроить eval?", но и вопрос "какой именно вывод этот eval вообще способен поддержать?".
-
-## Практика
-Практический материал здесь особенно важен как antidote к излишней абстракции. Он показывает, что разговор про limits of evals быстро упирается в очень конкретные решения: как сформулирован prompt, какой scorer выбран, что видно в логах и где именно мы можем случайно измерять не то, что хотели.
-
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) служит первой практической рамкой недели.
-- Цель notebook: собрать базовый eval pipeline и понять структуру `Task`.
-- Setup: Python notebook, `inspect-ai`, локальный Ollama или cloud APIs.
-- Задачи: hello-world eval, system prompts, prompt templates, chain-of-thought, single-choice и multiple-choice tasks, metadata, multiple correct answers.
-- Отдельное упражнение строит мини-эксперимент по position bias в multiple-choice benchmarks.
-- Notebook не исполнен и содержит `# YOUR CODE HERE`, поэтому его роль сейчас учебная, а не как источник результатов.
-
-## Связанные концепты
-- [concepts/evals](../concepts/evals.md) — базовый словарь и главные различия внутри поля
-- [concepts/behavioral-evals](../concepts/behavioral-evals.md) — что именно измеряет behavior-based evidence и где у него слабые места
-- [concepts/understanding-based-evals](../concepts/understanding-based-evals.md) — зачем вообще нужен более сильный standard, чем behavior-only testing
-- [concepts/evaluation-awareness](../concepts/evaluation-awareness.md) — как модель может распознавать eval-like context
-- [concepts/prompt-sensitivity](../concepts/prompt-sensitivity.md) — почему phrasing prompt влияет на observed capability
-- [concepts/specification-gaming](../concepts/specification-gaming.md) — как proxy objective уводит от intended outcome
-- [concepts/inspect-ai](../concepts/inspect-ai.md) — практический слой: как строить eval tasks и читать результаты
-
-## Связанный синтез
-- [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)
- 
 ## Что повторить перед следующей неделей
-- Уметь своими словами различать red-teaming, benchmarking, capability evals и alignment evals.
-- Понимать, почему behavioral evidence обычно сильнее для lower bounds, чем для upper bounds и alignment claims.
-- Держать в голове три разных источника искажения: evaluation awareness, prompt sensitivity и specification gaming.
-- Понимать базовую практическую схему `dataset -> solver -> scorer -> logs`.
+- Уметь различать `red-teaming`, `benchmarking`, `capability evals` и `alignment evals`.
+- Понимать, почему behavioral evidence обычно поддерживает **lower bounds** сильнее, чем **upper bounds** и сильные alignment claims.
+- Держать в голове три разных механизма искажения: **evaluation awareness**, **prompt sensitivity** и **specification gaming**.
+- Помнить базовую практическую схему `dataset -> solver -> scorer -> logs`.
 
-Если эти четыре пункта восстанавливаются без подсказки, значит основная логика недели уже держится в памяти, а source pages и concept pages нужны скорее для уточнения нюансов.
+## Примечание о raw
+- [Apollo](../sources/apollo-starter-guide-evals.md), [Hubinger](../sources/hubinger-understanding-based-safety-evals.md) и [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md) теперь опираются на полные clipped Markdown-версии текстов.
+- [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) опирается на сильный raw-набор: clipped HTML, PDF и `TeX Source`.
+- [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) теперь тоже опирается на сильный raw-набор: clipped HTML, PDF и `TeX Source`.
+- [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md) остается учебным notebook с `# YOUR CODE HERE`, то есть это scaffold, а не готовый empirical report.
 
 ## Открытые вопросы
-- Какие claims о safety вообще допустимо делать на основании behavioral evals без ложного чувства надежности?
-- Можно ли operationalize understanding-based evaluations так, чтобы они были достаточно строгими и при этом method-agnostic?
+- Какие claims о safety допустимо делать на основании behavioral evals без ложного чувства надежности?
+- Можно ли operationalize understanding-based evaluations так, чтобы они действительно проверяли понимание, а не красивую post-hoc rationalization?
 - Как сочетать evals, interpretability, audits и security controls в одном safety case?
-- Как отделять prompt sensitivity от реального отсутствия capability?
 - Как строить evals, которые меньше подсказывают модели, что она находится в режиме оценки?
-- Как ловить specification gaming до того, как proxy objective станет operational metric?
 
 ## Краткий вывод
-Неделя 01 теперь покрывает уже не только базовый словарь evals, но и несколько слоев их возможного сбоя. Apollo, Hubinger и Barnett-Thiergart задают общую рамку limits of behavioral evidence. Ivanov добавляет более точный разбор evaluation awareness и самого понятия evaluation, paper про prompt sensitivity показывает нестабильность ответа к phrasing, а DeepMind-текст про specification gaming напоминает, что ломаться может и сама objective. Notebook по Inspect AI переводит все это в практику: evals нужно не только обсуждать, но и собирать как явный workflow с контролируемыми design choices. За счет новых clipped и normalized raw-текстов эта картина теперь лучше опирается на локальные источники, а не только на краткие course-notes.
+Week-01 уже не просто вводит термин `evals`. Она показывает, что сила оценки зависит и от того, **что именно мы тестируем**, и от того, **какой вывод мы хотим из теста сделать**. Это хорошая стартовая неделя именно потому, что она одновременно дает язык области, ломает слишком простые ожидания и сразу показывает практический workflow, в котором эти ожидания либо подтверждаются, либо рушатся.

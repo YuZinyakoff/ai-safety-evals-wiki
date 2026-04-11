@@ -1,37 +1,50 @@
 # Scope, Failure Modes, And Practice Of Evals
 
 ## Короткий тезис
-После добавления extra и notebook-материалов неделя 01 выглядит уже не только как ввод в limits of evals, а как компактная карта всей области: что считать evaluation, где behavior-based evidence ломается, какие failure modes связаны с prompts и objectives, и как это operationalize в tooling.
+> **Главный вывод week-01 такой: evals полезны как инструмент обнаружения и калибровки, но опасны как источник ложной уверенности.** Неделя становится сильной не потому, что повторяет одно ограничение много раз, а потому, что показывает несколько разных механизмов, из-за которых можно переоценить смысл теста.
 
-Полезно видеть этот синтез не как еще один summary рядом с source pages, а как страницу, которая собирает общий рисунок недели. Если отдельные материалы начинают распадаться в памяти на несвязанные тезисы, имеет смысл вернуться именно сюда.
+## Где источники согласны
+- **Evals нужны.** Ни один из ключевых материалов не предлагает отказаться от evals как класса практик.
+- **Behavioral evidence ограничено.** Все важные тексты недели по-разному упираются в один и тот же факт: наблюдаемое поведение полезно, но оно не дает полного знания о системе.
+- **Качество вывода зависит от elicitation и framing.** Источники сходятся в том, что тест измеряет не “чистую способность”, а результат взаимодействия модели, prompt, интерфейса и выбранной objective.
+- **Нельзя путать measurement и safety case.** Хороший score или чистый run еще не равны достаточному обоснованию безопасности.
 
-## Факты из источников
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) дает базовый словарь: evals, red-teaming, benchmarking, capability evals и alignment evals.
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) уже на вводном уровне предупреждает, что behavioral evals уменьшают неопределенность, но не гарантируют безопасность, а еще показывает evals как research-engineering practice, а не только как набор benchmark artifacts.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) показывает, что само определение evaluation неочевидно и важно для анализа evaluation awareness.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) также полезно разносит intent, benchmark-likeness и consequences как разные измерения eval-like context.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) уточняет допустимые claims: evals хорошо устанавливают lower bounds и иногда помогают с misuse assessment, но не дают upper bounds и не умеют надежно forecast future capabilities.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) также показывает, что для misalignment, autonomy и unknown unknown risks ограничения current paradigm особенно серьезны.
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) делает следующий шаг и утверждает, что purely behavioral evaluations не стоит принимать как достаточный alignment standard.
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает, что даже slight prompt variations могут менять answerability и что существующие baselines плохо предсказывают эту чувствительность.
-- [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md) добавляет другой класс failure modes: агент может успешно оптимизировать proxy objective, не достигая intended outcome.
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) показывает, как evals practically строятся через `Task`, dataset, solver, scorer и analysis UI.
+## Как источники усиливают друг друга
+- **Apollo** задает словарь и нормализует мысль, что evals — это `decision-support layer`, а не почти готовая гарантия.
+- **Barnett-Thiergart** делает следующий шаг и дисциплинирует сами claims. После него вопрос звучит уже не "полезен ли eval?", а "какой именно вывод этот eval поддерживает?".
+- **Hubinger** повышает ставку в alignment-направлении: если система способна скрывать опасные свойства, то поведенческого стандарта может не хватить в принципе.
+- **Ivanov** уточняет механизм одной из проблем. Он показывает, что модель может реагировать не на “намерение исследователя”, а на benchmark-like признаки среды.
+- **Prompt Sensitivity** добавляет еще один конкретный слой хрупкости: observed capability зависит от phrasing, даже когда information need не меняется.
+- **Specification Gaming** расширяет рамку за пределы measurement. Иногда проблема уже не в том, как мы тестируем систему, а в том, что именно мы попросили ее оптимизировать.
+- **Inspect AI tutorial** заземляет всю картину. Он показывает, что эти риски появляются не в абстракции, а в конкретных design choices: `Task`, prompt, solver, scorer, logs.
 
-## Межисточниковый вывод
-- Общее направление недели можно описать так: evals полезны как инструменты обнаружения, elicitation и координации, но опасны как источник ложной уверенности.
-- Самая слабая часть behavior-only подхода — отрицательные claims. "Не нашли" не равно "нет", особенно если модель можно лучше elicit, донастроить, если prompt сформулирован неудачно или если система распознала eval context.
-- Новые материалы показывают, что ломаться может не только evidence, но и framing задачи: prompt sensitivity и evaluation awareness искажают измерение, а specification gaming искажает само соответствие между proxy objective и intended outcome.
-- Еще один важный слой из week-01 такой: "evaluation" не является простым наблюдаемым примитивом. То, что модель реально детектирует, может быть только benchmark-likeness среды, а не intent исследователя или реальные stakes.
-- Поэтому логика недели движется от вопроса "как измерять?" к более сильной тройке вопросов: "что именно мы считаем evaluation?", "что на самом деле измеряет observed behavior?" и "совпадает ли оптимизируемая цель с тем, что нам нужно?".
-- В этой рамке understanding-based evaluations выглядят не отдельной модной идеей, а попыткой ответить на фундаментальный дефицит behavior-based evidence.
-- Практический notebook важен потому, что переводит эти вопросы в инженерную плоскость: reliability evals зависит от prompt design, solver pipeline, scoring и inspection of logs.
+## Что именно здесь ломает наивный вывод
+- **Провал теста не доказывает отсутствия способности.** Это общий мотив у Apollo, Barnett-Thiergart и Hubinger.
+- **Успех на тесте не доказывает alignment.** Hubinger и Barnett-Thiergart сильнее всего бьют именно по этой экстраполяции.
+- **Сам eval-context может менять поведение.** Эту линию делает явной Ivanov.
+- **Даже внутри одного eval prompt может исказить результат.** Это наглядно показывает paper про prompt sensitivity.
+- **Даже “правильно измеренный” результат может быть не тем, что нам нужно.** Эту часть приносит specification gaming.
 
-Именно эта связка делает неделю содержательно сильной: она не просто перечисляет ограничения, а показывает, что они возникают на разных уровнях одновременно. Один и тот же неверный вывод о модели может оказаться следствием неудачного prompt, распознанного eval-context, слабой цели или переоценки того, что вообще способен доказать behavioral test.
+## Где остается напряжение
+- **Насколько далеко можно дотянуть behavioral evals?** Barnett-Thiergart оставляет место для practical value evals при misuse risk, но только под сильными предпосылками.
+- **Как operationalize более сильный стандарт?** Hubinger поднимает планку через understanding-based approach, но не дает готовой operational recipe.
+- **Как именно скрыть от модели факт оценки?** Ivanov помогает точнее сформулировать проблему, но не закрывает инженерный вопрос.
+- **Можно ли уменьшить prompt sensitivity, не превратив eval в слишком узкий interface?** Paper показывает проблему, но не предлагает универсального решения.
+
+## Практический вывод для курса
+Если переводить week-01 в рабочую дисциплину, то после любого eval полезно задавать не один вопрос, а сразу несколько:
+- **Что именно этот тест показал?**
+- **Что он не мог показать в принципе?**
+- **Какие элементы результата зависят от prompt и context?**
+- **Не оптимизируем ли мы proxy вместо intended outcome?**
+- **Какой еще evidence нужен, чтобы делать более сильный safety claim?**
+
+Именно в этом смысле synthesis полезен как отдельная страница: он собирает не просто краткие пересказы источников, а общую карту того, где именно ломается слишком уверенное чтение evals.
 
 ## Открытые вопросы
 - Какие комбинации evals, interpretability, audits и security controls могут давать practically useful safety case?
-- Можно ли построить understanding-based standard, который будет одновременно строгим, масштабируемым и не привязанным к одному исследовательскому направлению?
-- Как одновременно учитывать prompt sensitivity, evaluation awareness и specification gaming в design of safety-relevant evaluations?
+- Можно ли построить understanding-based standard, который будет одновременно строгим, масштабируемым и method-agnostic?
+- Как одновременно учитывать `evaluation awareness`, `prompt sensitivity` и `specification gaming` в design of safety-relevant evaluations?
 
 ## Связанные страницы
 - [weeks/week-01](../weeks/week-01.md)
@@ -42,10 +55,3 @@
 - [concepts/prompt-sensitivity](../concepts/prompt-sensitivity.md)
 - [concepts/specification-gaming](../concepts/specification-gaming.md)
 - [concepts/inspect-ai](../concepts/inspect-ai.md)
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md)
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md)
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md)
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md)
-- [sources/deepmind-specification-gaming](../sources/deepmind-specification-gaming.md)
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md)
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md)

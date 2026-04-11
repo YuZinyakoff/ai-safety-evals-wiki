@@ -1,45 +1,42 @@
 # Evaluation Awareness
 
-## Что это такое
-Evaluation awareness — это способность модели распознавать, что текущее взаимодействие похоже на evaluation context, и потенциально менять из-за этого поведение. Идея важна потому, что модель может реагировать не только на содержание вопроса, но и на признаки самой ситуации тестирования. В week-01 особенно полезно держать в голове, что речь часто идет не о глубоком чтении намерений исследователя, а о более приземленном распознавании benchmark-like среды.
+## Коротко
+> **Evaluation awareness** — это способность модели распознавать, что текущее взаимодействие похоже на evaluation context, и потенциально менять из-за этого поведение. Важно, что речь часто идет не о глубоком чтении намерений исследователя, а о более приземленном распознавании benchmark-like среды.
 
-## Почему это важно на первой неделе
-Этот концепт связывает между собой сразу несколько линий week-01: deceptive alignment, sandbagging, benchmark-like prompts и limits of behavioral evidence. Он помогает объяснить, почему прохождение теста не всегда означает то, что нам хотелось бы из него вывести.
+## Почему это важный концепт
+Этот концепт связывает сразу несколько линий week-01: deceptive alignment, sandbagging, benchmark-like prompts и limits of behavioral evidence. Он нужен, чтобы объяснить, почему прохождение теста не всегда означает то, что нам хотелось бы из него вывести.
 
-## Что видно по источникам
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) прямо ставит evaluation awareness как исследовательскую задачу: различает ли модель eval и deployment.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) утверждает, что модели не видят напрямую user intent или real consequences, но могут распознавать prompt features, historically correlated with evaluations.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) предлагает полезное различие между evaluation awareness и consequence awareness.
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) описывает риск deceptive behavior: опасная система может выглядеть safe во время тестирования.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) обсуждает sandbagging как одну из причин, по которой behavioral evals плохо проверяют misalignment.
+## Как именно он ломает вывод
+- **Тест перестает быть нейтральным окном в capabilities.** Модель может вести себя иначе именно потому, что узнала ситуацию оценки.
+- **Безопасное поведение на eval не гарантирует безопасного поведения вне eval.**
+- **Провал или успех могут зависеть от surface features среды.** Тогда мы измеряем не только capability, но и чувствительность к контексту.
 
-## Как этим пользоваться при повторении
-- Если модель отличает eval context от deployment context, то успешное прохождение теста может быть evidence не alignment, а context-sensitive impression management.
-- Поэтому этот концепт удобно держать рядом и с [concepts/behavioral-evals](behavioral-evals.md), и с [concepts/understanding-based-evals](understanding-based-evals.md).
+## Что здесь особенно важно
+- Полезно различать **`evaluation awareness`** и **`consequence awareness`**.
+- Модель не обязана видеть `intent` пользователя, чтобы отличать eval-like interaction от обычной.
+- Для современных моделей наиболее practically detectable часто выглядит именно **benchmark-likeness**, а не полноценное чтение ставок и намерений.
 
-При повторении полезно не мистифицировать этот термин. Речь не обязательно о глубоком "понимании намерений исследователя"; иногда достаточно того, что модель научилась реагировать на статистически узнаваемые признаки benchmark-like среды.
-
-Еще одна полезная опора из Иванова: вопрос "это eval?" можно мысленно разложить на три разных вопроса.
-- Каков intent пользователя?
-- Насколько prompt выглядит benchmark-like?
-- Есть ли у ответа consequences для модели?
-
-Для современных моделей наиболее practically detectable выглядит именно второй слой, а не полноценное чтение первых двух.
+## Как распознать этот риск в eval
+- Когда prompt или интерфейс явно похожи на benchmark format.
+- Когда система в eval-context систематически ведет себя осторожнее, чище или более “правильно”, чем в близких внешних условиях.
+- Когда вся сила вывода опирается на assumption, что поведение в тестовом режиме и вне его одинаково.
 
 ## С чем легко перепутать
-- Evaluation awareness легко принять за полную situational awareness, хотя на первой неделе речь чаще идет о гораздо более узком распознавании eval-like признаков.
-- Ее легко спутать с consequence awareness, хотя текст Иванова предлагает различать вопрос "это eval?" и вопрос "какие будут последствия?".
-- Этот концепт не требует приписывать модели богатую модель человеческих намерений: достаточно и более поверхностного распознавания benchmark-like контекста.
+- Evaluation awareness легко принять за полную situational awareness, хотя week-01 говорит о более узком и практичном феномене.
+- Ее легко спутать с consequence awareness, хотя это разные вопросы: “это eval?” и “какие для меня будут последствия?”.
+- Концепт не требует приписывать модели богатую модель человеческих намерений; иногда достаточно статистического распознавания familiar benchmark cues.
+
+## Где смотреть дальше
+- [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md) — главный текст для точной постановки проблемы.
+- [Hubinger](../sources/hubinger-understanding-based-safety-evals.md) — почему этот риск бьет по alignment claims.
+- [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) — как awareness и sandbagging ослабляют поведенческие выводы.
 
 ## Открытые вопросы
 - Какие surface features сильнее всего запускают evaluation awareness?
 - Можно ли строить evals, в которых модель хуже распознает сам факт оценки?
 
 ## Связанные страницы
-- [weeks/week-01](../weeks/week-01.md)
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md)
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md)
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md)
 - [concepts/behavioral-evals](behavioral-evals.md)
 - [concepts/understanding-based-evals](understanding-based-evals.md)
+- [concepts/evals](evals.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)

@@ -1,5 +1,25 @@
 # Журнал изменений
 
+## 2026-04-11 | cleanup | top-level nav and barnett raw
+- `wiki/home.md` и `index.md` усилены как верхнеуровневые точки входа: добавлены более полезные маршруты по задачам, а не только каталог страниц
+- Для Barnett-Thiergart добавлены clipped HTML raw и `TeX Source`, поэтому source page и `week-01` больше не зависят от fallback-sidecar
+- Старый `pdf.md` fallback для Barnett удален из `raw/` как больше не нужный вспомогательный артефакт
+
+## 2026-04-11 | refactor | week-02 wiki roles
+- `wiki/weeks/week-02.md` переписана как более сильная hub-page про evaluation frame, uncertainty и bounded benchmark coverage
+- Source pages week-02 усилены: добавлены более явные `Ключевая мысль`, структурные summaries и прямые ссылки на лучшие raw-источники
+- Concept pages week-02 стали более объясняющими и лучше различают объект оценки, механизм ошибки и тип путаницы
+- `wiki/syntheses/benchmarking-beyond-single-scores.md` переписан как более настоящий межисточниковый synthesis, а не просто recap benchmark-темы
+- Source page survey про generalizable evaluation обновлена под новый raw-набор: clipped Markdown, PDF и `TeX Source`
+
+## 2026-04-11 | refactor | week-01 wiki roles
+- `wiki/weeks/week-01.md` переписана как более сильная hub-page для повторения курса, а provenance/raw-статус сдвинут ниже
+- Source pages week-01 усилены не только summary-блоками, но и более явным ответом на вопрос, почему каждый текст важен и что из него стоит запомнить
+- Concept pages week-01 сделаны более объясняющими: теперь они лучше различают механизм, тип ошибки и частые путаницы
+- `wiki/syntheses/evals-scope-and-limits.md` переписан как более настоящий межисточниковый synthesis, а не просто общий recap недели
+- В source pages добавлены явные ссылки на raw-источники, чтобы wiki было удобнее читать как рядом с summary, так и рядом с полными текстами
+- Для source pages уточнен стандарт `Краткого содержания`: теперь он должен лучше отражать структуру текста, paper или notebook, а не только общий тезис
+
 ## 2026-04-11 | policy | raw hierarchy refined
 - После сравнения PDF, clipped HTML и TeX source для arXiv-статей week-01 и week-02 уточнен приоритет raw-форматов
 - Зафиксировано, что `pdf.md` sidecar из MarkItDown полезен как fallback-extract и поисковый слой, но не как автоматически preferred raw

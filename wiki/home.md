@@ -4,6 +4,13 @@
 Wiki уже вышла из чисто стартового состояния: материалы `week-01` и `week-02` разобраны по theory, notebook и extra-слоям, а остальные недели пока остаются на уровне каркаса.
 Внутренние ссылки в wiki ведутся в относительном Markdown-формате, чтобы база одинаково читалась в Obsidian, VS Code и GitHub.
 
+## Как заходить в базу
+
+- Если нужно **восстановить логику курса по порядку**, лучше всего идти через [week-01](weeks/week-01.md) и [week-02](weeks/week-02.md): это самые сильные hub-pages базы.
+- Если нужен **общий словарь и карта области**, открывай [concepts/evals](concepts/evals.md).
+- Если хочется быстро вернуть **главные межисточниковые выводы**, смотри [Scope, Failure Modes, And Practice Of Evals](syntheses/evals-scope-and-limits.md) и [Benchmarking Beyond Single Scores](syntheses/benchmarking-beyond-single-scores.md).
+- Если нужен **практический слой**, удобнее всего заходить через [Inspect AI](concepts/inspect-ai.md) и notebook source pages двух первых недель.
+
 ## Навигация
 
 - [weeks/week-01](weeks/week-01.md)
@@ -18,6 +25,7 @@ Wiki уже вышла из чисто стартового состояния: 
 
 - Неделя 01 разобрана по всем текущим материалам: есть 7 source pages, 7 concept pages и 1 synthesis.
 - Неделя 02 разобрана по всем текущим материалам: есть 5 source pages, 5 новых concept pages и 1 synthesis, плюс обновлены общие concept pages.
+- Для ключевых статей первых двух недель теперь в основном есть сильный raw-набор: clipped Markdown, а для arXiv-материалов при необходимости еще PDF и `TeX Source`.
 - Недели 03-05 пока остаются стартовыми страницами и ждут ingest новых материалов.
 - В `raw/week-01/` и `raw/week-02/` теперь покрыты theory, notebooks и extra.
 - Разделы `wiki/sources/`, `wiki/concepts/` и `wiki/syntheses/` больше не пусты.
@@ -41,6 +49,7 @@ Wiki уже вышла из чисто стартового состояния: 
 - чтобы быстро понять отдельный текст или ноутбук — открывать соответствующую source page
 - чтобы увидеть большую тему поперек нескольких источников — открывать concept page
 - чтобы получить сводку или сравнение — открывать synthesis page
+- чтобы перейти к полному исходному тексту — идти из source page по ссылке на raw
 
 ## Принцип записи
 

@@ -1,47 +1,45 @@
 # Behavioral Evals
 
-## Что это такое
-Behavioral evals судят о модели по наблюдаемому поведению: ответам, действиям, выполнению задач и реакциям в тестовых сценариях. Это самый естественный и самый распространенный тип evaluation, потому что его проще всего запускать и интерпретировать на поверхности.
+## Коротко
+> **Behavioral evals** судят о системе по наблюдаемому поведению: ответам, действиям, выполнению задач и реакциям в тестовых сценариях. Это самый естественный и самый распространенный тип evidence, но именно поэтому его особенно легко переоценить.
 
-## Почему это важно на первой неделе
-Week-01 почти целиком крутится вокруг силы и пределов behavior-based evidence. Сначала этот подход вводится как базовый язык области, а затем шаг за шагом показывается, где именно он начинает давать слишком слабые или слишком хрупкие сигналы.
+## Почему это важный концепт
+Week-01 почти целиком крутится вокруг силы и пределов behavior-based evidence. Behavioral evals удобны, потому что они напрямую работают с тем, что система делает. Но именно на этой поверхности возникает главная опасность: хочется думать, что раз мы увидели поведение, то мы уже почти поняли систему. Неделя показывает, что это слишком сильный переход.
 
-## Что видно по источникам
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) отмечает, что современные evals в основном являются behavioral measurements.
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) прямо предупреждает, что такие оценки покрывают только малую часть input space и уменьшают неопределенность лишь частично.
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) утверждает, что behavioral evaluations недостаточны как final standard for alignment, потому что опасная система может скрывать свои свойства, а проверять deception может быть труднее, чем предотвращать ее.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) показывает, что behavioral evals надежнее всего устанавливают lower bounds, но не upper bounds на capabilities.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) отдельно подчеркивает проблемы under-elicitation, sandbagging, weak forecasting и unknown unknown threat vectors.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что из самого transcript часто нельзя восстановить intent или stakes, а модели могут реагировать именно на benchmark-like prompt features.
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает, что результаты модели могут заметно меняться даже при slight prompt variations.
+## Как именно здесь ломается вывод
+- **Lower bounds сильнее upper bounds.** Если модель что-то смогла показать, это сильный сигнал о наличии способности. Если не смогла, это слабый сигнал об ее отсутствии.
+- **Elicitation matters.** Результат зависит не только от модели, но и от того, насколько хорошо мы сумели ее раскрыть.
+- **Context matters.** Модель может реагировать на признаки eval-like среды, а не только на саму задачу.
+- **Prompt matters.** Даже малое изменение phrasing может изменить answerability.
+- **Objective matters.** Иногда то, что мы измеряем, вообще плохо совпадает с тем, что нас реально интересует.
 
-## Как этим пользоваться при повторении
-- Behavioral evals особенно полезны как инструменты обнаружения, elicitation и грубой калибровки риска.
-- Их ключевая слабость в отрицательных выводах: если тест ничего не нашел, из этого плохо следует, что опасной способности или склонности нет.
-- Для misuse risk они могут быть частично полезны при сильных организационных и security assumptions, но для misalignment и autonomy risks behavior-only evidence выглядит гораздо слабее.
-- Дополнительная слабость behavior-only подхода в том, что observed behavior зависит не только от capability модели, но и от phrasing prompt, perceived context и качества elicitation.
+## Как распознать этот риск в реальном eval
+- Когда из провала теста делают вывод “значит способности нет”.
+- Когда из безопасного поведения в benchmark setting делают вывод “значит система aligned”.
+- Когда score читают без вопроса о prompt design, scaffolding, logs и threat model.
+- Когда benchmark output принимают за почти готовый safety case.
 
-Полезная проверка при перечитывании такая: если вывод из eval звучит как сильное "значит модель безопасна" или "значит этой способности точно нет", стоит вернуться к этой странице и посмотреть, не требуем ли мы от behavioral evidence больше, чем она обычно может дать.
+## Практическая интуиция
+Полезно помнить такую формулу: **behavioral evals хороши для обнаружения, калибровки и lower bounds, но хуже подходят для сильных отрицательных claims и особенно для alignment guarantees**. Это не значит, что их нужно выбросить. Это значит, что нужно аккуратно ограничивать силу вывода.
 
 ## С чем легко перепутать
-- Behavioral evals легко принять за все evals вообще, хотя week-01 как раз показывает, что это только один тип evidence.
-- Провал или успех behavioral test легко прочитать как сильный вывод об отсутствии или наличии свойства, хотя такие тесты надежнее работают как lower bounds и грубая калибровка.
-- Высокий score на поведении легко спутать с evidence об alignment, хотя в источниках эта экстраполяция как раз систематически критикуется.
+- Behavioral evals легко принять за все evals вообще, хотя это только один тип evidence.
+- Высокий score легко спутать с evidence об alignment, хотя источники недели именно против этой экстраполяции и выступают.
+- Failure finding легко спутать с полной coverage, хотя under-elicitation и unknown unknowns делают такую уверенность опасной.
+
+## Где смотреть дальше
+- [Hubinger](../sources/hubinger-understanding-based-safety-evals.md) — почему behavior-only standard слишком слаб для alignment.
+- [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) — где именно проходят границы claims.
+- [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) и [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md) — два конкретных механизма хрупкости.
 
 ## Открытые вопросы
 - Можно ли существенно расширить coverage behavioral evals без перехода к другому типу evidence?
-- Какие режимы red-teaming и elicitation реально меняют силу выводов, а какие только создают иллюзию полноты?
-- Как минимизировать влияние evaluation awareness и prompt sensitivity на результаты behavioral evals?
+- Какие режимы `red-teaming` и elicitation реально меняют силу выводов, а какие только создают иллюзию полноты?
+- Как минимизировать влияние `evaluation awareness` и `prompt sensitivity` на результаты behavioral evals?
 
 ## Связанные страницы
-- [weeks/week-01](../weeks/week-01.md)
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md)
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md)
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md)
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md)
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md)
 - [concepts/evals](evals.md)
+- [concepts/understanding-based-evals](understanding-based-evals.md)
 - [concepts/evaluation-awareness](evaluation-awareness.md)
 - [concepts/prompt-sensitivity](prompt-sensitivity.md)
-- [concepts/understanding-based-evals](understanding-based-evals.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)

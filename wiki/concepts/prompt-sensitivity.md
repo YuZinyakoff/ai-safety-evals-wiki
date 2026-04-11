@@ -1,39 +1,40 @@
 # Prompt Sensitivity
 
-## Что это такое
-Prompt sensitivity — это зависимость качества ответа модели от небольших изменений формулировки одного и того же запроса. В контексте evals это важно не только как тема prompt engineering, но и как источник искажения измерения.
+## Коротко
+> **Prompt sensitivity** — это зависимость качества ответа от небольших изменений формулировки одного и того же запроса. В контексте evals это важно не как бытовая техника “лучше писать промпты”, а как источник хрупкости самого измерения.
 
-## Почему это важно на первой неделе
-Week-01 много говорит про under-elicitation и limits of behavioral evidence. Prompt sensitivity делает эту проблему очень наглядной: иногда observed capability меняется не потому, что модель "может / не может", а потому что prompt оказался удачным или неудачным.
+## Почему это важный концепт
+Week-01 много говорит про under-elicitation и limits of behavioral evidence. Prompt sensitivity делает эту проблему очень наглядной: иногда observed capability меняется не потому, что модель “может / не может”, а потому что prompt оказался удачным или неудачным.
 
-## Что видно по источникам
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) формализует prompt sensitivity как benchmark problem и вводит задачу Prompt Sensitivity Prediction.
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) показывает, что slight prompt variations могут менять answerability даже при сохранении одного information need.
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md) опирается на PromptSET, где для одного information need сравниваются близкие formulations, а не совсем разные запросы.
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) подчеркивает важность prompting и LLM steering как базовых навыков evaluator.
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) на практике работает с `prompt_template`, solver design и несколькими типами prompt formatting.
+## Как именно это ломает вывод
+- **Один и тот же information need** не гарантирует один и тот же observed result.
+- **Результат зависит от elicitation quality.** Значит benchmark score partly measures prompt design, а не только модель.
+- **Низкий score** может означать не отсутствие capability, а плохую формулировку задачи.
+- **Сравнение моделей** может оказаться чувствительным к phrasing choice, а не только к реальной разнице в capability.
 
-## Как этим пользоваться при повторении
-- Prompt sensitivity полезно держать в голове как более конкретный механизм under-elicitation.
-- Если оценка capability сильно зависит от phrasing, то reliability eval partly depends on elicitation quality, а не только на самой модели.
-- Этот концепт удобно читать вместе с [concepts/inspect-ai](inspect-ai.md), потому что именно там становится видно, как prompt design входит в сам workflow.
+## Как распознать это в реальном eval
+- Когда малые переформулировки заметно меняют answerability.
+- Когда разные prompt templates дают разные rankings или очень разные absolute scores.
+- Когда после reformulation модель внезапно “обретает” способность, которую до этого считали отсутствующей.
 
-Хорошая практическая интуиция такая: prompt sensitivity не всегда означает, что модель "плохая", но почти всегда означает, что measurement fragile. Для недели 01 это и есть главный урок из этого концепта.
+## Практическая интуиция
+Полезно держать в голове такую формулу: **prompt sensitivity не всегда означает, что модель плохая, но почти всегда означает, что measurement fragile**. Именно поэтому этот концепт так важен для wiki по evals: он помогает не путать prompt engineering с вопросом reliability evidence.
 
 ## С чем легко перепутать
-- Prompt sensitivity легко свести к бытовому prompt engineering, хотя для week-01 это прежде всего проблема надежности измерения.
-- Ее легко спутать со случайным шумом, хотя paper показывает систематические и предсказуемо важные различия между формулировками.
+- Prompt sensitivity легко свести к бытовому prompt engineering, хотя для week-01 это прежде всего measurement problem.
+- Ее легко спутать со случайным шумом, хотя paper показывает систематические и practically important differences.
 - Чувствительность к phrasing не всегда означает отсутствие capability, но почти всегда означает, что observed result нельзя читать слишком прямолинейно.
+
+## Где смотреть дальше
+- [Prompt Sensitivity paper](../sources/prompt-sensitivity-benchmark.md) — основная source page по теме.
+- [Behavioral Evals](behavioral-evals.md) — более широкий контекст limits of observed behavior.
+- [Inspect AI](inspect-ai.md) — место, где становится видно, как prompt design входит в workflow.
 
 ## Открытые вопросы
 - Как отделить prompt sensitivity от реального отсутствия capability?
 - Какие prompt-construction practices уменьшают искажения в eval settings?
 
 ## Связанные страницы
-- [weeks/week-01](../weeks/week-01.md)
-- [sources/prompt-sensitivity-benchmark](../sources/prompt-sensitivity-benchmark.md)
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md)
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md)
 - [concepts/behavioral-evals](behavioral-evals.md)
 - [concepts/inspect-ai](inspect-ai.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)

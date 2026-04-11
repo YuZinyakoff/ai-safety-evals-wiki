@@ -1,109 +1,84 @@
 # Неделя 02
 
-## Навигация
-- [home](../home.md)
-- [index](../../index.md)
+## Ключевая мысль
+> **Week-02 делает benchmark culture взрослее.** После нее score полезно читать не как почти готовый verdict, а как результат внутри evaluation frame, статистических предпосылок и ограниченного coverage.
 
 ## Зачем открывать эту страницу
-Это hub-page второй недели. Она нужна, чтобы быстро восстановить логику недели, в которой evals перестают быть просто набором общих distinction и становятся вопросом о benchmark design, интерпретации результатов и статистической дисциплине. Если через время останется только смутная мысль "неделя была про MMLU, confidence intervals и benchmarking", эта страница должна собрать картину заново.
+Это hub-page второй недели. Ее лучше читать как карту вопросов, которые появляются сразу после первой недели. Если week-01 калибровала ожидания от behavioral evidence, то week-02 делает следующий шаг: спрашивает, **что именно мы меряем**, **как честно интерпретировать число**, и **насколько далеко вообще можно переносить benchmark result**.
 
-## Быстрый маршрут
-- Если нужно восстановить taxonomy недели: начни с [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md), [concepts/model-safety-evals](../concepts/model-safety-evals.md) и [concepts/contextual-safety-evals](../concepts/contextual-safety-evals.md).
-- Если нужен statistical core: смотри [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md), [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) и [concepts/statistical-rigor-in-evals](../concepts/statistical-rigor-in-evals.md).
-- Если нужно понять, почему benchmarking не исчерпывается одним leaderboard score: открывай [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md), [concepts/benchmarking](../concepts/benchmarking.md) и [concepts/evaluation-generalization](../concepts/evaluation-generalization.md).
-- Если нужен landscape-wide каталог по field: переходи к [sources/awesome-llm-eval](../sources/awesome-llm-eval.md).
+## Главные вопросы недели
+- **Какой тип evaluation мы вообще проводим?** Неделя начинает с различия между `model safety evaluations` и `contextual safety evaluations`.
+- **Что означает benchmark score?** Здесь в центр входят `confidence intervals`, `paired analysis`, `power` и `minimum detectable effect`.
+- **Где кончается полезность benchmark?** Появляются `contamination`, `static benchmark limits`, `bounded evaluation pipelines` и `evaluation generalization`.
+- **Как это operationalize на практике?** Notebook по `Inspect AI` показывает полный путь от benchmark run до statistical analysis.
 
-## Статус
-- Теоретические материалы из `raw/week-02/theory/` разобраны и вынесены в source pages.
-- Ноутбук из `raw/week-02/notebooks/` разобран как практический scaffold недели.
-- Дополнительный материал из `raw/week-02/extra/` разобран как навигационный source по landscape evals.
+## Если нужно быстро вспомнить неделю
+- Если нужен **taxonomy / design frame**, начни с [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md), [model safety evals](../concepts/model-safety-evals.md) и [contextual safety evals](../concepts/contextual-safety-evals.md).
+- Если нужен **statistical core**, смотри [Miller](../sources/miller-adding-error-bars-to-evals.md), [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md) и [statistical rigor in evals](../concepts/statistical-rigor-in-evals.md).
+- Если нужен **взгляд beyond benchmarks**, открывай [survey](../sources/cao-generalizable-evaluation-llm-era.md), [benchmarking](../concepts/benchmarking.md), [evaluation generalization](../concepts/evaluation-generalization.md) и [synthesis](../syntheses/benchmarking-beyond-single-scores.md).
+- Если нужен **landscape-wide каталог**, переходи к [Awesome LLM Eval](../sources/awesome-llm-eval.md).
 
-## Как читать набор материалов
-- [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md) — полный web clip и лучший entry point недели.
-- [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md) и [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md) опираются на полные PDF-статьи и задают более исследовательскую глубину недели.
-- [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) — учебный notebook с `# YOUR CODE HERE`, поэтому его стоит читать как scaffold для практики, а не как готовый empirical report.
-- [sources/awesome-llm-eval](../sources/awesome-llm-eval.md) — note-with-link к curated repo; это скорее карта поля, чем основной reading.
+## Картина недели
+Если собрать week-02 в одну линию, получится такой ход. Сначала материалы уточняют, что разные evaluation setups отвечают на разные вопросы: одно дело — измерять outputs самой модели, другое — оценивать downstream usefulness или harm in context. Затем неделя делает benchmark result статистически “тяжелее”: score перестает быть просто числом и становится estimate с uncertainty, paired structure, power limits и design assumptions. Наконец, survey beyond benchmarks показывает, что даже аккуратно посчитанный benchmark result не снимает проблемы coverage, contamination и bounded evaluation practice. Notebook по `Inspect AI` нужен здесь затем, чтобы все эти принципы превратились в конкретный workflow, а не остались на уровне красивых формулировок.
 
-## Фокус недели
-Неделя 02 смещает разговор от общих пределов evals к более прикладному вопросу: как устроены benchmark-centered evaluations, что именно они измеряют и как не переинтерпретировать их результаты. Источники вместе проходят путь от taxonomy model vs contextual evals к statistical interpretation, а затем к более широкой критике static benchmarks и bounded evaluation pipelines.
+## Как материалы собираются в одну линию
+- **CSET explainer** задает taxonomy и design frame: `what to measure -> how to measure -> what the results mean`.
+- **Miller** делает benchmark interpretation статистически честной и показывает, почему error bars, paired tests и power analysis — часть самого evaluation claim.
+- **Survey beyond benchmarks** расширяет разговор: даже хороший benchmark может оставаться слишком узким, слишком статичным и слишком медленным по сравнению с ростом capabilities.
+- **Inspect AI tutorial** переводит это в практику: `dataset -> Task -> EvalLog -> DataFrame -> CI / paired comparison / power`.
+- **Awesome-LLM-Eval** служит полезной картой поля, но одновременно напоминает, что длинный каталог benchmarks не равен решенной проблеме оценки.
 
-## Картина недели в одном абзаце
-Если сжать week-02 в одну линию, получится так. Сначала материалы уточняют, что разные evaluation setups отвечают на разные safety questions, поэтому важно не смешивать model outputs и contextual impact. Затем акцент переходит к benchmark discipline: score оказывается не просто числом, а noisy estimate с confidence intervals, paired comparisons и ограниченной statistical power. Наконец, survey beyond benchmarks показывает, что даже аккуратно посчитанный benchmark result не решает проблему coverage, contamination и bounded evaluation practice. Notebook по `Inspect AI` нужен в этой картине затем, чтобы вся эта логика не осталась на уровне принципов, а превратилась в конкретный analysis workflow.
+## Что нужно уметь объяснить своими словами
+- **Почему важно различать model-side и contextual evaluations.** Один и тот же score не отвечает одинаково хорошо на вопрос о capability и на вопрос о real-world impact.
+- **Почему один benchmark score почти всегда слишком слаб.** Нужны хотя бы uncertainty estimates и понимание design assumptions.
+- **Почему paired comparison сильнее простого сравнения средних.** Если модели отвечают на одни и те же вопросы, структура данных сама дает более сильный тест.
+- **Почему проблема benchmark не исчерпывается статистикой.** Даже честно посчитанный результат все равно может плохо generalize за пределы suite.
+- **Почему catalog of benchmarks не заменяет evaluation judgment.** Наличие большого landscape не снимает вопрос о task fit, validity и интерпретации.
 
-## Карта недели
-- Taxonomy и design frame: [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md) задает distinction между model and contextual safety evaluations и рамку `what / how / what it means`.
-- Statistical discipline: [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md) показывает, почему benchmark result нужно читать с error bars, paired analysis и power calculations.
-- Beyond benchmarks: [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md) объясняет, почему static benchmark logic упирается в contamination, automated judging и bounded coverage.
-- Practical layer: [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) operationalize MMLU benchmarking и statistical analysis через `Inspect AI`.
-- Landscape layer: [sources/awesome-llm-eval](../sources/awesome-llm-eval.md) служит обновляемым каталогом benchmarks, tools и leaderboards.
+## Практический слой
+Week-02 особенно сильна тем, что она не оставляет статистику в paper appendix. Ноутбук по `Inspect AI` показывает, как benchmark workflow на `MMLU` доводится до нормального анализа:
+- как загрузить данные и собрать `Task`;
+- как превратить `EvalLog` в табличный анализ;
+- как считать `confidence intervals`;
+- как сравнивать две модели через `paired test`;
+- как думать про `power analysis` и `required sample size` до следующего дорогого запуска.
 
-## Источники
+Это полезно помнить как контрвес популярной привычке “запустить benchmark и на этом остановиться”.
+
+## Источники недели
 ### Theory
-- [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md) — taxonomy AI safety evaluations и рамка их проектирования и интерпретации
-- [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md) — статистический взгляд на benchmark results, confidence intervals и power
-- [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md) — survey про evaluation beyond static benchmarks
+- [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md) — taxonomy AI safety evaluations и базовая рамка проектирования
+- [Miller](../sources/miller-adding-error-bars-to-evals.md) — статистический взгляд на benchmark results и uncertainty
+- [Generalizable Evaluation survey](../sources/cao-generalizable-evaluation-llm-era.md) — почему field движется beyond static benchmarks
 
 ### Notebooks
-- [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) — MMLU, `EvalLog`, confidence intervals, paired t-test и sample-size planning в `Inspect AI`
+- [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md) — MMLU, `EvalLog`, confidence intervals, paired tests и sample-size planning
 
 ### Extra
-- [sources/awesome-llm-eval](../sources/awesome-llm-eval.md) — curated repo как карта benchmark landscape, tools и leaderboards
+- [Awesome LLM Eval](../sources/awesome-llm-eval.md) — curated repo как карта benchmarks, tools и leaderboards
 
-## Что стоит вынести
-Неделя 02 не отменяет usefulness benchmark evals. Она делает более строгим вопрос, который нужно задавать после получения результата: что именно мы измерили, насколько надежен этот estimate и насколько далеко его можно переносить.
-
-### Базовая рамка
-- Важно различать model safety evaluations и contextual safety evaluations.
-- Хороший evaluation design начинается с рамки `что измеряем -> как измеряем -> как интерпретируем`.
-- Benchmarking остается важным инструментом, но он измеряет только controlled slice поведения.
-- Многие safety metrics являются proxy measures, а не прямым измерением реального риска.
-
-### Где ломаются простые выводы
-- Один benchmark score без confidence interval и effect-size interpretation слишком легко переоценить.
-- Разница между двумя моделями может быть статистическим шумом, если не учитывать paired structure данных и sample size.
-- Static benchmarks быстро сталкиваются с contamination, saturation и ограниченным coverage.
-- Catalog of benchmarks не решает сам по себе вопрос validity: длинный список ресурсов еще не говорит, какой benchmark действительно подходит под конкретную задачу.
-- Bounded evaluation pipeline не масштабируется автоматически вместе с ростом model capacity.
-
-### Как это интерпретировать
-- Benchmark result полезнее читать как measurement with assumptions, а не как почти готовый verdict.
-- Statistical rigor нужен не как формальность для paper appendix, а как часть самого evaluation claim.
-- Чем сильнее модели и шире target capability, тем опаснее делать далеко идущие выводы из одного benchmark suite.
-- Practical evaluator value в такой картине состоит не только в запуске toolchain, но и в выборе правильного evaluation frame и уровня интерпретации.
-
-Проще говоря, week-02 калибрует взгляд на benchmark culture. После нее полезно держать в голове не только вопрос "какой score у модели?", но и вопрос "какой именно тип вывода этот score вообще поддерживает?".
-
-## Практика
-- [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) служит основной практической рамкой недели.
-- Цель notebook: построить benchmark workflow на MMLU и довести его до statistical analysis.
-- Setup: Python notebook, `inspect-ai`, Hugging Face dataset loader, `numpy`, `pandas`, `scipy`, `matplotlib`.
-- Данные и задача: subject subset из `cais/mmlu`, multiple-choice evaluation.
-- Solver/scorer: `multiple_choice()`, `choice()`, затем сравнение baseline и `chain_of_thought`.
-- Аналитические шаги: `EvalLog -> DataFrame`, confidence intervals, paired t-test, interval estimation of difference, power analysis, required sample size.
-- Ограничение: notebook учебный, не до конца исполнен и содержит `# YOUR CODE HERE`.
-
-## Связанные концепты
-- [concepts/benchmarking](../concepts/benchmarking.md) — центральный объект недели: benchmark как controlled measurement, но не финальный verdict
-- [concepts/model-safety-evals](../concepts/model-safety-evals.md) — evaluation outputs самой модели
-- [concepts/contextual-safety-evals](../concepts/contextual-safety-evals.md) — evaluation downstream impact и human-task context
-- [concepts/statistical-rigor-in-evals](../concepts/statistical-rigor-in-evals.md) — confidence intervals, paired comparisons, power, MDE
-- [concepts/evaluation-generalization](../concepts/evaluation-generalization.md) — bounded evaluation pipeline vs growing model capacity
-- [concepts/inspect-ai](../concepts/inspect-ai.md) — practical tooling layer для benchmark experiments
-
-## Связанный синтез
-- [syntheses/benchmarking-beyond-single-scores](../syntheses/benchmarking-beyond-single-scores.md)
+## Куда идти дальше внутри wiki
+- Если нужен **межисточниковый вывод недели**, смотри [Benchmarking Beyond Single Scores](../syntheses/benchmarking-beyond-single-scores.md).
+- Если нужно быстро пройтись по **ключевым концептам**, открой [benchmarking](../concepts/benchmarking.md), [model safety evals](../concepts/model-safety-evals.md), [contextual safety evals](../concepts/contextual-safety-evals.md), [statistical rigor in evals](../concepts/statistical-rigor-in-evals.md), [evaluation generalization](../concepts/evaluation-generalization.md) и [Inspect AI](../concepts/inspect-ai.md).
 
 ## Что повторить перед следующей неделей
-- Уметь различать model safety и contextual safety evaluations.
+- Уметь различать `model safety` и `contextual safety evaluations`.
 - Понимать, почему benchmark score без uncertainty estimate слишком слаб как самостоятельный вывод.
-- Держать в голове difference between `n`, `K`, paired comparison и minimum detectable effect.
-- Помнить, что проблема benchmarking не исчерпывается статистикой: coverage, contamination и bounded evaluation practice тоже критичны.
+- Держать в голове разницу между `n`, `K`, `paired comparison` и `minimum detectable effect`.
+- Помнить, что проблема benchmarking не исчерпывается статистикой: `coverage`, `contamination` и `bounded evaluation practice` тоже критичны.
+
+## Примечание о raw
+- [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md) опирается на полный web clip.
+- [Miller](../sources/miller-adding-error-bars-to-evals.md) теперь имеет сильный raw-набор: clipped HTML, PDF и `TeX Source`.
+- [Generalizable Evaluation survey](../sources/cao-generalizable-evaluation-llm-era.md) теперь тоже опирается на более сильный raw-набор: clipped Markdown, PDF и `TeX Source`.
+- [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md) остается учебным notebook с `# YOUR CODE HERE`.
+- [Awesome LLM Eval](../sources/awesome-llm-eval.md) остается note-with-link и служит скорее навигацией по полю, чем полным источником сам по себе.
 
 ## Открытые вопросы
-- Какие benchmark designs сегодня лучше всего балансируют reproducibility и real-world relevance?
+- Какие benchmark designs сегодня лучше всего балансируют `reproducibility` и `real-world relevance`?
 - Когда стоит переходить от model-side benchmarks к contextual protocols, а не просто улучшать existing benchmark suite?
-- Насколько надежны automated judges как долгосрочная альтернатива expensive human evaluation?
-- Как practically измерять evaluation generalization, а не только констатировать ее дефицит?
+- Насколько надежны `LLMs-as-a-judge` как долгосрочная альтернатива дорогой human evaluation?
+- Как practically измерять `evaluation generalization`, а не только констатировать ее дефицит?
 
 ## Краткий вывод
-Неделя 02 делает benchmark culture заметно взрослее. CSET explainer вводит taxonomy safety evaluations, Miller показывает, как читать benchmark results статистически честно, а survey beyond benchmarks поднимает более широкий вопрос о coverage и generalization. Notebook по `Inspect AI` переводит это в hands-on workflow на MMLU, а Awesome-LLM-Eval напоминает, что знать landscape полезно, но недостаточно. Итог недели такой: score важен, но хороший evaluation начинается раньше него и заканчивается позже него.
+Week-02 полезна как калибровка против очень распространенной ошибки: смотреть на benchmark leaderboard как на почти готовый ответ. После этой недели полезно держать в голове, что score важен, но хороший evaluation начинается раньше него — в выборе frame и task — и заканчивается позже него — в статистической интерпретации и вопросе о том, что осталось вне теста.

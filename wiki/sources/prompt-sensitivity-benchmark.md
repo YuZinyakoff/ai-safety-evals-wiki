@@ -1,37 +1,34 @@
 # Benchmarking Prompt Sensitivity In Large Language Models
 
-- Тип источника: extra
-- Неделя: week-01
-- Raw: `raw/week-01/extra/Benchmarking Prompt Sensitivity in Large Language Models.md` + `raw/week-01/extra/2502.06065v1.pdf` + `raw/week-01/extra/arXiv-2502.06065v1.tar.gz`
-- Оригинал: https://arxiv.org/abs/2502.06065
-- Полнота raw: clipped HTML-версия, PDF статьи и TeX source archive
+- **Тип источника:** extra
+- **Неделя:** week-01
+- **Raw:** [HTML-clipped `.md`](<../../raw/week-01/extra/Benchmarking Prompt Sensitivity in Large Language Models.md>), [PDF](<../../raw/week-01/extra/2502.06065v1.pdf>), [TeX source](<../../raw/week-01/extra/arXiv-2502.06065v1.tar.gz>)
+- **Оригинал:** [arXiv](https://arxiv.org/abs/2502.06065)
+- **Полнота raw:** сильный raw-набор: clipped HTML, PDF и TeX source
+
+## Ключевая мысль
+> **Даже когда information need не меняется, observed capability может заметно меняться из-за phrasing prompt.** Это делает prompt sensitivity не бытовой темой prompt engineering, а проблемой reliability самого eval.
 
 ## Зачем источник в базе
-Это полезный empirical counterweight к более общим рассуждениям про under-elicitation. Источник нужен, чтобы на конкретном benchmark-материале увидеть: observed capability зависит не только от модели, но и от phrasing prompt.
+Это полезный empirical counterweight к более общим рассуждениям про under-elicitation. Источник нужен, чтобы на конкретном benchmark-материале увидеть: observed capability зависит не только от модели, но и от того, как именно сформулирован запрос.
 
 ## Краткое содержание
-Статья вводит задачу Prompt Sensitivity Prediction и датасет PromptSET для изучения того, как небольшие переформулировки одного и того же information need влияют на способность LLM дать корректный ответ. Авторы строят benchmark на основе TriviaQA и HotpotQA, генерируют наборы очень близких prompt variations и проверяют, насколько существующие baselines умеют предсказывать, окажется ли конкретная формулировка answerable. Работа показывает, что существующие методы плохо справляются с этой задачей, а сама формулировка запроса заметно влияет на answerability. Для week-01 это один из самых наглядных материалов, потому что он превращает общее подозрение про "prompt matters" в отдельный объект измерения.
+Paper устроен как полноценный benchmark work, а не как короткая заметка про prompt engineering. Сначала авторы мотивируют саму проблему: для одного и того же `information need` небольшие изменения phrasing могут заметно менять answerability, а значит prompt sensitivity стоит изучать как отдельную **measurement problem**. Затем они формализуют задачу `Prompt Sensitivity Prediction` и описывают построение датасета `PromptSET`: берут вопросы из `TriviaQA` и `HotpotQA`, генерируют для каждого набора близкие prompt variations, а затем фильтруют их по semantic similarity и качеству. После этого paper переходит к benchmark layer: сравниваются разные baselines, включая `LLM self-evaluation`, text-classification approaches и query performance prediction methods, чтобы понять, насколько хорошо они предсказывают, какая формулировка окажется answerable. Финальный вывод двоякий: prompt sensitivity действительно систематична и practically important, а существующие методы предсказания этой чувствительности пока довольно слабы. Для week-01 важно именно это: статья превращает интуицию “prompt matters” в отдельный объект измерения и анализа.
 
-## Ключевые идеи
-- Небольшие изменения prompt formulation могут радикально менять качество ответа.
-- Prompt sensitivity worth studying as a benchmark problem, а не только как anecdotal issue prompt engineering.
-- Авторы формализуют задачу Prompt Sensitivity Prediction.
-- PromptSET строится на Prompt-variation pairs с тем же information need.
-- Существующие baselines не закрывают задачу надежно.
-- Prompt reformulation может переводить исходно неудачный prompt в answerable state, даже если information need не меняется.
-
-## Опорные тезисы из источника
-- Статья определяет prompt sensitivity как существенную зависимость качества ответа от малых изменений phrasing, structure или punctuation.
-- Для PromptSET используются вопросы из TriviaQA и HotpotQA.
-- Авторы получили 11,469 уникальных prompts и для каждого сгенерировали по 9 variations.
-- Variations генерировались с помощью LLaMA 3.1 8B и Mistral-Nemo, затем фильтровались по semantic similarity и quality.
-- В benchmark сравниваются LLM self-evaluation, text classification и query performance prediction baselines.
-- Авторы сообщают, что specificity-based QPP baselines работают слабо, а существующие методы в целом не захватывают сложность prompt sensitivity prediction.
-- Более похожие на original prompt variations чаще оказываются answerable.
-- Prompt reformulation может превращать исходно неудачный prompt в ответимый.
+## Что здесь особенно важно
+- **Это не просто prompt engineering advice.** Paper показывает, что prompt sensitivity можно и нужно изучать как benchmark problem.
+- **Один и тот же information need не гарантирует один и тот же observed result.** Это сильный удар по наивному чтению behavior as capability.
+- **`PromptSET` делает тему измеримой.** За счет этого проблема перестает быть anecdotal.
+- **Baselines слабы.** То есть речь не о легко решаемой nuisance-помехе.
+- **Связь с elicitation quality прямая.** Если phrasing меняет answerability, то качество eval partly depends on interface design.
 
 ## Что это добавляет к теме недели
-Источник делает более конкретной общую проблему under-elicitation: observed capability частично зависит от того, как именно сформулирован prompt. Для темы evals это важное напоминание, что даже при фиксированной модели измеряемый результат чувствителен к interface design, а значит качество elicitation становится частью reliability самого eval. При перечитывании курса эта страница полезна как мост между теоретической критикой behavioral evidence и вполне прикладной задачей prompt design. Она также помогает не сводить разговор к бытовому "нужно лучше писать промпты": paper показывает, что чувствительность к phrasing можно и нужно изучать как отдельную measurement problem.
+Этот источник делает более конкретной общую проблему under-elicitation. Если Barnett и Hubinger говорят о пределе поведенческих выводов на уровне safety claims, то prompt sensitivity paper показывает, **как именно эта хрупкость может проявляться на уровне одного benchmark interaction**. Поэтому эта страница полезна как мост между абстрактной критикой и практикой task design.
+
+## Что стоит запомнить при повторении
+- **Prompt sensitivity** — это проблема measurement, а не только usability.
+- **Observed capability** зависит и от модели, и от phrasing.
+- **Надежный eval** требует внимания не только к dataset и scorer, но и к prompt construction.
 
 ## Связанные концепты
 - [concepts/prompt-sensitivity](../concepts/prompt-sensitivity.md)

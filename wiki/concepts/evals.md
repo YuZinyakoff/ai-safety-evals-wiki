@@ -1,69 +1,52 @@
 # Evals
 
-## Что это такое
-В этой wiki под evals понимаются методы систематического измерения свойств AI-систем: их способностей, склонностей и поведенческих ограничений. Важно держать в голове, что это не один конкретный benchmark и не один формат теста, а целое семейство практик измерения, elicitation и интерпретации результатов.
+## Коротко
+> **Evals** — это практики систематического измерения свойств AI-систем. Важно помнить, что это не один benchmark и не один тип теста, а целое семейство способов что-то выяснить о модели, раскрыть ее capability и интерпретировать полученный результат.
 
-## Почему это важно в курсе
-Первая неделя вводит этот термин и показывает пределы behavior-based evidence. Вторая неделя делает шаг дальше: уточняет виды evaluation, усиливает benchmark-centered часть поля и добавляет вопрос о статистической интерпретации результатов. Поэтому эта страница полезна уже не только как стартовый словарь, но и как место, где разные линии курса снова сходятся.
+## Почему это важный концепт
+Эта страница нужна как центральная точка сборки. Первая неделя вводит базовый язык области и показывает пределы behavior-based evidence. Вторая неделя делает шаг дальше и спрашивает, как именно интерпретировать benchmark results статистически и насколько вообще эти результаты переносятся за пределы конкретного suite. Поэтому `evals` здесь полезно держать не как одно определение, а как карту всего поля.
 
-## Что видно по источникам
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) задает базовое определение evals и основные различия внутри поля.
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md) также показывает, что evals — это не только benchmark artifacts, но и исследовательско-инженерная практика capability elicitation, measurement и interpretation.
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md) показывает, что evals полезны для lower bounds, misuse assessment при сильных условиях и policy coordination.
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md) фиксирует, что evals и standards становятся центральной частью разговора о безопасности advanced models.
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md) добавляет, что само определение "что считается evaluation" неочевидно и полезно раскладывать его на intent, benchmark-likeness и consequences.
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md) переводит разговор об evals в concrete workflow: `Task`, dataset, solver, scorer и логирование результатов.
-- [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md) различает model safety и contextual safety evaluations и добавляет design frame `what / how / what it means`.
-- [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md) показывает, что evaluation results нужно читать как noisy estimates, а не как self-explanatory scores.
-- [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md) расширяет разговор до limits of static benchmarks и evaluation generalization.
-- [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md) показывает, как benchmark run соединяется со statistical analysis.
+## На какие вопросы обычно отвечают evals
+- **Что модель умеет?** Это линия `capability evals`.
+- **К чему модель склонна?** Это линия `alignment evals`.
+- **Можно ли вообще выявить опасное свойство при активном поиске?** Это линия `red-teaming`.
+- **Как часто поведение проявляется на выбранном распределении задач?** Это линия `benchmarking`.
+- **Насколько устойчив и интерпретируем результат?** Это уже вопрос не только measurement, но и statistical rigor.
 
-## Что удобно помнить при повторении
-- Evals полезнее всего мыслить как decision-support layer, а не как автоматическую safety guarantee.
-- Особенно важно не путать "мы что-то померили" и "мы теперь можем делать сильный вывод о безопасности или превосходстве модели".
-- Evals почти всегда включают не только measurement, но и elicitation: score зависит и от модели, и от того, как именно мы пытались ее раскрыть.
-- Если становится непонятно, о каком именно типе eval идет речь, сначала полезно восстановить различия ниже.
+## Главные различия, которые полезно держать в голове
+- **`Red-teaming` vs `benchmarking`.** Первое активно ищет наличие свойства, второе пытается измерить его проявление на контролируемом наборе задач.
+- **`Capability evals` vs `alignment evals`.** В одном случае вопрос звучит “может ли модель?”, в другом “склонна ли она?”.
+- **`Model safety` vs `contextual safety evals`.** Одни фокусируются на outputs модели, другие на downstream impact и поведении в задаче вместе с контекстом применения.
+- **`Point estimate` vs uncertainty-aware result.** Один score сам по себе и score вместе с confidence interval, paired comparison и power reasoning — это разная сила evidence.
 
-Именно поэтому эта страница полезна как стартовая: она не отвечает на все вопросы о reliability evals, но помогает не потерять базовую опору, без которой остальные страницы недели начинают смешиваться между собой.
-
-## Важные различия
-- Red-teaming vs benchmarking: первое активно ищет наличие свойства, второе пытается оценить частоту или вероятность поведения на выбранном распределении задач.
-- Capability vs alignment evals: первое про "может ли модель", второе про "склонна ли модель".
-- Model safety vs contextual safety evals: первое оценивает outputs модели, второе пытается схватить ее downstream usefulness или impact in context.
-- Misuse vs misalignment: риски от злоумышленника, использующего модель, и риски от самой системы требуют разных стандартов evidence.
-- Eval context vs deployment context: вопрос не только в формальной задаче, но и в том, как модель распознает текущую среду взаимодействия.
-- Point estimate vs uncertainty-aware result: score сам по себе и score вместе с CI, paired comparison и power reasoning — это разная сила evidence.
+## Где здесь чаще всего ломается вывод
+- **Measurement путают с safety case.** Сам факт оценки еще не означает, что собрана достаточная аргументация о безопасности.
+- **Behavior принимают за всю модель.** Это особенно опасно в сценариях under-elicitation, sandbagging и evaluation awareness.
+- **Score читают слишком буквально.** Week-02 добавляет важную оговорку: benchmark result — это noisy estimate, а не self-explanatory verdict.
+- **Proxy принимают за реальную цель.** Здесь в поле зрения попадает specification gaming.
 
 ## С чем легко перепутать
-- Evals легко свести к одному benchmark или leaderboard, хотя на первой неделе они выступают как гораздо более широкое семейство практик измерения.
-- Evals легко спутать с red-teaming, хотя red-teaming здесь только один из режимов работы, а не вся область целиком.
-- Наличие eval pipeline не означает, что safety case уже собран: измерение и достаточное обоснование безопасности не одно и то же.
-- Большой benchmark landscape тоже не означает, что проблема evaluation validity уже решена.
+- Evals легко свести к одному leaderboard или benchmark suite, хотя в этой wiki они рассматриваются как более широкая measurement practice.
+- Evals легко спутать с `red-teaming`, хотя red-teaming — только один режим работы внутри более широкой области.
+- Наличие хорошего toolchain легко принять за качество eval как такового, хотя tool не отменяет слабую постановку задачи или слишком сильный claim.
+
+## Где смотреть дальше
+- [Apollo](../sources/apollo-starter-guide-evals.md) — самый удобный входной словарь.
+- [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) — самая полезная страница про границы claims.
+- [Miller](../sources/miller-adding-error-bars-to-evals.md) — статистическая честность benchmark results.
+- [week-01](../weeks/week-01.md) и [week-02](../weeks/week-02.md) — хронологическая логика курса.
 
 ## Открытые вопросы
 - Какие именно claims о безопасности допустимо строить на основании evals?
 - Как сочетать evals с interpretability, audits и governance measures, чтобы не переоценивать силу одного инструмента?
-- Что именно должно считаться evaluation в исследованиях evaluation awareness и evaluation gaming?
+- Что именно должно считаться `evaluation` в исследованиях evaluation awareness и evaluation gaming?
 
 ## Связанные страницы
-- [weeks/week-01](../weeks/week-01.md)
-- [weeks/week-02](../weeks/week-02.md)
-- [sources/apollo-starter-guide-evals](../sources/apollo-starter-guide-evals.md)
-- [sources/hubinger-understanding-based-safety-evals](../sources/hubinger-understanding-based-safety-evals.md)
-- [sources/barnett-thiergart-evals-catastrophic-risks](../sources/barnett-thiergart-evals-catastrophic-risks.md)
-- [sources/igor-ivanov-what-is-an-evaluation](../sources/igor-ivanov-what-is-an-evaluation.md)
-- [sources/inspect-ai-tutorial-week-01](../sources/inspect-ai-tutorial-week-01.md)
-- [sources/cset-ai-safety-evaluations-explainer](../sources/cset-ai-safety-evaluations-explainer.md)
-- [sources/miller-adding-error-bars-to-evals](../sources/miller-adding-error-bars-to-evals.md)
-- [sources/cao-generalizable-evaluation-llm-era](../sources/cao-generalizable-evaluation-llm-era.md)
-- [sources/inspect-ai-tutorial-week-02](../sources/inspect-ai-tutorial-week-02.md)
 - [concepts/behavioral-evals](behavioral-evals.md)
-- [concepts/benchmarking](benchmarking.md)
-- [concepts/model-safety-evals](model-safety-evals.md)
-- [concepts/contextual-safety-evals](contextual-safety-evals.md)
-- [concepts/statistical-rigor-in-evals](statistical-rigor-in-evals.md)
-- [concepts/evaluation-awareness](evaluation-awareness.md)
-- [concepts/inspect-ai](inspect-ai.md)
 - [concepts/understanding-based-evals](understanding-based-evals.md)
+- [concepts/evaluation-awareness](evaluation-awareness.md)
+- [concepts/benchmarking](benchmarking.md)
+- [concepts/statistical-rigor-in-evals](statistical-rigor-in-evals.md)
+- [concepts/inspect-ai](inspect-ai.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)
 - [syntheses/benchmarking-beyond-single-scores](../syntheses/benchmarking-beyond-single-scores.md)
