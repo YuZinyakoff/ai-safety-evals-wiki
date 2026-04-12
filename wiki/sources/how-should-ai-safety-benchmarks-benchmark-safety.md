@@ -15,6 +15,12 @@
 ## Краткое содержание
 Статья начинается с постановки вопроса: что вообще делает safety benchmarking особым видом benchmark design. Авторы противопоставляют обычные capability benchmarks и safety benchmarks, показывая, что последние имеют нормативный и социотехнический характер. Затем paper делает scoping review 210 AI safety benchmarks и выделяет три основные зоны слабости: `construct coverage`, `risk quantification` и `measurement validity`. После этого работа переходит от диагноза к инженерной рамке и формулирует десять рекомендаций `R1–R10`, сгруппированных по этим трем модулям. В конце авторы превращают рекомендации в практический checklist и даже прогоняют через него конкретный benchmark-case, чтобы показать, как такая критика выглядит на практике.
 
+## Что источник утверждает прямо
+- Safety benchmarks отличаются от ordinary capability benchmarks тем, что имеют нормативный и социотехнический характер.
+- В обзорной выборке current safety benchmarks чаще всего слабы по трем направлениям: `construct coverage`, `risk quantification` и `measurement validity`.
+- Benchmark score нельзя автоматически читать как calibrated risk statement о deployment harm.
+- Улучшение safety benchmarking требует не только новых тестов, но и более явной дисциплины around blind spots, uncertainty, severity, versioning и deployment grounding.
+
 ## Что здесь особенно важно
 - **Safety benchmarking is normative.** Вопрос здесь не только в том, что модель делает, но и в том, какие harms считаются значимыми и как они соотносятся с реальным использованием.
 - **`Construct coverage` нельзя сводить к known knowns.** Иначе benchmark создает ложное чувство полноты, проверяя только заранее ожидаемые риски.
@@ -22,8 +28,8 @@
 - **`Measurement validity` важнее красивой метрики.** Refusal rate, toxicity score или другой proxy сами по себе еще не доказывают, что измеряется именно тот real-world safety property, который интересует.
 - **Checklist важен сам по себе.** Paper полезен не только как critique, но и как компактная рабочая рамка для review или design нового safety benchmark.
 
-## Что это добавляет к теме недели
-Этот источник делает первый и самый важный шаг недели: он показывает, что `AI safety benchmark` — это не просто "benchmark на safety topic", а отдельный measurement problem с более высокой epistemic нагрузкой. Именно через него становится видно, почему финальная неделя курса уходит от обычной логики leaderboard и переходит к разговорам о high-stakes measurement.
+## Интерпретация для курса
+Для логики курса этот источник делает первый и самый важный шаг недели: он показывает, что `AI safety benchmark` — это не просто "benchmark на safety topic", а отдельный measurement problem с более высокой epistemic нагрузкой. Именно через него становится видно, почему финальная неделя курса уходит от обычной логики leaderboard и переходит к разговорам о high-stakes measurement.
 
 ## Что стоит запомнить при повторении
 - **Safety benchmark должен документировать blind spots, а не притворяться полным safety verdict.**

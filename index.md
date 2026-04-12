@@ -1,113 +1,132 @@
 # Индекс базы знаний
 
 ## Главный вход
-- [wiki/home](wiki/home.md) — основная входная точка по базе
-- [log](log.md) — краткая история изменений
+- [wiki/home](wiki/home.md) — входная страница по сценариям использования базы
+- [log](log.md) — append-only журнал ingest, framing, cleanup и policy-изменений
 
 ## Как читать этот индекс
-- Здесь собраны стабильные входы и полезные маршруты, а не полный инвентарь всех страниц.
-- Внутренние ссылки ведутся в относительном Markdown-формате, чтобы одинаково открываться в Obsidian, VS Code и GitHub.
-- Для полного понимания конкретной недели лучше идти через ее hub-page, а не пытаться читать wiki линейно из этого файла.
+- Это content-oriented каталог wiki, а не только набор маршрутов.
+- Здесь перечислены основные страницы базы по категориям и даны короткие summaries.
+- Для быстрого старта удобно сначала открыть [wiki/home](wiki/home.md), а потом уже использовать этот файл как карту всего содержимого.
 
 ## Быстрые маршруты
-- Если нужен **вход в limits of evals**, начинай с [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
+- Если нужен **весь курс в одном тексте**, начинай с [wiki/syntheses/course-arc-from-evals-to-reliable-safety](wiki/syntheses/course-arc-from-evals-to-reliable-safety.md).
+- Если нужен **вход в limits of evals**, смотри [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
 - Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
-- Если нужен **вход в benchmark design, validity и benchmark ecosystem**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
-- Если нужен **вход в agent evaluation, reliability и elicitation**, открывай [wiki/weeks/week-04](wiki/weeks/week-04.md), [wiki/concepts/agent-evaluation](wiki/concepts/agent-evaluation.md) и [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md).
-- Если нужен **вход в reliable AI safety evals, science of evals и research taste**, переходи к [wiki/weeks/week-05](wiki/weeks/week-05.md), [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) и [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md).
-- Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md), [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md), [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md), [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md) и [wiki/sources/inspect-ai-tutorial-week-04](wiki/sources/inspect-ai-tutorial-week-04.md).
+- Если нужен **вход в benchmark design и validity**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
+- Если нужен **вход в agent evaluation**, открывай [wiki/weeks/week-04](wiki/weeks/week-04.md), [wiki/concepts/agent-evaluation](wiki/concepts/agent-evaluation.md) и [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md).
+- Если нужен **вход в reliable AI safety evals**, переходи к [wiki/weeks/week-05](wiki/weeks/week-05.md), [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) и [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md).
+- Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md) и notebook source pages первых четырех недель.
 
-## Текущее покрытие
-- `week-01` разобрана по theory, notebook и extra-материалам и дополнительно усилена clipped / normalized raw-текстами для ключевых источников.
-- `week-02` тоже разобрана по theory, notebook и extra-материалам.
-- `week-03` тоже разобрана по theory, notebook и extra-материалам.
-- `week-04` тоже разобрана по theory, notebook и extra-материалам.
-- `week-05` тоже разобрана по текущим theory-материалам и organizer framing.
-- Для ключевых arXiv-материалов первых двух недель теперь в основном есть более сильный raw: clipped Markdown, PDF и `TeX Source`.
-- Для ключевых материалов третьей недели preferred raw тоже выбран: clipped Markdown там, где он был доступен, а PDF sidecar используется только как fallback.
-- Для ключевых материалов четвертой недели preferred raw тоже в основном clipped-first, а PDF/TeX остаются backup-слоем.
-- Для ключевых материалов пятой недели preferred raw тоже выбран: у safety benchmark paper есть clipped Markdown, PDF и `TeX Source`, остальные тексты представлены сильным clipped Markdown.
-- Для `week-01` есть 7 source pages, 7 concept pages и 1 synthesis.
-- Для `week-02` есть 5 source pages, 5 новых concept pages и 1 synthesis.
-- Для `week-03` есть 12 source pages, 8 новых concept pages и 1 synthesis.
-- Для `week-04` есть 11 source pages, 6 новых concept pages и 1 synthesis.
-- Для `week-05` есть 3 source pages, 5 новых concept pages и 1 synthesis.
+## Покрытие
+- В базе сейчас 5 week hub-pages, 38 source pages, 31 concept page и 6 syntheses.
+- Все внутренние Markdown-ссылки резолвятся; orphan pages в `wiki/` сейчас нет.
+- `raw/` и `wiki/` уже разведены по ролям: `raw` хранит исходники, `wiki` хранит compounding knowledge layer.
 
-## Недели
-- [wiki/weeks/week-01](wiki/weeks/week-01.md) — основная hub-page по первой неделе
-- [wiki/weeks/week-02](wiki/weeks/week-02.md) — hub-page по benchmarking, statistical rigor и evaluation design
-- [wiki/weeks/week-03](wiki/weeks/week-03.md) — hub-page по benchmark design, evidence claims и benchmark ecosystem
-- [wiki/weeks/week-04](wiki/weeks/week-04.md) — hub-page по agent evaluation, reliability, elicitation и autonomy
-- [wiki/weeks/week-05](wiki/weeks/week-05.md) — hub-page по reliable AI safety evals, science of evals и research taste
+## Страницы недель
+- [wiki/weeks/week-01](wiki/weeks/week-01.md) — ввод в природу evals, limits of behavioral evidence и failure modes уверенного чтения тестов.
+- [wiki/weeks/week-02](wiki/weeks/week-02.md) — benchmarking, evaluation strategy и статистическая дисциплина чтения результатов.
+- [wiki/weeks/week-03](wiki/weeks/week-03.md) — benchmark design, evidence claims, validity и benchmark ecosystem.
+- [wiki/weeks/week-04](wiki/weeks/week-04.md) — agent evaluation, reliability, elicitation, autonomy и практический ReAct / Inspect AI слой.
+- [wiki/weeks/week-05](wiki/weeks/week-05.md) — reliable AI safety evals, science of evals и research taste как финальный слой курса.
 
-## Ключевые страницы week-01
-- [wiki/sources/apollo-starter-guide-evals](wiki/sources/apollo-starter-guide-evals.md) — вводный словарь evals и роли evaluator
-- [wiki/sources/barnett-thiergart-evals-catastrophic-risks](wiki/sources/barnett-thiergart-evals-catastrophic-risks.md) — самая системная страница про силу и пределы evals
-- [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md) — практический вход через notebook и `Inspect AI`
-- [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md) — межисточниковая сводка по тому, какие выводы evals реально поддерживают
+## Syntheses
+- [wiki/syntheses/course-arc-from-evals-to-reliable-safety](wiki/syntheses/course-arc-from-evals-to-reliable-safety.md) — capstone synthesis по всей дуге `week-01..05`.
+- [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md) — week-01 synthesis про силу и пределы eval claims.
+- [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md) — week-02 synthesis про benchmarking, statistical rigor и bounded coverage.
+- [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md) — week-03 synthesis про benchmark design, evidence chain и incentives.
+- [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md) — week-04 synthesis про capability, reliability и procedure in agent evals.
+- [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md) — week-05 synthesis про safety benchmarks, science of evals и research taste.
 
-## Ключевые страницы week-02
-- [wiki/sources/cset-ai-safety-evaluations-explainer](wiki/sources/cset-ai-safety-evaluations-explainer.md) — taxonomy safety evaluations и design frame недели
-- [wiki/sources/miller-adding-error-bars-to-evals](wiki/sources/miller-adding-error-bars-to-evals.md) — главная страница про uncertainty, CI и power в evals
-- [wiki/sources/cao-generalizable-evaluation-llm-era](wiki/sources/cao-generalizable-evaluation-llm-era.md) — survey про limits of static benchmarks и evaluation generalization
-- [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md) — практический MMLU notebook с statistical analysis
-- [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md) — сводка недели о том, почему benchmark score не равен хорошему выводу
+## Concept Pages
 
-## Ключевые страницы week-03
-- [wiki/sources/holistic-evaluation-language-models](wiki/sources/holistic-evaluation-language-models.md) — HELM как широкий frame для benchmark design
-- [wiki/sources/evidence-centered-benchmark-design-nlp](wiki/sources/evidence-centered-benchmark-design-nlp.md) — самый строгий текст про evidence chain benchmark'а
-- [wiki/sources/benchmark-lottery](wiki/sources/benchmark-lottery.md) — benchmark ecosystem как сила, которая формирует прогресс
-- [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md) — judge-based toxicity pipeline в `Inspect AI`
-- [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md) — сводка недели о том, как benchmark design формирует evidence и incentives
+### Базовый слой evals
+- [wiki/concepts/evals](wiki/concepts/evals.md) — центральная карта области evals и ее главных distinctions.
+- [wiki/concepts/behavioral-evals](wiki/concepts/behavioral-evals.md) — behavioral evidence, lower bounds и limits of behavior-only reading.
+- [wiki/concepts/understanding-based-evals](wiki/concepts/understanding-based-evals.md) — более сильный standard, чем behavior-only testing.
+- [wiki/concepts/evaluation-awareness](wiki/concepts/evaluation-awareness.md) — как модель может распознавать benchmark-like context.
+- [wiki/concepts/prompt-sensitivity](wiki/concepts/prompt-sensitivity.md) — хрупкость measurement к phrasing и surface formatting.
+- [wiki/concepts/specification-gaming](wiki/concepts/specification-gaming.md) — как proxy objective расходится с intended outcome.
+- [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md) — Inspect AI как главный practical tooling layer курса.
 
-## Ключевые страницы week-04
-- [wiki/sources/evaluation-benchmarking-llm-agents-survey](wiki/sources/evaluation-benchmarking-llm-agents-survey.md) — карта области agent evaluation по осям `what` и `how`
-- [wiki/sources/science-ai-agent-reliability](wiki/sources/science-ai-agent-reliability.md) — reliability profile beyond mean success
-- [wiki/sources/metr-guidelines-capability-elicitation](wiki/sources/metr-guidelines-capability-elicitation.md) — главный текст недели про elicitation и underestimation
-- [wiki/sources/inspect-ai-tutorial-week-04](wiki/sources/inspect-ai-tutorial-week-04.md) — ReAct agent, tools и dev/test elicitation loop
-- [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md) — сводка недели о capability, reliability и measurement procedure
+### Benchmarking и interpretation
+- [wiki/concepts/benchmarking](wiki/concepts/benchmarking.md) — benchmarking как controlled slice, а не финальный verdict.
+- [wiki/concepts/model-safety-evals](wiki/concepts/model-safety-evals.md) — оценки, работающие на уровне outputs и model-side properties.
+- [wiki/concepts/contextual-safety-evals](wiki/concepts/contextual-safety-evals.md) — оценки, учитывающие context, deployment и downstream impact.
+- [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) — confidence intervals, paired tests, power и MDE.
+- [wiki/concepts/evaluation-generalization](wiki/concepts/evaluation-generalization.md) — limits of static benchmarks и bounded transfer of results.
 
-## Ключевые страницы week-05
-- [wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety](wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety.md) — самый строгий текст про limits и standards safety benchmarking
-- [wiki/sources/we-need-a-science-of-evals](wiki/sources/we-need-a-science-of-evals.md) — field-building frame про maturation evals как дисциплины
-- [wiki/sources/you-and-your-research](wiki/sources/you-and-your-research.md) — финальный текст про выбор важных проблем и исследовательский стиль
-- [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md) — сводка недели о том, что делает safety eval действительно надежным
+### Benchmark design и validity
+- [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) — benchmark как содержательная конструкция, а не нейтральный прибор.
+- [wiki/concepts/holistic-evaluation](wiki/concepts/holistic-evaluation.md) — HELM-style coverage, multi-metric evaluation и standardized comparison.
+- [wiki/concepts/evidence-centered-benchmark-design](wiki/concepts/evidence-centered-benchmark-design.md) — benchmark как evidence chain из capability, content, adaptation, assembly и evidence.
+- [wiki/concepts/benchmark-lottery](wiki/concepts/benchmark-lottery.md) — как benchmark ecosystem формирует narrative о прогрессе.
+- [wiki/concepts/construct-validity](wiki/concepts/construct-validity.md) — насколько benchmark действительно измеряет заявленный capability concept.
+- [wiki/concepts/benchmark-documentation](wiki/concepts/benchmark-documentation.md) — documentation layer для benchmark transparency и reuse.
+- [wiki/concepts/llm-as-a-judge](wiki/concepts/llm-as-a-judge.md) — judge model как отдельный measurement device со своими biases и limits.
+- [wiki/concepts/toxicity-evals](wiki/concepts/toxicity-evals.md) — toxicity measurement как пример benchmark design и bias-sensitive evaluation.
 
-## Ключевые концепты week-01
-- [wiki/concepts/evals](wiki/concepts/evals.md) — базовая карта области
-- [wiki/concepts/behavioral-evals](wiki/concepts/behavioral-evals.md) — что именно измеряет observed behavior
-- [wiki/concepts/understanding-based-evals](wiki/concepts/understanding-based-evals.md) — зачем нужен более сильный standard, чем behavior-only testing
-- [wiki/concepts/evaluation-awareness](wiki/concepts/evaluation-awareness.md) — почему eval-like context может искажать поведение
-- [wiki/concepts/prompt-sensitivity](wiki/concepts/prompt-sensitivity.md) — как phrasing prompt влияет на measurement
-- [wiki/concepts/specification-gaming](wiki/concepts/specification-gaming.md) — как proxy objective расходится с intended outcome
-- [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md) — tooling layer первой недели
+### Agent evaluation
+- [wiki/concepts/agent-evaluation](wiki/concepts/agent-evaluation.md) — why agent eval is wider than ordinary model benchmarking.
+- [wiki/concepts/agent-reliability](wiki/concepts/agent-reliability.md) — consistency, robustness, predictability и safety как отдельный reliability profile.
+- [wiki/concepts/capability-elicitation](wiki/concepts/capability-elicitation.md) — как не занижать reachable performance слабым protocol.
+- [wiki/concepts/agent-scaffolding](wiki/concepts/agent-scaffolding.md) — prompts, tools, loops и limits как часть measurement procedure.
+- [wiki/concepts/agent-autonomy](wiki/concepts/agent-autonomy.md) — autonomy как свойство системы, а не только модели.
+- [wiki/concepts/react-agents](wiki/concepts/react-agents.md) — think-act-observe loop как минимальный agent pattern.
 
-## Ключевые концепты week-02
-- [wiki/concepts/benchmarking](wiki/concepts/benchmarking.md) — benchmarking как controlled slice, а не финальный verdict
-- [wiki/concepts/model-safety-evals](wiki/concepts/model-safety-evals.md) — evaluation outputs самой модели
-- [wiki/concepts/contextual-safety-evals](wiki/concepts/contextual-safety-evals.md) — evaluation downstream impact и task context
-- [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) — CI, paired tests, power и MDE
-- [wiki/concepts/evaluation-generalization](wiki/concepts/evaluation-generalization.md) — bounded evaluation pipeline vs growing model capacity
+### Reliable AI safety evals
+- [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) — чем safety benchmark отличается от generic capability benchmark.
+- [wiki/concepts/science-of-evals](wiki/concepts/science-of-evals.md) — maturation evals от craft к более зрелой дисциплине.
+- [wiki/concepts/measurement-validity](wiki/concepts/measurement-validity.md) — как proxy score связан с real-world property and harm.
+- [wiki/concepts/risk-quantification](wiki/concepts/risk-quantification.md) — observed rate, severity, uncertainty и deployment risk.
+- [wiki/concepts/research-taste](wiki/concepts/research-taste.md) — выбор действительно важных problems вместо convenient proxies.
 
-## Ключевые концепты week-03
-- [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) — benchmark как содержательная конструкция, а не нейтральный тест
-- [wiki/concepts/holistic-evaluation](wiki/concepts/holistic-evaluation.md) — coverage, multi-metric evaluation и standardized comparison
-- [wiki/concepts/evidence-centered-benchmark-design](wiki/concepts/evidence-centered-benchmark-design.md) — benchmark как evidence chain из пяти модулей
-- [wiki/concepts/benchmark-lottery](wiki/concepts/benchmark-lottery.md) — benchmark ecosystem искажающий narrative о прогрессе
-- [wiki/concepts/llm-as-a-judge](wiki/concepts/llm-as-a-judge.md) — judge model как новый measurement device со своими limits
-- [wiki/concepts/construct-validity](wiki/concepts/construct-validity.md) — почему capability words требуют более строгой validity рамки
+## Source Pages
 
-## Ключевые концепты week-04
-- [wiki/concepts/agent-evaluation](wiki/concepts/agent-evaluation.md) — почему оценка агентов шире обычного benchmarking
-- [wiki/concepts/agent-reliability](wiki/concepts/agent-reliability.md) — consistency, robustness, predictability и safety как отдельный профиль
-- [wiki/concepts/capability-elicitation](wiki/concepts/capability-elicitation.md) — как не занижать reachable performance
-- [wiki/concepts/agent-scaffolding](wiki/concepts/agent-scaffolding.md) — prompts, tools, loops и limits как часть measurement
-- [wiki/concepts/agent-autonomy](wiki/concepts/agent-autonomy.md) — autonomy как свойство не только модели, но и продукта/oversight
-- [wiki/concepts/react-agents](wiki/concepts/react-agents.md) — think-act-observe loop как минимальный agent pattern
+### Week-01
+- [wiki/sources/apollo-starter-guide-evals](wiki/sources/apollo-starter-guide-evals.md) — вводный текст Apollo про смысл evals, навыки evaluator и практический цикл работы.
+- [wiki/sources/hubinger-understanding-based-safety-evals](wiki/sources/hubinger-understanding-based-safety-evals.md) — аргумент за более сильный standard, чем поведенческая проверка.
+- [wiki/sources/barnett-thiergart-evals-catastrophic-risks](wiki/sources/barnett-thiergart-evals-catastrophic-risks.md) — системная статья про lower bounds, upper bounds и пределы catastrophic-risk evals.
+- [wiki/sources/igor-ivanov-what-is-an-evaluation](wiki/sources/igor-ivanov-what-is-an-evaluation.md) — разбор того, что вообще считать evaluation и почему это определение matters.
+- [wiki/sources/deepmind-specification-gaming](wiki/sources/deepmind-specification-gaming.md) — canonical текст про proxy optimization и metric misspecification.
+- [wiki/sources/prompt-sensitivity-benchmark](wiki/sources/prompt-sensitivity-benchmark.md) — paper про хрупкость benchmark results к изменению prompt wording.
+- [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md) — первый notebook-layer курса через Inspect AI.
 
-## Ключевые концепты week-05
-- [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) — чем safety benchmark отличается от generic benchmark
-- [wiki/concepts/science-of-evals](wiki/concepts/science-of-evals.md) — maturation evals от craft к более зрелой дисциплине
-- [wiki/concepts/measurement-validity](wiki/concepts/measurement-validity.md) — связь между proxy score и real-world safety property
-- [wiki/concepts/risk-quantification](wiki/concepts/risk-quantification.md) — observed rate, severity, uncertainty и deployment risk
-- [wiki/concepts/research-taste](wiki/concepts/research-taste.md) — выбор действительно важных проблем вместо convenient proxies
+### Week-02
+- [wiki/sources/cset-ai-safety-evaluations-explainer](wiki/sources/cset-ai-safety-evaluations-explainer.md) — taxonomy safety evaluations и базовый frame `what / how / what it means`.
+- [wiki/sources/miller-adding-error-bars-to-evals](wiki/sources/miller-adding-error-bars-to-evals.md) — главный текст про uncertainty, paired analysis, power и MDE.
+- [wiki/sources/cao-generalizable-evaluation-llm-era](wiki/sources/cao-generalizable-evaluation-llm-era.md) — survey про limits of static benchmarks и beyond-benchmarks frame.
+- [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md) — практический notebook про MMLU и statistical reading of results.
+- [wiki/sources/awesome-llm-eval](wiki/sources/awesome-llm-eval.md) — curated repo как карта benchmark landscape, но не замена evaluation judgment.
+
+### Week-03
+- [wiki/sources/holistic-evaluation-language-models](wiki/sources/holistic-evaluation-language-models.md) — HELM как широкий multi-metric benchmark frame.
+- [wiki/sources/evidence-centered-benchmark-design-nlp](wiki/sources/evidence-centered-benchmark-design-nlp.md) — ECBD как строгая evidence-centered рамка benchmark design.
+- [wiki/sources/benchmark-lottery](wiki/sources/benchmark-lottery.md) — benchmark ecosystem как сила, формирующая progress narrative.
+- [wiki/sources/jigsaw-unintended-bias-text-classification](wiki/sources/jigsaw-unintended-bias-text-classification.md) — unintended bias в toxicity classification.
+- [wiki/sources/realtoxicityprompts-toxic-degeneration](wiki/sources/realtoxicityprompts-toxic-degeneration.md) — токсичность как свойство generative LM behavior и training data.
+- [wiki/sources/llm-as-a-judge-mt-bench-chatbot-arena](wiki/sources/llm-as-a-judge-mt-bench-chatbot-arena.md) — базовый paper про LLM-as-a-judge.
+- [wiki/sources/limits-scalable-evaluation-frontier](wiki/sources/limits-scalable-evaluation-frontier.md) — limits of scalable eval at the frontier when judge quality saturates.
+- [wiki/sources/no-free-labels-llm-as-a-judge](wiki/sources/no-free-labels-llm-as-a-judge.md) — ограничения judge without human grounding.
+- [wiki/sources/hardt-emerging-science-ml-benchmarks](wiki/sources/hardt-emerging-science-ml-benchmarks.md) — более широкий benchmark-science взгляд на ranking stability и contamination.
+- [wiki/sources/benchmarkcards-llm-benchmarks](wiki/sources/benchmarkcards-llm-benchmarks.md) — documentation standard для benchmark transparency.
+- [wiki/sources/construct-validity-nomological-networks](wiki/sources/construct-validity-nomological-networks.md) — спорный, но полезный текст про construct validity и nomological networks.
+- [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md) — практический notebook с toxicity pipeline и LLM judge.
+
+### Week-04
+- [wiki/sources/evaluation-benchmarking-llm-agents-survey](wiki/sources/evaluation-benchmarking-llm-agents-survey.md) — survey-карта области agent evaluation по осям `what` и `how`.
+- [wiki/sources/science-ai-agent-reliability](wiki/sources/science-ai-agent-reliability.md) — reliability profile beyond success rate.
+- [wiki/sources/metr-guidelines-capability-elicitation](wiki/sources/metr-guidelines-capability-elicitation.md) — METR protocol про elicitation и underestimation.
+- [wiki/sources/inspect-ai-tutorial-week-04](wiki/sources/inspect-ai-tutorial-week-04.md) — ReAct agent, MATH-500 и dev/test elicitation loop.
+- [wiki/sources/react-synergizing-reasoning-acting](wiki/sources/react-synergizing-reasoning-acting.md) — ReAct как baseline agent pattern.
+- [wiki/sources/math-dataset](wiki/sources/math-dataset.md) — MATH dataset как benchmark context для notebook.
+- [wiki/sources/llm-agent-survey-methodology-applications-challenges](wiki/sources/llm-agent-survey-methodology-applications-challenges.md) — широкий survey про design space самих агентов.
+- [wiki/sources/measuring-ai-agent-autonomy-practice](wiki/sources/measuring-ai-agent-autonomy-practice.md) — deployment-side measurement of agent autonomy.
+- [wiki/sources/swe-bench-real-world-github-issues](wiki/sources/swe-bench-real-world-github-issues.md) — canonical coding benchmark on real GitHub issues.
+- [wiki/sources/swe-bench-verified](wiki/sources/swe-bench-verified.md) — benchmark quality control и verified subset для SWE-bench.
+- [wiki/sources/metr-autonomy-evaluation-resources](wiki/sources/metr-autonomy-evaluation-resources.md) — index ресурсов METR по autonomy evaluation.
+
+### Week-05
+- [wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety](wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety.md) — самый строгий текст про standards and failure modes safety benchmarking.
+- [wiki/sources/we-need-a-science-of-evals](wiki/sources/we-need-a-science-of-evals.md) — Apollo text про maturation evals в более зрелую discipline.
+- [wiki/sources/you-and-your-research](wiki/sources/you-and-your-research.md) — финальный research-taste текст про important problems и long research trajectory.

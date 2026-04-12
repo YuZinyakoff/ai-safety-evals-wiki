@@ -15,6 +15,12 @@
 ## Краткое содержание
 Текст начинается с мотивации: evals уже участвуют в safety-related decisions и потенциально будут связаны с law and policy, а значит, их результатам придется выдерживать гораздо более сильную внешнюю проверку. Дальше Apollo показывает на примере prompt sensitivity и elicitation instability, почему нынешняя практика часто больше похожа на искусство, чем на зрелую научную дисциплину. После этого пост вводит идею `Science of Evals` через аналогию с maturation process других инженерных полей, особенно авиации: от exploratory phase к informal norms и дальше к standards that are ready for law. Затем текст формулирует вопросы, на которые должна уметь отвечать зрелая evaluation field: что именно измеряется, какое coverage у eval, насколько robust и replicable результаты, возможны ли статистические guarantees и как результаты current evals переносятся на future systems. Финальный блок уже работает как field-building memo: перечисляет ранние примеры полезных meta-evaluation работ и формулирует open questions вокруг conceptual clarity и trustworthiness of results.
 
+## Что источник утверждает прямо
+- Evals уже достаточно важны для deployment и policy, чтобы к ним применялись более жесткие standards of scrutiny.
+- Текущая практика evals еще слишком молода и нестабильна, чтобы уверенно выдерживать такую нагрузку.
+- Полю нужен maturation process, похожий на то, что происходило в других инженерных дисциплинах.
+- Зрелая evaluation field должна уметь отвечать на вопросы о measured quantity, coverage, robustness, replicability, statistical guarantees и переносе выводов на future systems.
+
 ## Что здесь особенно важно
 - **Порог требований к evals поднимается из-за того, что они становятся policy-relevant.**
 - **`Science of Evals` — это не "еще больше benchmark'ов", а более зрелая measurement discipline.**
@@ -22,7 +28,7 @@
 - **Coverage, replicability и statistical guarantees** описаны как признаки зрелости поля, а не как nice-to-have дополнения.
 - **Пост одновременно и диагностический, и организационный.** Он не только критикует состояние поля, но и пытается собрать research agenda и экосистему вокруг этого направления.
 
-## Что это добавляет к теме недели
+## Интерпретация для курса
 Если первый текст недели критикует именно safety benchmarks, то Apollo поднимает разговор на уровень всей дисциплины. Он помогает увидеть, что проблемы safety benchmarking — не локальная техническая неисправность, а частный случай более общей незрелости evals как поля.
 
 ## Что стоит запомнить при повторении
