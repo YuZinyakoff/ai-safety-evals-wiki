@@ -1,5 +1,15 @@
 # Журнал изменений
 
+## 2026-04-12 | ingest | week-04
+- Разобраны материалы `raw/week-04/` по theory, notebook и extra-слоям, включая organizer framing
+- Созданы 11 source pages, 6 новых concept pages и 1 synthesis про agent evaluation, reliability, elicitation и autonomy
+- `wiki/weeks/week-04.md` собрана как полноценная hub-page недели, а `wiki/home.md`, `index.md` и общие concept pages обновлены под текущее покрытие первых четырех недель
+
+## 2026-04-12 | framing | week-04 organizer note
+- В `raw/week-04/extra/` добавлена organizer note `course-framing-week-04.md` как педагогическая рамка четвертой недели
+- `wiki/weeks/week-04.md` переписана из стартового шаблона в pre-ingest hub-page с замыслом недели, предварительными вопросами, картиной недели и маршрутом по материалам
+- Для week-04 зафиксирован переход от benchmark design к agent evaluation, reliability, elicitation и autonomy
+
 ## 2026-04-12 | ingest | week-03
 - Разобраны материалы `raw/week-03/` по theory, notebook и extra-слоям, включая organizer framing и fallback sidecar только для PDF-only материалов
 - Созданы 12 source pages, 8 новых concept pages и 1 synthesis про benchmark design, evidence claims и benchmark ecosystem

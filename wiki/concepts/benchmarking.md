@@ -4,13 +4,14 @@
 > **Benchmarking** — это evaluation через стандартизированный набор задач, вопросов или сценариев, на котором модели можно сравнивать по общим правилам. Его сила в controlled measurement, а слабость — в том, что такой контроль почти всегда достигается ценой ограниченного coverage.
 
 ## Почему это важный концепт
-Week-02 вводит benchmarking как controlled measurement practice, а week-03 резко усложняет картину, показывая, что benchmark сам по себе является содержательной конструкцией. Поэтому benchmarking здесь нужно держать не как абстрактное слово, а как практику со своими trade-offs: удобство сравнения, statistical discipline, contamination concerns, design assumptions и bounded transfer of conclusions.
+Week-02 вводит benchmarking как controlled measurement practice, week-03 резко усложняет картину, показывая, что benchmark сам по себе является содержательной конструкцией, а week-04 добавляет agent layer: в случае агентов benchmark часто оценивает не просто модель, а модель вместе с scaffold, tools, environment и evaluation procedure. Поэтому benchmarking здесь нужно держать не как абстрактное слово, а как практику со своими trade-offs: удобство сравнения, statistical discipline, contamination concerns, design assumptions и bounded transfer of conclusions.
 
 ## Что именно здесь ломает наивный вывод
 - **Controlled slice** легко принять за полный портрет модели.
 - **Score difference** легко прочитать как meaningful difference без uncertainty estimates.
 - **Static suites** быстро сталкиваются с contamination и saturation.
 - **Большой benchmark landscape** легко принять за solved measurement problem.
+- **Agent benchmarks** особенно чувствительны к procedure quality, retrieval, harness stability и elicitation gaps.
 
 ## Как распознать риск в реальном benchmark
 - Когда benchmark ranking читают без question о coverage.
@@ -32,6 +33,7 @@ Week-02 вводит benchmarking как controlled measurement practice, а wee
 - [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md) — где benchmarking стоит внутри более широкой taxonomy.
 - [HELM](../sources/holistic-evaluation-language-models.md) — как benchmark превращается в more explicit multi-metric framework.
 - [The Benchmark Lottery](../sources/benchmark-lottery.md) — как benchmark ecosystem искажает narrative о прогрессе.
+- [SWE-bench Verified](../sources/swe-bench-verified.md) — как benchmark quality control меняет capability claims для агентов.
 
 ## Открытые вопросы
 - Как понимать, что benchmark действительно отражает нужную capability, а не только удобный proxy?
@@ -42,4 +44,5 @@ Week-02 вводит benchmarking как controlled measurement practice, а wee
 - [concepts/statistical-rigor-in-evals](statistical-rigor-in-evals.md)
 - [concepts/evaluation-generalization](evaluation-generalization.md)
 - [concepts/benchmark-design](benchmark-design.md)
+- [concepts/agent-evaluation](agent-evaluation.md)
 - [syntheses/benchmarking-beyond-single-scores](../syntheses/benchmarking-beyond-single-scores.md)
