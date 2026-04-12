@@ -29,6 +29,7 @@
 ## Где смотреть дальше
 - [We Need A Science of Evals](../sources/we-need-a-science-of-evals.md)
 - [How Should AI Safety Benchmarks Benchmark Safety?](../sources/how-should-ai-safety-benchmarks-benchmark-safety.md)
+- [Eval Methodology in AI Safety](../syntheses/eval-methodology-in-ai-safety.md)
 - [Statistical Rigor in Evals](statistical-rigor-in-evals.md)
 
 ## Открытые вопросы
@@ -37,6 +38,7 @@
 
 ## Связанные страницы
 - [concepts/evals](evals.md)
+- [concepts/eval-methodology](eval-methodology.md)
 - [concepts/measurement-validity](measurement-validity.md)
 - [concepts/risk-quantification](risk-quantification.md)
 - [concepts/ai-safety-benchmarks](ai-safety-benchmarks.md)

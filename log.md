@@ -126,3 +126,8 @@
 - В ключевых source pages `week-05` явнее разведены слой прямых утверждений источника и слой интерпретации для курса
 - В `README.md` добавлены отдельные секции про то, как работать с базой и как ей управлять в духе persistent wiki workflow
 - В `AGENTS.md` зафиксирован более явный source-page pattern для страниц, где важно отделять source facts от wiki-level interpretation
+
+## 2026-04-12 | ingest | shared methodology lectures
+- В `raw/shared/` нормализованы три `.pptx`-презентации цикла о проблемах методологии evals в контексте AI safety и рядом созданы sidecar-файлы `.pptx.md`
+- Созданы 3 shared source pages, 1 новый concept page `eval-methodology` и 1 synthesis про методологию evals как общий слой поверх недельного курса
+- Обновлены `wiki/home.md`, `index.md`, `wiki/concepts/evals.md` и `wiki/concepts/science-of-evals.md`, чтобы shared-материалы были видимы в общей навигации

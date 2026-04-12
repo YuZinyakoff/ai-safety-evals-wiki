@@ -11,6 +11,7 @@
 
 ## Быстрые маршруты
 - Если нужен **весь курс в одном тексте**, начинай с [wiki/syntheses/course-arc-from-evals-to-reliable-safety](wiki/syntheses/course-arc-from-evals-to-reliable-safety.md).
+- Если нужен **вход в методологию evals как общекурсовую тему**, смотри [wiki/syntheses/eval-methodology-in-ai-safety](wiki/syntheses/eval-methodology-in-ai-safety.md), [wiki/concepts/eval-methodology](wiki/concepts/eval-methodology.md) и три shared-лекции Славы Меритона.
 - Если нужен **вход в limits of evals**, смотри [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
 - Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
 - Если нужен **вход в benchmark design и validity**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
@@ -19,7 +20,7 @@
 - Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md) и notebook source pages первых четырех недель.
 
 ## Покрытие
-- В базе сейчас 5 week hub-pages, 38 source pages, 31 concept page и 6 syntheses.
+- В базе сейчас 5 week hub-pages, 41 source pages, 32 concept page и 7 syntheses.
 - Все внутренние Markdown-ссылки резолвятся; orphan pages в `wiki/` сейчас нет.
 - `raw/` и `wiki/` уже разведены по ролям: `raw` хранит исходники, `wiki` хранит compounding knowledge layer.
 
@@ -32,6 +33,7 @@
 
 ## Syntheses
 - [wiki/syntheses/course-arc-from-evals-to-reliable-safety](wiki/syntheses/course-arc-from-evals-to-reliable-safety.md) — capstone synthesis по всей дуге `week-01..05`.
+- [wiki/syntheses/eval-methodology-in-ai-safety](wiki/syntheses/eval-methodology-in-ai-safety.md) — shared synthesis про методологию evals как AI safety bottleneck и research direction.
 - [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md) — week-01 synthesis про силу и пределы eval claims.
 - [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md) — week-02 synthesis про benchmarking, statistical rigor и bounded coverage.
 - [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md) — week-03 synthesis про benchmark design, evidence chain и incentives.
@@ -76,6 +78,7 @@
 
 ### Reliable AI safety evals
 - [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) — чем safety benchmark отличается от generic capability benchmark.
+- [wiki/concepts/eval-methodology](wiki/concepts/eval-methodology.md) — качество самой практики построения, проверки и интерпретации evals.
 - [wiki/concepts/science-of-evals](wiki/concepts/science-of-evals.md) — maturation evals от craft к более зрелой дисциплине.
 - [wiki/concepts/measurement-validity](wiki/concepts/measurement-validity.md) — как proxy score связан с real-world property and harm.
 - [wiki/concepts/risk-quantification](wiki/concepts/risk-quantification.md) — observed rate, severity, uncertainty и deployment risk.
@@ -130,3 +133,8 @@
 - [wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety](wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety.md) — самый строгий текст про standards and failure modes safety benchmarking.
 - [wiki/sources/we-need-a-science-of-evals](wiki/sources/we-need-a-science-of-evals.md) — Apollo text про maturation evals в более зрелую discipline.
 - [wiki/sources/you-and-your-research](wiki/sources/you-and-your-research.md) — финальный research-taste текст про important problems и long research trajectory.
+
+### Shared
+- [wiki/sources/slava-meriton-evals-methodology-lecture-01](wiki/sources/slava-meriton-evals-methodology-lecture-01.md) — why eval methodology is AI safety-relevant at the level of field context and leverage.
+- [wiki/sources/slava-meriton-evals-methodology-lecture-02](wiki/sources/slava-meriton-evals-methodology-lecture-02.md) — evals as an empirical tool under weak theory and imperfect checks.
+- [wiki/sources/slava-meriton-evals-methodology-lecture-03](wiki/sources/slava-meriton-evals-methodology-lecture-03.md) — methodological turn toward operationalizing goals, ontology and measurable patterns.

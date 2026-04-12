@@ -36,6 +36,7 @@
 - [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) — самая полезная страница про границы claims.
 - [Miller](../sources/miller-adding-error-bars-to-evals.md) — статистическая честность benchmark results.
 - [We Need A Science of Evals](../sources/we-need-a-science-of-evals.md) — почему поле должно становиться более зрелой дисциплиной.
+- [Eval Methodology](eval-methodology.md) — что именно ломается на уровне качества самой measurement practice.
 - [week-01](../weeks/week-01.md), [week-02](../weeks/week-02.md) и [week-05](../weeks/week-05.md) — хронологическая логика курса от вводного языка к high-stakes measurement.
 
 ## Открытые вопросы
@@ -50,6 +51,7 @@
 - [concepts/benchmarking](benchmarking.md)
 - [concepts/statistical-rigor-in-evals](statistical-rigor-in-evals.md)
 - [concepts/inspect-ai](inspect-ai.md)
+- [concepts/eval-methodology](eval-methodology.md)
 - [concepts/science-of-evals](science-of-evals.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)
 - [syntheses/benchmarking-beyond-single-scores](../syntheses/benchmarking-beyond-single-scores.md)
