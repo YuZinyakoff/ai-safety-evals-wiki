@@ -14,6 +14,7 @@
 - Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
 - Если нужен **вход в benchmark design, validity и benchmark ecosystem**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
 - Если нужен **вход в agent evaluation, reliability и elicitation**, открывай [wiki/weeks/week-04](wiki/weeks/week-04.md), [wiki/concepts/agent-evaluation](wiki/concepts/agent-evaluation.md) и [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md).
+- Если нужен **вход в reliable AI safety evals, science of evals и research taste**, переходи к [wiki/weeks/week-05](wiki/weeks/week-05.md), [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) и [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md).
 - Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md), [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md), [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md), [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md) и [wiki/sources/inspect-ai-tutorial-week-04](wiki/sources/inspect-ai-tutorial-week-04.md).
 
 ## Текущее покрытие
@@ -21,21 +22,23 @@
 - `week-02` тоже разобрана по theory, notebook и extra-материалам.
 - `week-03` тоже разобрана по theory, notebook и extra-материалам.
 - `week-04` тоже разобрана по theory, notebook и extra-материалам.
+- `week-05` тоже разобрана по текущим theory-материалам и organizer framing.
 - Для ключевых arXiv-материалов первых двух недель теперь в основном есть более сильный raw: clipped Markdown, PDF и `TeX Source`.
 - Для ключевых материалов третьей недели preferred raw тоже выбран: clipped Markdown там, где он был доступен, а PDF sidecar используется только как fallback.
 - Для ключевых материалов четвертой недели preferred raw тоже в основном clipped-first, а PDF/TeX остаются backup-слоем.
+- Для ключевых материалов пятой недели preferred raw тоже выбран: у safety benchmark paper есть clipped Markdown, PDF и `TeX Source`, остальные тексты представлены сильным clipped Markdown.
 - Для `week-01` есть 7 source pages, 7 concept pages и 1 synthesis.
 - Для `week-02` есть 5 source pages, 5 новых concept pages и 1 synthesis.
 - Для `week-03` есть 12 source pages, 8 новых concept pages и 1 synthesis.
 - Для `week-04` есть 11 source pages, 6 новых concept pages и 1 synthesis.
-- `week-05` пока остается стартовой страницей.
+- Для `week-05` есть 3 source pages, 5 новых concept pages и 1 synthesis.
 
 ## Недели
 - [wiki/weeks/week-01](wiki/weeks/week-01.md) — основная hub-page по первой неделе
 - [wiki/weeks/week-02](wiki/weeks/week-02.md) — hub-page по benchmarking, statistical rigor и evaluation design
 - [wiki/weeks/week-03](wiki/weeks/week-03.md) — hub-page по benchmark design, evidence claims и benchmark ecosystem
 - [wiki/weeks/week-04](wiki/weeks/week-04.md) — hub-page по agent evaluation, reliability, elicitation и autonomy
-- [wiki/weeks/week-05](wiki/weeks/week-05.md) — стартовая страница под будущий ingest
+- [wiki/weeks/week-05](wiki/weeks/week-05.md) — hub-page по reliable AI safety evals, science of evals и research taste
 
 ## Ключевые страницы week-01
 - [wiki/sources/apollo-starter-guide-evals](wiki/sources/apollo-starter-guide-evals.md) — вводный словарь evals и роли evaluator
@@ -63,6 +66,12 @@
 - [wiki/sources/metr-guidelines-capability-elicitation](wiki/sources/metr-guidelines-capability-elicitation.md) — главный текст недели про elicitation и underestimation
 - [wiki/sources/inspect-ai-tutorial-week-04](wiki/sources/inspect-ai-tutorial-week-04.md) — ReAct agent, tools и dev/test elicitation loop
 - [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md) — сводка недели о capability, reliability и measurement procedure
+
+## Ключевые страницы week-05
+- [wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety](wiki/sources/how-should-ai-safety-benchmarks-benchmark-safety.md) — самый строгий текст про limits и standards safety benchmarking
+- [wiki/sources/we-need-a-science-of-evals](wiki/sources/we-need-a-science-of-evals.md) — field-building frame про maturation evals как дисциплины
+- [wiki/sources/you-and-your-research](wiki/sources/you-and-your-research.md) — финальный текст про выбор важных проблем и исследовательский стиль
+- [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md) — сводка недели о том, что делает safety eval действительно надежным
 
 ## Ключевые концепты week-01
 - [wiki/concepts/evals](wiki/concepts/evals.md) — базовая карта области
@@ -95,3 +104,10 @@
 - [wiki/concepts/agent-scaffolding](wiki/concepts/agent-scaffolding.md) — prompts, tools, loops и limits как часть measurement
 - [wiki/concepts/agent-autonomy](wiki/concepts/agent-autonomy.md) — autonomy как свойство не только модели, но и продукта/oversight
 - [wiki/concepts/react-agents](wiki/concepts/react-agents.md) — think-act-observe loop как минимальный agent pattern
+
+## Ключевые концепты week-05
+- [wiki/concepts/ai-safety-benchmarks](wiki/concepts/ai-safety-benchmarks.md) — чем safety benchmark отличается от generic benchmark
+- [wiki/concepts/science-of-evals](wiki/concepts/science-of-evals.md) — maturation evals от craft к более зрелой дисциплине
+- [wiki/concepts/measurement-validity](wiki/concepts/measurement-validity.md) — связь между proxy score и real-world safety property
+- [wiki/concepts/risk-quantification](wiki/concepts/risk-quantification.md) — observed rate, severity, uncertainty и deployment risk
+- [wiki/concepts/research-taste](wiki/concepts/research-taste.md) — выбор действительно важных проблем вместо convenient proxies

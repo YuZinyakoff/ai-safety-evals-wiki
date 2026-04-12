@@ -30,6 +30,12 @@
 - В `AGENTS.md` и `README.md` зафиксировано, что такие `course framing`-заметки живут в `extra/`, усиливают week pages и не подменяют предметные source pages
 - `wiki/weeks/week-01.md` дополнена замыслом недели, предварительными вопросами и вопросами для обсуждения на основе organizer note
 
+## 2026-04-12 | ingest | week-05
+- Добавлена organizer note `raw/week-05/extra/course-framing-week-05.md` и собрана `wiki/weeks/week-05.md` как завершающая hub-page курса
+- Созданы 3 source pages по theory-материалам недели, 5 concept pages и 1 synthesis
+- Обновлены `wiki/home.md`, `index.md`, `log.md`, а также общие concept pages `evals` и `benchmarking`
+- Week-05 закреплена как финальный слой про safety benchmarking, science of evals и research taste
+
 ## 2026-04-11 | cleanup | top-level nav and barnett raw
 - `wiki/home.md` и `index.md` усилены как верхнеуровневые точки входа: добавлены более полезные маршруты по задачам, а не только каталог страниц
 - Для Barnett-Thiergart добавлены clipped HTML raw и `TeX Source`, поэтому source page и `week-01` больше не зависят от fallback-sidecar
