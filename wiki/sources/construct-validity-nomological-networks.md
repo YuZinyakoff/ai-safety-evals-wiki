@@ -1,0 +1,44 @@
+# Establishing Construct Validity In LLM Capability Benchmarks Requires Nomological Networks
+
+- **Тип источника:** extra
+- **Неделя:** week-03
+- **Raw:** [clipped `.md`](<../../raw/week-03/extra/Establishing Construct Validity in LLM Capability Benchmarks Requires Nomological Networks.md>)
+- **Оригинал:** [arXiv HTML](https://arxiv.org/html/2603.15121v1)
+- **Полнота raw:** clipped Markdown
+
+## Ключевая мысль
+> **Нельзя просто назвать benchmark “reasoning benchmark” и считать, что construct уже измерен.** Нужно еще показать, как этот construct связан с задачами, другими способностями и ожидаемыми эмпирическими отношениями.
+
+## Зачем источник в базе
+Это самый философски нагруженный, но содержательно полезный extra-text недели. Он нужен, чтобы придать week-03 более глубокий язык для разговора о capability claims: почему слова вроде `reasoning`, `theory of mind` или `morality` сами по себе создают сильные интерпретации и требуют более строгой validity framework.
+
+## Краткое содержание
+Paper начинает с критики распространенной практики: researchers приписывают LLM human-like capabilities на основании benchmark results без достаточной теории того, что benchmark вообще измеряет. Затем автор сравнивает три account of construct validity — causal, inferential и nomological — и утверждает, что для текущего LLM research лучше всего подходит именно `nomological account`, потому что она не требует слишком сильных онтологических обязательств, но при этом дает substantive framework. Во второй части paper автор применяет эту рамку к reasoning capability: обсуждает task benchmarks, content validity, convergent и discriminant analysis, а также риск `theoretical–empirical mismatch`, когда observed benchmark relations плохо согласуются с заявленной network of capabilities. Итоговый вывод: capability benchmarks требуют не только scores, но и richer theoretical web, которая ограничивает допустимые интерпретации.
+
+## Что здесь особенно важно
+- **Construct labels** автоматически тянут за собой сильные человеческие интерпретации.
+- **Task score** сам по себе не равен capability claim.
+- **Nomological network** задает более строгий язык для связи benchmark'ов и capability vocabulary.
+- **Theoretical–empirical mismatch** — полезная идея для критики слишком смелых capability claims.
+
+## Что это добавляет к теме недели
+Источник углубляет week-03 до уровня language of claims. HELM, ECBD и Benchmark Lottery в основном обсуждают benchmark design и ecosystem design, а этот paper добавляет еще один вопрос: что вообще нужно, чтобы слова про “capability” и “reasoning” были хоть сколько-то научно оправданными.
+
+## Что стоит запомнить при повторении
+- **Назвать capability легче, чем валидно ее измерить.**
+- **Benchmark design и construct validity тесно связаны.**
+- **Номологическая сеть — это попытка ограничить слишком свободные интерпретации benchmark scores.**
+
+## Связанные концепты
+- [concepts/construct-validity](../concepts/construct-validity.md)
+- [concepts/benchmark-design](../concepts/benchmark-design.md)
+- [concepts/evidence-centered-benchmark-design](../concepts/evidence-centered-benchmark-design.md)
+
+## Что осталось неясным / спорным
+- Насколько сама психометрическая традиция достаточно зрелая, чтобы быть сильным ориентиром для LLM evaluation?
+- Можно ли practically строить такие nomological networks в быстро меняющемся benchmark ecosystem?
+
+## Связанные страницы
+- [weeks/week-03](../weeks/week-03.md)
+- [sources/evidence-centered-benchmark-design-nlp](evidence-centered-benchmark-design-nlp.md)
+- [sources/benchmarkcards-llm-benchmarks](benchmarkcards-llm-benchmarks.md)

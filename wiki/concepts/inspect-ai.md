@@ -11,6 +11,7 @@
 - **Prompt design — часть measurement.** Это особенно важно в связке с week-01.
 - **Logs matter.** После запуска eval важна не только итоговая метрика, но и просмотр того, как модель реально проходила задачу.
 - **Statistical layer тоже operationalize.** На week-02 через `EvalLog` и post-processing tool уже участвует в paired comparisons, confidence intervals и power analysis.
+- **Judge layer тоже operationalize.** На week-03 через classifier–judge pipeline становится видно, что judge сам является measurement device со своими biases и blind spots.
 
 ## Как этим пользоваться при повторении
 - Если нужно быстро вернуть практическую часть week-01, почти всегда стоит начинать отсюда и с notebook source page.
@@ -25,6 +26,7 @@
 ## Где смотреть дальше
 - [week-01 tutorial](../sources/inspect-ai-tutorial-week-01.md) — базовая механика `Task`, prompts и scoring.
 - [week-02 tutorial](../sources/inspect-ai-tutorial-week-02.md) — связь benchmark run со statistical analysis.
+- [week-03 tutorial](../sources/inspect-ai-tutorial-week-03.md) — classifier–judge pipeline, toxicity evaluation и audit judge model.
 - [Prompt Sensitivity](prompt-sensitivity.md) — почему prompt layer неотделим от evaluation reliability.
 
 ## Открытые вопросы
@@ -35,5 +37,6 @@
 - [concepts/evals](evals.md)
 - [concepts/prompt-sensitivity](prompt-sensitivity.md)
 - [concepts/statistical-rigor-in-evals](statistical-rigor-in-evals.md)
+- [concepts/llm-as-a-judge](llm-as-a-judge.md)
 - [syntheses/evals-scope-and-limits](../syntheses/evals-scope-and-limits.md)
 - [syntheses/benchmarking-beyond-single-scores](../syntheses/benchmarking-beyond-single-scores.md)

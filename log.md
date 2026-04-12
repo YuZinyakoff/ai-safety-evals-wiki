@@ -1,5 +1,25 @@
 # Журнал изменений
 
+## 2026-04-12 | ingest | week-03
+- Разобраны материалы `raw/week-03/` по theory, notebook и extra-слоям, включая organizer framing и fallback sidecar только для PDF-only материалов
+- Созданы 12 source pages, 8 новых concept pages и 1 synthesis про benchmark design, evidence claims и benchmark ecosystem
+- `wiki/weeks/week-03.md` собрана как полноценная hub-page недели, а `wiki/home.md` и `index.md` обновлены под текущее покрытие первых трех недель
+
+## 2026-04-12 | framing | week-03 organizer note
+- В `raw/week-03/extra/` добавлена organizer note `course-framing-week-03.md` как педагогическая рамка третьей недели
+- `wiki/weeks/week-03.md` переписана из стартового шаблона в pre-ingest hub-page с замыслом недели, предварительными вопросами, картиной недели и ссылками на raw-материалы
+- Для week-03 зафиксирован переход от `evaluation strategy` к benchmark design, evidence claims и benchmark ecosystem
+
+## 2026-04-12 | framing | week-02 organizer note
+- В `raw/week-02/extra/` добавлена organizer note `course-framing-week-02.md` как отдельный слой педагогической рамки недели
+- `wiki/weeks/week-02.md` дополнена замыслом недели, предварительными вопросами и вопросами для обсуждения на основе organizer note
+- Организаторская рамка встроена в week-02 как переход от ограничений evals к вопросу о strategy, benchmark choice и честной интерпретации результата
+
+## 2026-04-12 | framing | week-01 organizer note
+- В `raw/week-01/extra/` добавлена organizer note `course-framing-week-01.md` как отдельный слой педагогической рамки недели
+- В `AGENTS.md` и `README.md` зафиксировано, что такие `course framing`-заметки живут в `extra/`, усиливают week pages и не подменяют предметные source pages
+- `wiki/weeks/week-01.md` дополнена замыслом недели, предварительными вопросами и вопросами для обсуждения на основе organizer note
+
 ## 2026-04-11 | cleanup | top-level nav and barnett raw
 - `wiki/home.md` и `index.md` усилены как верхнеуровневые точки входа: добавлены более полезные маршруты по задачам, а не только каталог страниц
 - Для Barnett-Thiergart добавлены clipped HTML raw и `TeX Source`, поэтому source page и `week-01` больше не зависят от fallback-sidecar

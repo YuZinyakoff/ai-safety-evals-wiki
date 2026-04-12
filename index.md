@@ -12,20 +12,24 @@
 ## Быстрые маршруты
 - Если нужен **вход в limits of evals**, начинай с [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
 - Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
-- Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md), [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md) и [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md).
+- Если нужен **вход в benchmark design, validity и benchmark ecosystem**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
+- Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md), [wiki/sources/inspect-ai-tutorial-week-01](wiki/sources/inspect-ai-tutorial-week-01.md), [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md) и [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md).
 
 ## Текущее покрытие
 - `week-01` разобрана по theory, notebook и extra-материалам и дополнительно усилена clipped / normalized raw-текстами для ключевых источников.
 - `week-02` тоже разобрана по theory, notebook и extra-материалам.
+- `week-03` тоже разобрана по theory, notebook и extra-материалам.
 - Для ключевых arXiv-материалов первых двух недель теперь в основном есть более сильный raw: clipped Markdown, PDF и `TeX Source`.
+- Для ключевых материалов третьей недели preferred raw тоже выбран: clipped Markdown там, где он был доступен, а PDF sidecar используется только как fallback.
 - Для `week-01` есть 7 source pages, 7 concept pages и 1 synthesis.
 - Для `week-02` есть 5 source pages, 5 новых concept pages и 1 synthesis.
-- `week-03`..`week-05` пока остаются стартовыми страницами.
+- Для `week-03` есть 12 source pages, 8 новых concept pages и 1 synthesis.
+- `week-04` и `week-05` пока остаются стартовыми страницами.
 
 ## Недели
 - [wiki/weeks/week-01](wiki/weeks/week-01.md) — основная hub-page по первой неделе
 - [wiki/weeks/week-02](wiki/weeks/week-02.md) — hub-page по benchmarking, statistical rigor и evaluation design
-- [wiki/weeks/week-03](wiki/weeks/week-03.md) — стартовая страница под будущий ingest
+- [wiki/weeks/week-03](wiki/weeks/week-03.md) — hub-page по benchmark design, evidence claims и benchmark ecosystem
 - [wiki/weeks/week-04](wiki/weeks/week-04.md) — стартовая страница под будущий ingest
 - [wiki/weeks/week-05](wiki/weeks/week-05.md) — стартовая страница под будущий ingest
 
@@ -42,6 +46,13 @@
 - [wiki/sources/inspect-ai-tutorial-week-02](wiki/sources/inspect-ai-tutorial-week-02.md) — практический MMLU notebook с statistical analysis
 - [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md) — сводка недели о том, почему benchmark score не равен хорошему выводу
 
+## Ключевые страницы week-03
+- [wiki/sources/holistic-evaluation-language-models](wiki/sources/holistic-evaluation-language-models.md) — HELM как широкий frame для benchmark design
+- [wiki/sources/evidence-centered-benchmark-design-nlp](wiki/sources/evidence-centered-benchmark-design-nlp.md) — самый строгий текст про evidence chain benchmark'а
+- [wiki/sources/benchmark-lottery](wiki/sources/benchmark-lottery.md) — benchmark ecosystem как сила, которая формирует прогресс
+- [wiki/sources/inspect-ai-tutorial-week-03](wiki/sources/inspect-ai-tutorial-week-03.md) — judge-based toxicity pipeline в `Inspect AI`
+- [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md) — сводка недели о том, как benchmark design формирует evidence и incentives
+
 ## Ключевые концепты week-01
 - [wiki/concepts/evals](wiki/concepts/evals.md) — базовая карта области
 - [wiki/concepts/behavioral-evals](wiki/concepts/behavioral-evals.md) — что именно измеряет observed behavior
@@ -57,3 +68,11 @@
 - [wiki/concepts/contextual-safety-evals](wiki/concepts/contextual-safety-evals.md) — evaluation downstream impact и task context
 - [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) — CI, paired tests, power и MDE
 - [wiki/concepts/evaluation-generalization](wiki/concepts/evaluation-generalization.md) — bounded evaluation pipeline vs growing model capacity
+
+## Ключевые концепты week-03
+- [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) — benchmark как содержательная конструкция, а не нейтральный тест
+- [wiki/concepts/holistic-evaluation](wiki/concepts/holistic-evaluation.md) — coverage, multi-metric evaluation и standardized comparison
+- [wiki/concepts/evidence-centered-benchmark-design](wiki/concepts/evidence-centered-benchmark-design.md) — benchmark как evidence chain из пяти модулей
+- [wiki/concepts/benchmark-lottery](wiki/concepts/benchmark-lottery.md) — benchmark ecosystem искажающий narrative о прогрессе
+- [wiki/concepts/llm-as-a-judge](wiki/concepts/llm-as-a-judge.md) — judge model как новый measurement device со своими limits
+- [wiki/concepts/construct-validity](wiki/concepts/construct-validity.md) — почему capability words требуют более строгой validity рамки
