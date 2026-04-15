@@ -12,8 +12,22 @@
 ## Зачем источник в базе
 Эта страница нужна как карта METR ecosystem around autonomy evals. Она помогает не читать `Guidelines for capability elicitation` изолированно, а видеть, из каких еще частей состоит их общий подход.
 
+## Эпистемический статус и как на него смотреть
+Это resource hub and ecosystem map, а не single research paper. Его лучше читать как index of a measurement stack: tasks, workbench, protocol, elicitation research and example workflows.
+
+## На какие вопросы источник помогает отвечать
+- Из каких компонентов на самом деле состоит METR-style autonomy evaluation?
+- Почему task suite, workbench and elicitation research стоит читать вместе?
+- Что делает этот stack больше, чем просто benchmark?
+- Какие pieces useful even if you are not adopting the whole METR ecosystem?
+
 ## Краткое содержание
 Resource page описывает набор связанных компонентов для оценки potentially dangerous autonomous capabilities. Сначала идет `task suite`: задачи с human-time difficulty estimates, quality indicators и упором на domains, где frontier models уже сравнительно сильны. Затем описываются `guidelines for capability elicitation`, `task standard and workbench`, `example evaluation protocol` и исследовательский блок `measuring the impact of elicitation`. Важен общий смысл: METR пытается построить не просто benchmark, а целый measurement stack, где tasks, scaffolding, protocol and interpretation layer поддерживают друг друга.
+
+## Как читать источник быстро
+- Если нужен map of the stack, просто пройди top-level components: task suite, guidelines, workbench, example protocol and elicitation research.
+- Если вопрос про methodology, смотри сначала links around elicitation and example evaluation protocol.
+- Если нужен engineering layer, концентрируйся на task standard and workbench as infrastructure pieces.
 
 ## Что здесь особенно важно
 - **Task suite** здесь связан с difficulty estimates and human-time framing.

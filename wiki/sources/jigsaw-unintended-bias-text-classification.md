@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это прямое дополнение к notebook недели. Источник нужен, чтобы разговор о toxicity evaluation не сводился к одной aggregate accuracy и чтобы было понятно, как именно возникают false positives и unwanted censorship effects на identity-related examples.
 
+## Эпистемический статус и как на него смотреть
+Это классический empirical bias paper on classifier evaluation, а не broad theory of fairness. Его полезно читать как конкретный пример того, как slice-based analysis обнаруживает harms, которые aggregate metrics скрывают.
+
+## На какие вопросы источник помогает отвечать
+- Как toxicity classifier может выглядеть сильным overall и при этом систематически ошибаться на identity-related text?
+- Почему aggregate metrics скрывают unintended bias?
+- Какие slice-based measurements нужны, чтобы сделать bias visible?
+- Какие mitigation strategies authors проверяют и что они реально улучшают?
+
 ## Краткое содержание
 Статья вводит понятие `unintended bias` в контексте text classification и сразу отделяет его от более широкой социальной проблемы fairness. Затем авторы разбирают конкретный кейс: toxicity classifier на Wikipedia Talk data начал переассоциировать отдельные identity terms вроде “gay” с toxicity, потому что в training data эти terms были непропорционально представлены в toxic comments. После постановки проблемы paper предлагает способ измерять bias на специальных slices и сравнивать поведение модели на identity-related examples с общим quality level. Далее работа показывает простой mitigation path через балансировку данных и добавление strategically chosen examples. В финале paper проверяет, что bias mitigation действительно уменьшает unintended bias without collapsing overall model quality.
+
+## Как читать источник быстро
+- Если нужен core lesson, читай problem setup around identity-term bias and why overall accuracy misses it.
+- Если важен measurement layer, переходи к sections on slice-based metrics and identity-related examples.
+- Если нужен practical takeaway, смотри mitigation experiment and trade-offs with overall quality.
+
+## Что источник утверждает прямо
+- Aggregate classifier metrics могут выглядеть сильными и одновременно скрывать systematic errors on identity-related slices.
+- Correlations between identity terms and toxicity in training data ведут к unintended false positives.
+- Slice-based measurements делают эти harms visible better than whole-dataset aggregates.
+- Authors показывают, что data balancing и carefully chosen augmentation могут уменьшать unintended bias without collapsing overall quality.
 
 ## Что здесь особенно важно
 - **Aggregate performance** может скрывать серьезные локальные failure modes.
 - **Identity-term imbalance** в training data быстро превращается в false positive bias.
 - **Mitigation** здесь понимается как изменение training distribution, а не только косметическая post-hoc correction.
 - **Bias measurement** требует смотреть на специальные slices, а не только на весь test set целиком.
+
+## Интерпретация для курса
+Для курса этот paper полезен как очень конкретный пример того, что benchmark design decides which harms become visible. Он помогает читать fairness/bias evaluation не как moral appendix, а как structural question about slices, distributions and what evidence the benchmark actually collects.
 
 ## Что это добавляет к теме недели
 Этот текст связывает benchmark design с содержательной конструкцией test slices. Он показывает, что даже когда мы вроде бы “меряем токсичность”, benchmark choice все равно решает, какие harms станут видимыми, а какие останутся спрятанными за общей метрикой. Для week-03 это хороший прикладной пример того, как design benchmark'а влияет на смысл результата.

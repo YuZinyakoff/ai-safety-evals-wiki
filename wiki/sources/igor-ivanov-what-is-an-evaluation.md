@@ -12,8 +12,28 @@
 ## Зачем источник в базе
 Этот текст нужен, чтобы не обращаться со словом `evaluation` слишком свободно. Он полезен как точка, где неделя перестает быть только про benchmarks и начинает обсуждать, **что именно модель может распознавать в eval-like context**.
 
+## Эпистемический статус и как на него смотреть
+Это концептуально-терминологический post, а не empirical paper. Его сила не в новых данных, а в том, что он очищает definitions и делает разговор об `evaluation awareness` более operational.
+
+## На какие вопросы источник помогает отвечать
+- Что вообще можно считать `evaluation`, если смотреть на ситуацию глазами модели?
+- Почему определения через `intent`, `benchmark-likeness` и `consequences` не совпадают?
+- Чем `evaluation awareness` отличается от `consequence awareness`?
+- Какие surface features модели plausibly detect лучше, чем человеческие намерения?
+
 ## Краткое содержание
 Текст построен как последовательный разбор нескольких интуитивных определений слова `evaluation`. Сначала Иванов рассматривает идею “evaluation — это взаимодействие, в котором мы хотим что-то узнать о модели”, затем более узкую версию через **primary intent**, а потом еще одну линию через **consequences** для модели или разработчиков. Для каждого варианта автор показывает, почему он плохо работает как operational definition: люди и в deployment тоже обновляют beliefs о моделях, `intent` смешан и плохо читается из prompt, а последствия могут радикально различаться при одном и том же surface interaction. На этом фоне пост предлагает более полезное разложение проблемы на несколько осей — `intent`, `benchmark-likeness` и `consequences` — и отдельно различает `evaluation awareness` и `consequence awareness`. Итоговый вывод специально сделан приземленным: современные модели, вероятно, распознают не абстрактную “сущность оценки”, а набор surface features, historically correlated with benchmark-like or unusual environments.
+
+## Как читать источник быстро
+- Если нужен only core clarification, читай candidate definitions plus objections to each of them.
+- Если важен практический takeaway, сосредоточься на финальном decomposition into `intent`, `benchmark-likeness` and `consequences`.
+- Если вопрос про модельное распознавание eval context, не пропускай concluding move про surface features and benchmark-like environments.
+
+## Что источник утверждает прямо
+- Определения `evaluation` через intent, consequences и benchmark-likeness не совпадают и дают разные operational predictions.
+- `Evaluation awareness` и `consequence awareness` стоит различать, а не использовать как взаимозаменяемые labels.
+- Модели plausibly detect surface features of benchmark-like environments better than human intent.
+- Для research on awareness нужна decomposition along multiple axes rather than one essentialized definition of evaluation.
 
 ## Что здесь особенно важно
 - **Определение влияет на исследование.** Пока неясно, что такое evaluation, трудно и говорить об `evaluation awareness`.
@@ -21,6 +41,9 @@
 - **Модель не обязана читать человеческие намерения.** Ей может хватать более простых статистических признаков среды.
 - **Нужно различать `evaluation awareness` и `consequence awareness`.** Это один из самых полезных anchors текста.
 - **Текст очищает терминологию.** Он полезен не за счет нового benchmark, а за счет того, что делает разговор про awareness более точным.
+
+## Интерпретация для курса
+Для курса этот пост важен как operational cleanup. Он позволяет обсуждать awareness без лишней мистики: не “понимает ли модель, что ее проверяют?”, а “какие признаки eval-like context она реально может научиться распознавать и почему это ломает интерпретацию behavior?”.
 
 ## Что это добавляет к теме недели
 Этот источник превращает общий скепсис недели в более конкретный механизм ошибки. После него “behavior on eval may be misleading” уже не звучит мистически: становится понятно, что модель может реагировать на узнаваемый формат, а не на реальную safety-critical суть ситуации. В этом смысле текст очень хорошо связывает Hubinger, Barnett и prompt-level failure modes.

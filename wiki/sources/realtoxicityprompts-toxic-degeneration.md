@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это важный практический контекст для benchmark design вокруг toxicity. Источник нужен, чтобы помнить: в generative settings сам объект измерения сложнее, чем в classifier setup, а toxicity benchmark должен учитывать prompt distribution, generation regime и происхождение training data.
 
+## Эпистемический статус и как на него смотреть
+Это empirical dataset-and-benchmark paper about generative toxicity, а не просто paper про detox methods. Его лучше читать как пример того, как harm measurement меняется, когда вместо classification мы оцениваем continuations and generation dynamics.
+
+## На какие вопросы источник помогает отвечать
+- Чем generative toxicity evaluation отличается от classifier-style toxicity measurement?
+- Зачем нужен `RealToxicityPrompts` и что именно он делает измеримым?
+- Как prompt distribution, pretraining data and decoding interact in toxicity outcomes?
+- Почему detector tools and toxicity labels сами становятся частью benchmark design?
+
 ## Краткое содержание
 Paper сначала ставит проблему `neural toxic degeneration`: language models могут продолжать нейтральные или слабо токсичные prompts токсичным текстом. Затем авторы создают `RealToxicityPrompts`, большой набор из 100K естественных web prompts с toxicity scores, чтобы систематически оценивать эту склонность. После построения dataset работа показывает, что популярные pretrained models действительно систематически уходят в токсичные generations и что вероятность токсичного continuation связана не только с prompt toxicity, но и с характером pretraining corpora. Дальше paper сравнивает разные controllable generation / detoxification approaches и показывает, что часть методов помогает, но безопасного универсального решения нет. В конце авторы переходят к более широкому выводу: benchmark design для toxicity должен учитывать и limits of detector tools вроде Perspective API, и социально нагруженный характер самих toxicity labels.
+
+## Как читать источник быстро
+- Если нужен main benchmark idea, читай problem setup and the construction of `RealToxicityPrompts`.
+- Если вопрос про mechanism, переходи к results linking prompt toxicity, pretraining data and generation behavior.
+- Если важен evaluation-methodology layer, не пропускай discussion of detector limits and socially loaded toxicity labels.
+
+## Что источник утверждает прямо
+- Pretrained language models могут уходить в toxic continuations даже от relatively innocuous prompts.
+- `RealToxicityPrompts` создается как large prompt set with toxicity scores for systematic evaluation of this behavior.
+- Toxic degeneration зависит не только от prompt toxicity, но и от pretraining data and generation dynamics.
+- Detector tools and toxicity labels имеют собственные limits, поэтому measurement layer здесь тоже non-neutral.
 
 ## Что здесь особенно важно
 - **Generative toxicity** — это не то же самое, что classifier toxicity.
 - **Prompt dataset** сам по себе становится частью benchmark design.
 - **Pretraining data** влияет на measured toxicity не меньше, чем decoding-time tricks.
 - **Detox methods** помогают частично, но не дают fail-safe guarantee.
+
+## Интерпретация для курса
+Для курса этот paper важен как напоминание, что harm benchmark в generative setting не сводится к “подсчитать долю токсичных ответов”. Здесь нужно отдельно думать о prompt distribution, detector choice и том, что именно benchmark принимает за harm evidence.
 
 ## Что это добавляет к теме недели
 Этот paper расширяет week-03 от benchmark design в абстрактном смысле к конкретному generative harm setting. Он полезен как пример того, что benchmark для risk evaluation нужно строить так, чтобы он отражал реальный interaction between prompts, training data and generation procedure, а не только удобно считаемый score.

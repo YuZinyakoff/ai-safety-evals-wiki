@@ -12,8 +12,29 @@
 ## Зачем источник в базе
 Это опорный текст недели для статистической части evals. Он нужен, чтобы не читать benchmark score как самодостаточный результат и помнить, что language model evaluation надо рассматривать как эксперимент с неопределенностью, sampling assumptions и ограниченной мощностью.
 
+## Эпистемический статус и как на него смотреть
+Это methodological statistics paper, а не очередной benchmark result paper. Его лучше читать как попытку привить LLM evals нормальную experimental discipline, а не как набор формул ради формул.
+
+## На какие вопросы источник помогает отвечать
+- Почему benchmark score лучше понимать как estimate, а не verdict?
+- Когда нужен `paired analysis`, а когда хватает unpaired comparison?
+- Как `standard error`, `confidence intervals`, `power` и `MDE` входят в LLM eval practice?
+- Что меняется, если вопросы clustered или repeated runs добавляют дополнительную структуру шума?
+
 ## Краткое содержание
 Статья Miller устроена как попытка перенести обычную статистическую дисциплину на LLM evals. В начале paper задает общую рамку: evaluation questions стоит мыслить как выборку из более широкой `super-population`, а значит score сам по себе — это estimate, а не self-explanatory truth. Затем автор шаг за шагом разбирает базовый statistical toolkit: `standard error`, `confidence intervals` и различие между `unpaired` и `paired analysis` для сравнения моделей. После этого paper добавляет практические extensions: clustered questions, variance reduction через resampling и next-token probabilities, а в финальной части переходит к `power analysis` и `minimum detectable effect` как инструментам планирования eval до запуска. За счет такой структуры текст полезен не только как набор формул, но и как более строгий стандарт чтения benchmark results.
+
+## Как читать источник быстро
+- Если нужен главный сдвиг, читай opening sections on `super-population` and why point estimates are insufficient.
+- Если задача про model comparison, переходи к `paired` versus `unpaired` analysis.
+- Если нужен planning layer, концентрируйся на sections про `power analysis` and `minimum detectable effect`.
+- Если benchmark setup richer than iid questions, не пропускай blocks on clustering and variance reduction.
+
+## Что источник утверждает прямо
+- LLM evaluation results should be interpreted as statistical estimates with uncertainty, not self-explanatory facts.
+- `Paired analysis` often yields stronger and more appropriate comparisons when models answer the same questions.
+- Sample size, repeats and dependence structure all materially affect what conclusions the data support.
+- Good eval practice includes planning around power and minimum detectable effect before expensive runs, not only after them.
 
 ## Что здесь особенно важно
 - **Point estimate почти всегда недостаточен.**
@@ -21,6 +42,9 @@
 - **`n` и `K`** уменьшают uncertainty по-разному и не взаимозаменяемы.
 - **Power analysis** нужен до запуска expensive eval, а не только после.
 - **Error bars** не делают benchmark идеальным, но хотя бы ограничивают силу вывода тем, что данные реально поддерживают.
+
+## Интерпретация для курса
+В логике курса этот paper важен не как урок статистики ради статистики. Он повышает technical bar for reading benchmarks at all: after Miller, single-number reading starts looking not merely crude, but methodologically unserious for many practical evaluation claims.
 
 ## Что это добавляет к теме недели
 Этот paper переводит разговор недели из режима “какие benchmark scores мы получили?” в режим “какой вывод из этих scores вообще оправдан?”. Он особенно хорошо работает в связке с notebook, потому что там идеи статьи operationalize на `MMLU`, `EvalLog`, `DataFrame`, `confidence intervals` и `paired tests`. Для повторения курса это одна из самых полезных страниц недели, если нужно поднять technical bar без потери общей логики.

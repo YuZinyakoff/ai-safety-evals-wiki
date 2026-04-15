@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это самый строгий антихайповый текст недели про `LLM-as-a-judge`. Он нужен, чтобы не спутать факт “judge иногда полезен” с более сильным и часто подразумеваемым claim “judge почти решает проблему масштабируемой оценки frontier-моделей”.
 
+## Эпистемический статус и как на него смотреть
+Это theory-plus-empirics critique of judge-based evaluation at the frontier, а не anti-judge manifesto. Его полезно читать как paper про statistical ceiling judge-debiasing, а не как отрицание любой полезности automated judges.
+
+## На какие вопросы источник помогает отвечать
+- Почему high agreement judge'а с ground truth не гарантирует cheap scalable evaluation?
+- Что authors называют структурным limit judge-based debiasing at the frontier?
+- Когда proxy judgments помогают меньше, чем интуитивно обещает hype?
+- Как empirical results on MMLU and MT-Bench соотносятся с theoretical claim?
+
 ## Краткое содержание
 Paper формализует ситуацию, в которой model-as-judge дает дешевые proxy scores, а human / expert labels остаются дорогим ground truth. Сначала авторы показывают, что judge bias может серьезно искажать rankings, даже если agreement judge'а выглядит высоким. Затем работа вводит debiasing setup, близкий к `prediction-powered inference`: небольшое количество ground-truth labels используется для корректировки большого числа cheap proxy judgments. После этого paper приходит к главному теоретическому результату: когда judge model не лучше evaluated model, correlation between proxy and ground truth не позволяет сэкономить больше чем примерно вдвое по объему ground-truth data. В финале авторы проверяют это эмпирически на MMLU и MT-Bench и показывают, что на практике выигрыш часто еще скромнее.
+
+## Как читать источник быстро
+- Если нужен главный результат, читай setup judge/proxy versus ground truth and the statement of the two-times limit.
+- Если интересует mechanism, смотри sections on bias, proxy-ground-truth correlation and the debiasing setup.
+- Если нужен reality check, не пропускай empirical validation on MMLU and MT-Bench.
+
+## Что источник утверждает прямо
+- Высокий agreement proxy judge'а с ground truth сам по себе не гарантирует cheap scalable evaluation.
+- В debiasing setup authors получают главный результат: если judge model не лучше evaluated model, выигрыш по числу дорогих ground-truth labels ограничен примерно двукратным фактором.
+- Frontier evaluation особенно сложна, потому что оцениваемая модель может быть сильнее judge model.
+- Empirical results на MMLU и MT-Bench согласуются с теоретическим claim и показывают, что практический выигрыш часто еще меньше.
 
 ## Что здесь особенно важно
 - **Agreement rate** сам по себе ничего надежного не гарантирует о usefulness judge'а.
 - **Debiasing** помогает, но не отменяет structural limit frontier evaluation.
 - **Proxy scores** легко выглядят дешевыми и удобными, но их bias model-dependent.
 - **Frontier case** принципиально сложнее, потому что judged model может быть лучше judge model.
+
+## Интерпретация для курса
+Для курса этот paper важен как строгий антихайповый corrective к judge optimism. Он помогает удерживать дисциплину вывода: `LLM-as-a-judge` иногда полезен как proxy, но это совсем не то же самое, что “judge решает проблему frontier evaluation”.
 
 ## Что это добавляет к теме недели
 Этот paper делает разговор о `LLM-as-a-judge` заметно трезвее. Если MT-Bench paper показывает, почему judge-based evaluation выглядит привлекательной, то здесь становится ясно, почему эта привлекательность резко падает именно там, где оценка особенно нужна: на frontier и в tight model comparisons.

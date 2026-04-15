@@ -11,8 +11,22 @@
 ## Зачем источник в базе
 Это самая исследовательски-направленная часть цикла. Она полезна не как готовый standard, а как пример того, как проблема methodology может переводиться в более конкретную research agenda. В отличие от первых двух лекций, здесь центр тяжести уже не в critique current practice, а в попытке очертить возможный объект исследования.
 
+## Эпистемический статус и как на него смотреть
+Это exploratory research-framing lecture, а не settled theory of eval methodology. Ее лучше читать как источник hypotheses and research directions about ontology, goals and operationalization.
+
+## На какие вопросы источник помогает отвечать
+- Почему улучшение eval methodology может упираться не только в protocol quality, но и в object definition?
+- Что значит говорить о цели ИИ как о pattern on outcomes?
+- Почему benchmark and eval themselves encode ontology?
+- Какие research questions появляются, если относиться к operationalization как к central bottleneck?
+
 ## Краткое содержание
 Лекция сначала коротко собирает предпосылки: предпарадигмальное состояние AI safety и evals, значение эмпирики и общий потенциал evals для накопления знаний. Затем она сужает разговор до двух связок: `central alignment problem` и `ontology identification problem`. После этого появляется основная прикладная линия: если говорить о цели ИИ не как о loss function и не как о внутреннем представлении, а как о паттерне на исходах, то нужно понять, как такой паттерн операционализировать и что именно можно измерять как свидетельство goal-directedness или aimability. В финальных слайдах лекция уже напрямую переводит это в language of evals: `eval` как способ зафиксировать паттерн, `benchmark` как конкретная онтология, prompting/fine-tuning как интерфейс управления, и список исследовательских вопросов, которые из этого следуют.
+
+## Как читать источник быстро
+- Если нужен conceptual jump, читай slides on ontology identification and the different senses of “goal”.
+- Если важен methodological claim, переходи к the move from patterns on outcomes to what evals can actually operationalize.
+- Если нужен project-idea layer, смотри final slides where the lecture translates ontology questions into eval research questions.
 
 ## Что источник утверждает прямо
 - Для прикладных исследований безопасности ИИ особенно важно не смешивать разные значения слова "цель": reward/loss, внутреннее представление цели и паттерн на исходах.

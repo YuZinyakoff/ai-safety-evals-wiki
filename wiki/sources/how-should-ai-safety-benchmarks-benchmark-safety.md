@@ -12,6 +12,15 @@
 ## Зачем источник в базе
 Это самый технически насыщенный и самый предметный текст недели. Он нужен как строгая критика того, почему многие текущие safety benchmarks не выдерживают сильных claims о model safety и deployment readiness. Через него удобно перейти от общего разговора про benchmark design к более жесткому разговору про normative and sociotechnical nature of safety.
 
+## Эпистемический статус и как на него смотреть
+Это не consensus standard и не исчерпывающий handbook по safety evaluation. Это review-plus-framework paper: authors делают scoping review, выделяют recurring failure modes и предлагают design checklist. Читать его лучше как сильную рабочую рамку для critique и review safety benchmark'ов, а не как закрытый набор окончательных правил.
+
+## На какие вопросы источник помогает отвечать
+- Чем safety benchmark отличается от ordinary capability benchmark?
+- Какие failure modes чаще всего делают safety benchmark epistemically слабым?
+- Почему `construct coverage`, `risk quantification` и `measurement validity` надо держать вместе, а не по отдельности?
+- Как превратить critique benchmark'а в более операциональный checklist review?
+
 ## Краткое содержание
 Статья начинается с постановки вопроса: что вообще делает safety benchmarking особым видом benchmark design. Авторы противопоставляют обычные capability benchmarks и safety benchmarks, показывая, что последние имеют нормативный и социотехнический характер. Затем paper делает scoping review 210 AI safety benchmarks и выделяет три основные зоны слабости: `construct coverage`, `risk quantification` и `measurement validity`. После этого работа переходит от диагноза к инженерной рамке и формулирует десять рекомендаций `R1–R10`, сгруппированных по этим трем модулям. В конце авторы превращают рекомендации в практический checklist и даже прогоняют через него конкретный benchmark-case, чтобы показать, как такая критика выглядит на практике.
 
@@ -30,6 +39,12 @@
 
 ## Интерпретация для курса
 Для логики курса этот источник делает первый и самый важный шаг недели: он показывает, что `AI safety benchmark` — это не просто "benchmark на safety topic", а отдельный measurement problem с более высокой epistemic нагрузкой. Именно через него становится видно, почему финальная неделя курса уходит от обычной логики leaderboard и переходит к разговорам о high-stakes measurement.
+
+## Как читать источник быстро
+- Если нужен общий frame, читай `abstract`, `introduction`, `conclusion` и sections, где authors объясняют отличие safety benchmark'ов от ordinary benchmark'ов.
+- Если нужен диагностический слой, концентрируйся на трех модулях: `construct coverage`, `risk quantification` и `measurement validity`.
+- Если нужен operational takeaway, смотри блок с рекомендациями `R1–R10` и финальный checklist / case analysis.
+- Если важно оценить, насколько critique grounded, не пропускай sections про scoping review design и ограничения самих authors.
 
 ## Что стоит запомнить при повторении
 - **Safety benchmark должен документировать blind spots, а не притворяться полным safety verdict.**
@@ -50,4 +65,5 @@
 - [weeks/week-05](../weeks/week-05.md)
 - [sources/we-need-a-science-of-evals](we-need-a-science-of-evals.md)
 - [syntheses/reliable-ai-safety-evals](../syntheses/reliable-ai-safety-evals.md)
+- [syntheses/reading-course-sources](../syntheses/reading-course-sources.md)
 - [concepts/benchmarking](../concepts/benchmarking.md)

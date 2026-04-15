@@ -11,8 +11,22 @@
 ## Зачем источник в базе
 Это практическая опора недели. Ноутбук нужен не ради готовых результатов, а как точка, где разговор про evals превращается в воспроизводимый workflow. Его ценность в том, что он делает маленькие engineering choices видимыми и обсуждаемыми.
 
+## Эпистемический статус и как на него смотреть
+Это учебный notebook-scaffold, а не finished empirical study. Его полезно читать как guided tour по тому, где в реальном eval pipeline появляются dataset, prompt, solver, scorer и logs.
+
+## На какие вопросы источник помогает отвечать
+- Как `Inspect AI` собирает базовый eval из `dataset -> solver -> scorer`?
+- Где prompt and scorer choices начинают влиять на measurement еще до всякой статистики?
+- Зачем смотреть логи, если есть итоговый score?
+- Как даже учебный benchmark быстро превращается в набор design assumptions?
+
 ## Краткое содержание
 Ноутбук устроен как постепенный tutorial, который наращивает evaluation workflow шаг за шагом. В начале он проходит через setup и первый “hello world” запуск, чтобы показать базовую механику `Inspect AI`. Затем материал переходит к устройству `Task`: как задаются `dataset`, `solver` и `scorer`, как работают `system_message`, `prompt_template`, `chain_of_thought`, `multiple_choice` и простые scoring patterns. После этого tutorial двигается к более содержательным упражнениям: собственные single-choice и multiple-choice tasks, работа с metadata, несколько корректных ответов и мини-эксперимент про `position bias` в benchmark settings. Отдельный слой ноутбука — `inspect view` и просмотр логов, чтобы не сводить eval к одному числу. Это не большой research artifact, а учебный scaffold, который показывает, из каких конкретных инженерных решений собирается даже самый базовый eval.
+
+## Как читать источник быстро
+- Если нужен быстрый first pass, смотри setup, sections про `Task`, затем блоки про prompt/scorer choices и `inspect view`.
+- Если важен engineering layer, концентрируйся на упражнениях с single-choice / multiple-choice tasks, metadata и scoring patterns.
+- Если хочется использовать notebook как anti-score reminder, не пропускай log inspection и position-bias exercise.
 
 ## Что здесь особенно важно
 - **`Task` как единица анализа.** Это хороший способ мыслить eval не как “один запуск модели”, а как явно собранный pipeline.

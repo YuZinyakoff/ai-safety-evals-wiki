@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это важное уточнение к более раннему optimism around `LLM-as-a-judge`. Источник нужен, чтобы добавить correctness-heavy perspective: preference-style agreement еще не гарантирует, что judge будет надежна там, где качество ответа зависит от domain knowledge и factual correctness.
 
+## Эпистемический статус и как на него смотреть
+Это empirical critique of correctness-oriented judging, а не общая критика preference-style Arena setups. Его полезно читать как paper про то, где automated judging упирается в competence and reference quality.
+
+## На какие вопросы источник помогает отвечать
+- Почему `LLM-as-a-judge` без human grounding особенно слаб в correctness-heavy domains?
+- Что дают `BFF-Bench` и `VERDICTS` как testbed?
+- Насколько важны quality and correctness of reference answers?
+- Как связана надежность judge'а с его собственной competence on the underlying task?
+
 ## Краткое содержание
 Paper строит собственную empirical base для проверки correctness-oriented judging. Сначала авторы создают `BFF-Bench` и `VERDICTS`: набор сложных business / finance вопросов, human-written references и expert judgments correctness. Затем работа сравнивает разные automated grading methods и отдельно исследует judge models в single и pairwise settings. Главный анализ идет через очень конкретный вопрос: что происходит с agreement judge'а, если у него нет правильной reference answer? Вывод paper в том, что judge сохраняет высокое agreement с экспертами главным образом там, где сам способен решить underlying question, а human-written reference сильно улучшает результат. Дальше работа показывает, что тип reference и ее correctness важнее, чем просто stylistic resemblance, и что human verification остается критичным даже при использовании сильных judge models.
+
+## Как читать источник быстро
+- Если нужен main correction to the hype, читай setup of correctness-heavy judging and the role of `BFF-Bench` / `VERDICTS`.
+- Если важен mechanism, переходи к comparisons with and without human-grounded reference answers.
+- Если нужен practical takeaway, концентрируйся на conclusion that judge competence and reference quality dominate reliability.
+
+## Что источник утверждает прямо
+- В correctness-heavy domains judge reliability сильно зависит от того, умеет ли judge сам решать underlying task.
+- `BFF-Bench` и `VERDICTS` вводятся как специальные testbeds для проверки correctness-oriented automated judging.
+- Human-grounded correct references существенно повышают agreement judge'а с экспертами.
+- Без human grounding automated judging не производит “бесплатные trustworthy labels” и быстро теряет reliability.
 
 ## Что здесь особенно важно
 - **Correctness-heavy evaluation** резко строже, чем preference-heavy judging.
 - **Reference quality** влияет на judge сильнее, чем многие ожидают.
 - **Judge competence on underlying task** — не второстепенный фактор, а почти главный.
 - **Human grounding** остается необходимой частью trustworthy judging.
+
+## Интерпретация для курса
+Для курса это важное дополнение к MT-Bench-style optimism. Текст помогает развести два режима, которые легко смешать: preference judging и correctness judging имеют разный evidential standard, и переносить успех одного режима на другой нельзя автоматически.
 
 ## Что это добавляет к теме недели
 Источник хорошо закрывает week-03 со стороны limits of judge-based evaluation. Он показывает, что benchmark design для `LLM-as-a-judge` должен включать не только prompt and rubric choices, но и question of human grounding, reference correctness и domain fit judge model.

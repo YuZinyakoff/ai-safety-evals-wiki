@@ -29,6 +29,12 @@
 - Если нужен **финальный corrective на уровень research strategy**, смотри [You and Your Research](../sources/you-and-your-research.md) и [Research Taste](../concepts/research-taste.md).
 - Если нужен **межисточниковый вывод недели**, переходи к [Reliable AI Safety Evals](../syntheses/reliable-ai-safety-evals.md).
 
+## Если у тебя конкретный вопрос
+- Если вопрос звучит как **“что именно safety benchmark должен мерить, чтобы говорить о safety, а не просто о capability?”**, начни с [How Should AI Safety Benchmarks Benchmark Safety?](../sources/how-should-ai-safety-benchmarks-benchmark-safety.md).
+- Если вопрос звучит как **“какими признаками вообще должна обладать зрелая evaluation discipline?”**, читай [We Need A Science of Evals](../sources/we-need-a-science-of-evals.md).
+- Если вопрос звучит как **“почему benchmark output нельзя напрямую читать как probability of real-world harm?”**, снова возвращайся к [How Should AI Safety Benchmarks Benchmark Safety?](../sources/how-should-ai-safety-benchmarks-benchmark-safety.md), а затем уточняй общую рамку через [We Need A Science of Evals](../sources/we-need-a-science-of-evals.md).
+- Если вопрос звучит как **“как не соскользнуть в удобные, но неважные proxy-проблемы?”**, открывай [You and Your Research](../sources/you-and-your-research.md).
+
 ## Картина недели
 Week-05 полезно читать как финальное сужение стандарта. Сначала safety benchmark paper показывает, что обычная benchmark logic плохо переносится на безопасность: здесь нужно думать не только о наборе задач, но и о normative constructs, severity, uncertainty и deployment relevance. Затем Apollo расширяет этот тезис до уровня поля: если evals служат основанием для real-world decisions, они должны проходить maturation от art-like craft к более строгой дисциплине. Наконец, Хэмминг поднимает разговор еще выше и напоминает, что даже правильные standards не спасут поле, если исследователи систематически работают над задачами, которые легко измерять, а не над задачами, которые действительно важны.
 

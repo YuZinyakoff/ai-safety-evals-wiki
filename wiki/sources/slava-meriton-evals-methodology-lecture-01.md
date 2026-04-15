@@ -11,8 +11,22 @@
 ## Зачем источник в базе
 Эта лекция полезна как самый широкий вход в вопрос "почему вообще методология evals должна быть задачей AI safety". Она почти не обсуждает benchmark recipes и вместо этого строит фон: что именно делает AI safety трудной областью, почему здесь особенно ощущается нехватка теории и почему улучшение качества эмпирической проверки может быть асимметрично полезным вкладом.
 
+## Эпистемический статус и как на него смотреть
+Это lecture-style framing source, а не formal paper. Его полезно читать как broad motivation for why eval methodology matters in AI safety at all, before descending into benchmark protocols.
+
+## На какие вопросы источник помогает отвечать
+- Почему проблема методологии evals вообще оказывается AI-safety-relevant?
+- Как нехватка теории, сложность объекта и скорость capability progress связаны с measurement bottlenecks?
+- Почему improvement of eval methodology можно рассматривать как leverage point for safety work?
+- Чем эта framing-рамка отличается от локальной критики одного benchmark'а?
+
 ## Краткое содержание
 Лекция начинается не с evals, а с более общего safety-контекста: экзистенциальные риски, hard bits of alignment, отсутствие общей теории интеллекта и ситуация `AI are grown, not built`. Дальше из этого строится главный диагноз: в AI safety есть и трудность самой предметной области, и проблема скорости, при которой capability progress опережает понимание. Во второй части слайды переходят к вопросу "что вообще можно делать", и там проблема методологии evals появляется как один из способов увеличить эффективность safety-работы. Ход лекции поэтому такой: сначала показать, почему задача safety в принципе трудна, а потом встроить улучшение eval methodology в более общую стратегию уменьшения рисков.
+
+## Как читать источник быстро
+- Если нужен frame, смотри opening slides on AI safety difficulty, weak theory and `AI are grown, not built`.
+- Если важен leverage claim, переходи к переходу от general safety diagnosis к eval methodology as one intervention.
+- Если нужен course-level takeaway, держи в фокусе not benchmark details, but epistemic throughput of safety work.
 
 ## Что источник утверждает прямо
 - AI safety сталкивается с unusually тяжелой комбинацией: нет зрелой общей теории, системы плохо понятны, а многие эффекты в ИИ не имеют готовых аналогов в других областях.

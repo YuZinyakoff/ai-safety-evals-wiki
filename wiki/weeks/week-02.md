@@ -30,6 +30,12 @@
 - Если нужен **взгляд beyond benchmarks**, открывай [survey](../sources/cao-generalizable-evaluation-llm-era.md), [benchmarking](../concepts/benchmarking.md), [evaluation generalization](../concepts/evaluation-generalization.md) и [synthesis](../syntheses/benchmarking-beyond-single-scores.md).
 - Если нужен **landscape-wide каталог**, переходи к [Awesome LLM Eval](../sources/awesome-llm-eval.md).
 
+## Если у тебя конкретный вопрос
+- Если вопрос звучит как **“что именно я вообще пытаюсь измерить: model property или contextual harm/usefulness?”**, начни с [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md).
+- Если вопрос звучит как **“как честно читать benchmark score, uncertainty и difference between models?”**, сначала иди в [Miller](../sources/miller-adding-error-bars-to-evals.md), потом в [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md).
+- Если вопрос звучит как **“почему даже аккуратный benchmark может плохо generalize beyond its suite?”**, читай [Generalizable Evaluation survey](../sources/cao-generalizable-evaluation-llm-era.md).
+- Если вопрос звучит как **“где быстро посмотреть landscape benchmarks и tools, но не спутать это с готовым judgment?”**, используй [Awesome LLM Eval](../sources/awesome-llm-eval.md) как карту, а не как финальный ответ.
+
 ## Картина недели
 Если собрать week-02 в одну линию, получится такой ход. Сначала материалы уточняют, что разные evaluation setups отвечают на разные вопросы: одно дело — измерять outputs самой модели, другое — оценивать downstream usefulness или harm in context. Затем неделя делает benchmark result статистически “тяжелее”: score перестает быть просто числом и становится estimate с uncertainty, paired structure, power limits и design assumptions. Наконец, survey beyond benchmarks показывает, что даже аккуратно посчитанный benchmark result не снимает проблемы coverage, contamination и bounded evaluation practice. Notebook по `Inspect AI` нужен здесь затем, чтобы все эти принципы превратились в конкретный workflow, а не остались на уровне красивых формулировок.
 

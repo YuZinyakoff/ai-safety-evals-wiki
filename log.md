@@ -131,3 +131,24 @@
 - В `raw/shared/` нормализованы три `.pptx`-презентации цикла о проблемах методологии evals в контексте AI safety и рядом созданы sidecar-файлы `.pptx.md`
 - Созданы 3 shared source pages, 1 новый concept page `eval-methodology` и 1 synthesis про методологию evals как общий слой поверх недельного курса
 - Обновлены `wiki/home.md`, `index.md`, `wiki/concepts/evals.md` и `wiki/concepts/science-of-evals.md`, чтобы shared-материалы были видимы в общей навигации
+
+## 2026-04-14 | refactor | question-driven source pages
+- В `AGENTS.md` и `README.md` уточнен desired pattern для `wiki/sources/`: source page должна помогать не только recall, но и question-driven reading через секции про вопросы, быстрый маршрут по тексту и эпистемический статус источника
+- Добавлена synthesis-страница `wiki/syntheses/reading-course-sources.md` как wiki-level guide про то, как читать course papers и как использовать source pages без линейного перечитывания
+- В `wiki/home.md` и `index.md` добавлен маршрут к новому reading guide; счетчик syntheses обновлен до 8
+- Репрезентативные theory source pages `Barnett-Thiergart`, `HELM`, `ECBD` и `How Should AI Safety Benchmarks Benchmark Safety?` усилены секциями `Эпистемический статус`, `На какие вопросы источник помогает отвечать` и `Как читать источник быстро`
+
+## 2026-04-14 | refactor | question-driven backfill for remaining sources
+- Remaining source pages по `week-01..05` и `shared` усилены в той же логике: добавлены секции `Эпистемический статус и как на него смотреть`, `На какие вопросы источник помогает отвечать` и `Как читать источник быстро`
+- Backfill сделан не только для theory-pages, но и для paper-like extras, resource pages, lecture pages и notebook source pages, чтобы `wiki/sources/` работали как question-driven entry layer ко всему корпусу
+- Теперь новый reading-oriented pattern покрывает не только образцовые страницы, но и весь набор source pages базы
+
+## 2026-04-15 | refactor | explicit source-vs-interpretation split and notebook normalization
+- На ключевых методологических source pages явнее разведены `Что источник утверждает прямо` и `Интерпретация для курса`, чтобы facts из источника не смешивались с wiki-level framing
+- Такой explicit split усилен для опорных текстов про eval foundations, safety-eval taxonomy, statistical rigor, benchmark ecosystem, elicitation и agent reliability
+- Notebook source pages `week-02..04` доведены до полного notebook-стандарта: добавлены `Цель ноутбука`, `Setup`, `Данные / задача / модели / scorer` и `Результаты и ограничения`
+
+## 2026-04-15 | refactor | extra-page split and week routing
+- Явное разведение `Что источник утверждает прямо` и `Интерпретация для курса` расширено на paper-heavy `extra` source pages по week-01, week-03 и week-04, чтобы applied papers и research notes тоже было легче читать без смешения source claims и wiki framing
+- Hub-pages `wiki/weeks/week-01..05.md` усилены секциями `Если у тебя конкретный вопрос`, которые маршрутизируют к нужным source pages не только по теме недели, но и по типу вопроса пользователя
+- Тем самым week pages стали лучше работать как navigation layer к уже обновленным question-driven source pages

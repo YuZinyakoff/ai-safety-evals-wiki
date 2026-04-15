@@ -29,6 +29,14 @@
 - Если нужен **методический взгляд на reachable capabilities и на риск underestimation**, переходи к [METR elicitation guidelines](../sources/metr-guidelines-capability-elicitation.md) и [capability elicitation](../concepts/capability-elicitation.md).
 - Если нужен **практический слой недели**, смотри [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-04.md), [ReAct](../sources/react-synergizing-reasoning-acting.md), [SWE-bench](../sources/swe-bench-real-world-github-issues.md) и [Measuring AI agent autonomy in practice](../sources/measuring-ai-agent-autonomy-practice.md).
 
+## Если у тебя конкретный вопрос
+- Если вопрос звучит как **“что вообще измерять у агента помимо task success?”**, начни с [LLM Agents Survey](../sources/evaluation-benchmarking-llm-agents-survey.md) и [AI Agent Reliability](../sources/science-ai-agent-reliability.md).
+- Если вопрос звучит как **“как не занизить reachable capability плохой процедурой?”**, сначала иди в [METR elicitation guidelines](../sources/metr-guidelines-capability-elicitation.md), потом в [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-04.md).
+- Если вопрос звучит как **“как scaffolding pattern сам меняет agent behavior?”**, открывай [ReAct](../sources/react-synergizing-reasoning-acting.md) и [LLM Agent Survey](../sources/llm-agent-survey-methodology-applications-challenges.md).
+- Если вопрос звучит как **“что именно измеряет coding-agent benchmark и где он может быть unfair?”**, пройди [SWE-bench](../sources/swe-bench-real-world-github-issues.md) вместе с [SWE-bench Verified](../sources/swe-bench-verified.md).
+- Если вопрос звучит как **“как autonomy выглядит уже в deployment, а не только в lab eval?”**, смотри [Measuring AI agent autonomy in practice](../sources/measuring-ai-agent-autonomy-practice.md) и [METR Resources](../sources/metr-autonomy-evaluation-resources.md).
+- Если вопрос звучит как **“что за benchmark context лежит под notebook на math tasks?”**, открой [MATH dataset](../sources/math-dataset.md).
+
 ## Картина недели
 Если собрать week-04 в одну линию, получится такой ход. Сначала survey от SAP раскладывает область agent evaluation на `what to evaluate` и `how to evaluate`, показывая, что у агентов измерять нужно не только поведение, но и capabilities, reliability и safety. Затем Princeton-текст делает следующий шаг и показывает, почему single success metric скрывает свойства, важные для deployment: consistency, robustness, predictability и safety. После этого METR добавляет еще один уровень критики: даже если метрика выбрана осмысленно, плохая процедура оценки может сильно занизить реальные capabilities агента. Дополнительные материалы и notebook заземляют этот разговор: ReAct показывает, как scaffolding меняет agent behavior, SWE-bench и SWE-bench Verified показывают сложность agentic benchmark design, а Anthropic и METR дают более практический взгляд на autonomy evals и post-deployment monitoring.
 

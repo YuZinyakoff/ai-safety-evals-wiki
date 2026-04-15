@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это самый философски нагруженный, но содержательно полезный extra-text недели. Он нужен, чтобы придать week-03 более глубокий язык для разговора о capability claims: почему слова вроде `reasoning`, `theory of mind` или `morality` сами по себе создают сильные интерпретации и требуют более строгой validity framework.
 
+## Эпистемический статус и как на него смотреть
+Это exploratory theoretical paper, который заимствует язык psychometrics и philosophy of measurement для LLM benchmarks. Его полезно читать как попытку поднять планку capability claims, а не как уже settled doctrine для всего поля.
+
+## На какие вопросы источник помогает отвечать
+- Почему capability labels вроде `reasoning` не стоит принимать за сами измеренные constructs?
+- Что такое `nomological network` и зачем она нужна benchmark interpretation?
+- Чем nomological account of construct validity отличается от causal и inferential alternatives?
+- Как более строгий validity language может ограничивать слишком свободные capability claims?
+
 ## Краткое содержание
 Paper начинает с критики распространенной практики: researchers приписывают LLM human-like capabilities на основании benchmark results без достаточной теории того, что benchmark вообще измеряет. Затем автор сравнивает три account of construct validity — causal, inferential и nomological — и утверждает, что для текущего LLM research лучше всего подходит именно `nomological account`, потому что она не требует слишком сильных онтологических обязательств, но при этом дает substantive framework. Во второй части paper автор применяет эту рамку к reasoning capability: обсуждает task benchmarks, content validity, convergent и discriminant analysis, а также риск `theoretical–empirical mismatch`, когда observed benchmark relations плохо согласуются с заявленной network of capabilities. Итоговый вывод: capability benchmarks требуют не только scores, но и richer theoretical web, которая ограничивает допустимые интерпретации.
+
+## Как читать источник быстро
+- Если нужен main claim, читай sections comparing the three validity accounts and the defense of a nomological approach.
+- Если важен application layer, переходи к reasoning benchmark case and discussion of `theoretical–empirical mismatch`.
+- Если статья кажется слишком abstract, держи вопрос не “какая теория лучшая”, а “какой additional evidence нужен, чтобы capability label был оправдан”.
+
+## Что источник утверждает прямо
+- Capability labels вроде `reasoning` не становятся валидными автоматически только потому, что benchmark так назван.
+- Автор сравнивает causal, inferential и nomological accounts of construct validity и утверждает, что для LLM capability benchmarks сейчас особенно полезен именно nomological account.
+- Более сильный construct claim требует evidence from relations between tasks, constructs, convergent and discriminant patterns, not just one benchmark score.
+- `Theoretical–empirical mismatch` выступает как важный warning sign: observed relations могут плохо поддерживать заявленную capability story.
 
 ## Что здесь особенно важно
 - **Construct labels** автоматически тянут за собой сильные человеческие интерпретации.
 - **Task score** сам по себе не равен capability claim.
 - **Nomological network** задает более строгий язык для связи benchmark'ов и capability vocabulary.
 - **Theoretical–empirical mismatch** — полезная идея для критики слишком смелых capability claims.
+
+## Интерпретация для курса
+Для курса этот paper полезен как способ ужесточить язык вывода. Он помогает различать “benchmark показал performance on tasks of type X” и “мы получили evidence for capability Y”, то есть прямо повышает требовательность к тому, что именно benchmark score вообще лицензирует.
 
 ## Что это добавляет к теме недели
 Источник углубляет week-03 до уровня language of claims. HELM, ECBD и Benchmark Lottery в основном обсуждают benchmark design и ecosystem design, а этот paper добавляет еще один вопрос: что вообще нужно, чтобы слова про “capability” и “reasoning” были хоть сколько-то научно оправданными.

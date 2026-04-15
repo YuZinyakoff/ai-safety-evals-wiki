@@ -15,6 +15,7 @@
 - Если нужно **восстановить логику курса по порядку**, иди через [week-01](weeks/week-01.md), [week-02](weeks/week-02.md), [week-03](weeks/week-03.md), [week-04](weeks/week-04.md) и [week-05](weeks/week-05.md).
 - Если нужен **быстрый проход по всей дуге курса**, начинай с [From Evals To Reliable AI Safety Evals](syntheses/course-arc-from-evals-to-reliable-safety.md).
 - Если нужен **общий слой про методологию evals вне логики отдельных недель**, смотри [Eval Methodology in AI Safety](syntheses/eval-methodology-in-ai-safety.md).
+- Если нужно **быстро понять, как читать course papers и зачем source pages вообще устроены так, а не иначе**, открывай [Как читать источники курса](syntheses/reading-course-sources.md).
 - Если нужен **общий словарь и карта области**, открывай [Evals](concepts/evals.md).
 - Если хочется быстро вернуть **главные межисточниковые выводы**, смотри [Scope, Failure Modes, And Practice Of Evals](syntheses/evals-scope-and-limits.md), [Benchmarking Beyond Single Scores](syntheses/benchmarking-beyond-single-scores.md), [Benchmark Design, Evidence, And Incentives](syntheses/benchmark-design-evidence-and-incentives.md), [Agent Evals Beyond Task Success](syntheses/agent-evals-beyond-task-success.md) и [Reliable AI Safety Evals](syntheses/reliable-ai-safety-evals.md).
 - Если нужен **практический слой**, удобнее всего заходить через [Inspect AI](concepts/inspect-ai.md) и notebook source pages первых четырех недель.
@@ -28,7 +29,7 @@
 ## Что уже собрано
 
 - Все 5 недель курса уже имеют полноценные hub-pages.
-- В `wiki/` сейчас 41 source page, 32 concept page и 7 syntheses.
+- В `wiki/` сейчас 41 source page, 32 concept page и 8 syntheses.
 - Для ключевых arXiv-материалов там, где это было полезно, preferred raw уже выбран как clipped Markdown / HTML с `PDF` и `TeX Source` в backup-слое.
 - По `week-01..04` есть и теоретический, и практический слой; `week-05` остается более методологической и завершающей.
 - В `raw/shared/` теперь есть и вне-недельный слой: цикл лекций про методологию evals как отдельную AI safety задачу.

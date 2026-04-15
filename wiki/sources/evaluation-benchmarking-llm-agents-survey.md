@@ -12,8 +12,22 @@
 ## Зачем источник в базе
 Это главный обзорный текст недели. Он нужен как карта problem space: какие свойства агентов вообще хотят измерять, какие evaluation processes для этого используют и почему agent evaluation пока остается фрагментированной областью. Без этой страницы week-04 легко распадается на набор отдельных тем вроде reliability, elicitation и autonomy.
 
+## Эпистемический статус и как на него смотреть
+Это broad survey and taxonomy paper, а не нормативный standard for agent evaluation. Его полезно читать как map of the problem space: он помогает ориентироваться в `what to evaluate` and `how to evaluate`, но не закрывает methodological disputes.
+
+## На какие вопросы источник помогает отвечать
+- Что именно вообще можно считать объектом agent evaluation?
+- Почему authors разводят `what to evaluate` и `how to evaluate`?
+- Какие evaluation objectives beyond task success становятся центральными для агентов?
+- Почему context, tooling and interaction mode нельзя считать merely implementation details?
+
 ## Краткое содержание
 Статья устроена как широкий survey по области agent evaluation. Сначала авторы объясняют, почему стандартные LLM evals плохо переносятся на агента, который действует в динамической среде, использует tools и может идти по длинной траектории. Затем paper вводит двухмерную taxonomy: по оси `evaluation objectives` обсуждаются `behavior`, `capabilities`, `reliability` и `safety`; по оси `evaluation process` — `interaction modes`, `datasets and benchmarks`, `metrics`, `tooling` и `contexts`. После этого текст проходит по каждому блоку подробнее: чем task completion отличается от оценки planning, tool use, memory или multi-agent collaboration; почему для агентов важны both offline and online evaluation; какие benchmark families и tooling ecosystems уже существуют; и какие enterprise-specific constraints вроде RBAC, compliance и long-term interaction field пока плохо закрывает. Paper больше полезен как карта и vocabulary, чем как законченный стандарт.
+
+## Как читать источник быстро
+- Если нужен общий frame, читай introduction and the two-axis taxonomy around `evaluation objectives` and `evaluation process`.
+- Если вопрос про concrete agent properties, переходи к sections on behavior, capabilities, reliability and safety.
+- Если нужен practical benchmarking layer, смотри parts on benchmarks, metrics, tooling and context constraints.
 
 ## Что здесь особенно важно
 - **Что оценивать** и **как оценивать** здесь разделены явно, и это помогает не путать target of evaluation с самой процедурой.

@@ -29,6 +29,14 @@
 - Если нужен **взгляд на benchmark как на силу, которая формирует само поле**, переходи к [The Benchmark Lottery](../sources/benchmark-lottery.md), [Hardt](../sources/hardt-emerging-science-ml-benchmarks.md) и [benchmark lottery](../concepts/benchmark-lottery.md).
 - Если нужен **прикладной хвост недели**, смотри [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-03.md), [Jigsaw bias paper](../sources/jigsaw-unintended-bias-text-classification.md), [RealToxicityPrompts](../sources/realtoxicityprompts-toxic-degeneration.md) и [LLM-as-a-judge](../concepts/llm-as-a-judge.md).
 
+## Если у тебя конкретный вопрос
+- Если вопрос звучит как **“какую общую рамку benchmark evaluation authors предлагают?”**, начни с [HELM](../sources/holistic-evaluation-language-models.md).
+- Если вопрос звучит как **“как связать capability claim, task design и evidence chain более строго?”**, иди в [ECBD](../sources/evidence-centered-benchmark-design-nlp.md) и затем в [Construct validity paper](../sources/construct-validity-nomological-networks.md).
+- Если вопрос звучит как **“почему benchmark влияет не только на score, но и на траекторию всего поля?”**, читай [The Benchmark Lottery](../sources/benchmark-lottery.md) вместе с [Hardt](../sources/hardt-emerging-science-ml-benchmarks.md).
+- Если вопрос звучит как **“как documentation and reporting влияют на корректное использование benchmark?”**, открой [BenchmarkCards](../sources/benchmarkcards-llm-benchmarks.md).
+- Если вопрос звучит как **“когда `LLM-as-a-judge` реально помогает, а где у него жесткие limits?”**, пройди связку [MT-Bench / Chatbot Arena](../sources/llm-as-a-judge-mt-bench-chatbot-arena.md), [Limits at the frontier](../sources/limits-scalable-evaluation-frontier.md) и [No Free Labels](../sources/no-free-labels-llm-as-a-judge.md).
+- Если вопрос звучит как **“как benchmark design проявляется в toxicity and harm evaluation?”**, смотри [Jigsaw bias paper](../sources/jigsaw-unintended-bias-text-classification.md), [RealToxicityPrompts](../sources/realtoxicityprompts-toxic-degeneration.md) и [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-03.md).
+
 ## Картина недели
 Если собрать week-03 в одну линию, получится такой ход. Сначала HELM показывает benchmark не как один тест, а как систему standardized comparison по многим сценариям и метрикам. Затем ECBD делает эту систему более строгой и спрашивает, за счет каких именно design decisions benchmark вообще собирает evidence о нужной способности. После этого The Benchmark Lottery добавляет еще один уровень критики: benchmark влияет не только на локальный вывод о модели, но и на то, что сообщество вообще начинает считать прогрессом. Дополнительные материалы и notebook переводят этот разговор в более прикладной слой, где видно, что те же вопросы всплывают в bias evaluation, toxicity evaluation, `LLM-as-a-judge` и benchmark documentation.
 

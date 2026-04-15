@@ -12,14 +12,37 @@
 ## Зачем источник в базе
 Это важный supporting text для week-03, потому что он переводит разговор о benchmark design в разговор о benchmark documentation. Источник нужен, чтобы не потерять еще один слой зрелости eval practice: прозрачность claims и limits должна жить не только в голове автора benchmark'а, но и в стандартизированном описании.
 
+## Эпистемический статус и как на него смотреть
+Это design-and-documentation proposal paper с user-study layer, а не benchmark result paper. Его полезно читать как попытку сделать benchmark use более auditably transparent через standardized documentation.
+
+## На какие вопросы источник помогает отвечать
+- Почему benchmark documentation влияет на качество использования benchmark'а почти так же, как сам benchmark?
+- Что именно должно входить в `BenchmarkCard`?
+- Как such documentation помогает benchmark selection and interpretation?
+- Какие ограничения и gaming risks возникают у standardized benchmark cards?
+
 ## Краткое содержание
 Paper начинает с проблемы: benchmark'ов много, их metadata scattered, и пользователю сложно понять, какой benchmark вообще подходит под его задачу и как интерпретировать результаты. Затем авторы предлагают `BenchmarkCards` как documentation framework, который стандартизирует benchmark objectives, methodology, data sources, assumptions, limitations и related benchmarks. После описания template paper переходит к user studies с benchmark users и benchmark authors, чтобы проверить две вещи: полезность такой формы документации и адекватность автоматически сгенерированных cards. В финале работа обсуждает результаты этих studies, идеи community-driven repository и ограничения самого подхода, включая необходимость поддерживать cards актуальными и риск того, что подробное описание limitations может облегчать gaming.
+
+## Как читать источник быстро
+- Если нужен общий смысл, читай problem statement and the proposed `BenchmarkCards` template.
+- Если интересует practical value, переходи к user-study sections with benchmark users and authors.
+- Если нужен критический reading, не пропускай discussion of maintenance costs, stale metadata and gaming concerns.
+
+## Что источник утверждает прямо
+- Авторы утверждают, что benchmark users часто плохо видят intended use, assumptions, data sources и limitations, потому что эта информация рассыпана по paper, appendix и external resources.
+- `BenchmarkCards` предлагаются как стандартизированный template для documentation benchmark objectives, methodology, data provenance, limitations и related benchmarks.
+- User studies в paper показывают, что structured cards помогают и users, и authors лучше понимать benchmark selection and interpretation.
+- Авторы отдельно признают costs and risks такого подхода: cards нужно поддерживать актуальными, а подробная transparency иногда может облегчать gaming.
 
 ## Что здесь особенно важно
 - **Documentation** влияет на benchmark selection почти так же, как сам benchmark.
 - **Metadata scattered across papers** — реальная практическая проблема, а не мелочь.
 - **“Similar benchmarks”** и explicit limitations важны для сравнения и правильной интерпретации.
 - **Стандартизация документации** помогает видеть blind spots benchmark ecosystem.
+
+## Интерпретация для курса
+Для курса эта статья важна как расширение benchmark design до documentation and governance layer. Она помогает не смешивать два вопроса: “benchmark хорошо устроен?” и “benchmark хорошо описан так, чтобы другой человек не сделал из него слишком сильный вывод?”.
 
 ## Что это добавляет к теме недели
 `BenchmarkCards` показывает, что benchmark design не заканчивается на dataset, metric и leaderboard. Есть еще слой “как этот benchmark будет прочитан и использован другими”. Для week-03 это важное продолжение тем transparency, validity и evidence communication.

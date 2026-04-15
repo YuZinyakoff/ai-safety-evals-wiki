@@ -30,6 +30,13 @@
 - Если нужно вернуть **механизмы, из-за которых eval ломается**, переходи к [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md), [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) и [Specification Gaming](../sources/deepmind-specification-gaming.md).
 - Если нужен **практический слой**, открывай [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md) и [concepts/inspect-ai](../concepts/inspect-ai.md).
 
+## Если у тебя конкретный вопрос
+- Если вопрос звучит как **“что вообще считать eval и зачем они нужны?”**, сначала иди в [Apollo](../sources/apollo-starter-guide-evals.md), а потом при необходимости уточняй словарь через [concepts/evals](../concepts/evals.md).
+- Если вопрос звучит как **“какие safety-claims реально можно и нельзя делать по наблюдаемому поведению?”**, читай [Hubinger](../sources/hubinger-understanding-based-safety-evals.md) вместе с [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md).
+- Если вопрос звучит как **“как модель вообще может распознавать, что она на eval?”**, начни с [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md).
+- Если вопрос звучит как **“почему одна и та же задача дает разный observed capability при другом phrasing?”**, открывай [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) и затем [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md), чтобы увидеть инженерный слой.
+- Если вопрос звучит как **“что если проблема вообще не в измерении, а в плохо выбранной цели?”**, смотри [Specification Gaming](../sources/deepmind-specification-gaming.md).
+
 ## Картина недели
 Если собрать материалы в одну линию, получится такой ход. Сначала evals вводятся как почти неизбежный инструмент для понимания моделей и улучшения решений вокруг них. Затем неделя быстро показывает, что сам факт тестирования еще не дает сильного safety claim: модель можно недораскрыть, можно случайно измерить поведение только в benchmark-like контексте, можно получить результат, который чувствителен к phrasing prompt, и можно вообще оптимизировать не ту цель, которая нас реально интересует. Практический notebook важен в этой картине потому, что он переводит разговор из уровня абстрактных оговорок в уровень конкретного workflow.
 

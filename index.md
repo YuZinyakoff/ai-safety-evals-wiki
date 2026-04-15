@@ -12,6 +12,7 @@
 ## Быстрые маршруты
 - Если нужен **весь курс в одном тексте**, начинай с [wiki/syntheses/course-arc-from-evals-to-reliable-safety](wiki/syntheses/course-arc-from-evals-to-reliable-safety.md).
 - Если нужен **вход в методологию evals как общекурсовую тему**, смотри [wiki/syntheses/eval-methodology-in-ai-safety](wiki/syntheses/eval-methodology-in-ai-safety.md), [wiki/concepts/eval-methodology](wiki/concepts/eval-methodology.md) и три shared-лекции Славы Меритона.
+- Если нужен **режим чтения source pages через вопрос, а не линейный пересказ**, смотри [wiki/syntheses/reading-course-sources](wiki/syntheses/reading-course-sources.md).
 - Если нужен **вход в limits of evals**, смотри [wiki/weeks/week-01](wiki/weeks/week-01.md), [wiki/concepts/evals](wiki/concepts/evals.md) и [wiki/syntheses/evals-scope-and-limits](wiki/syntheses/evals-scope-and-limits.md).
 - Если нужен **вход в benchmarking и статистическую интерпретацию**, открывай [wiki/weeks/week-02](wiki/weeks/week-02.md), [wiki/concepts/statistical-rigor-in-evals](wiki/concepts/statistical-rigor-in-evals.md) и [wiki/syntheses/benchmarking-beyond-single-scores](wiki/syntheses/benchmarking-beyond-single-scores.md).
 - Если нужен **вход в benchmark design и validity**, переходи к [wiki/weeks/week-03](wiki/weeks/week-03.md), [wiki/concepts/benchmark-design](wiki/concepts/benchmark-design.md) и [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md).
@@ -20,7 +21,7 @@
 - Если нужен **практический слой**, смотри [wiki/concepts/inspect-ai](wiki/concepts/inspect-ai.md) и notebook source pages первых четырех недель.
 
 ## Покрытие
-- В базе сейчас 5 week hub-pages, 41 source pages, 32 concept page и 7 syntheses.
+- В базе сейчас 5 week hub-pages, 41 source pages, 32 concept page и 8 syntheses.
 - Все внутренние Markdown-ссылки резолвятся; orphan pages в `wiki/` сейчас нет.
 - `raw/` и `wiki/` уже разведены по ролям: `raw` хранит исходники, `wiki` хранит compounding knowledge layer.
 
@@ -39,6 +40,7 @@
 - [wiki/syntheses/benchmark-design-evidence-and-incentives](wiki/syntheses/benchmark-design-evidence-and-incentives.md) — week-03 synthesis про benchmark design, evidence chain и incentives.
 - [wiki/syntheses/agent-evals-beyond-task-success](wiki/syntheses/agent-evals-beyond-task-success.md) — week-04 synthesis про capability, reliability и procedure in agent evals.
 - [wiki/syntheses/reliable-ai-safety-evals](wiki/syntheses/reliable-ai-safety-evals.md) — week-05 synthesis про safety benchmarks, science of evals и research taste.
+- [wiki/syntheses/reading-course-sources](wiki/syntheses/reading-course-sources.md) — how-to-read guide про question-driven reading и то, как должны работать source pages.
 
 ## Concept Pages
 

@@ -12,8 +12,22 @@
 ## Зачем источник в базе
 Это самый удобный текст недели для перехода от critique отдельных benchmark practices к critique зрелости поля в целом. Он не дает готовый стандарт, но хорошо показывает, почему разговор об evals уже нельзя вести только как разговор о полезных инженерных трюках и benchmark recipes.
 
+## Эпистемический статус и как на него смотреть
+Это field-building memo and programmatic essay, а не formal consensus document. Его полезно читать как попытку назвать conditions of maturity for evals as a discipline, а не как окончательный blueprint такой дисциплины.
+
+## На какие вопросы источник помогает отвечать
+- Почему policy-relevant evals требуют более зрелой дисциплины, чем today’s ad hoc practice?
+- Что authors имеют в виду под `Science of Evals`?
+- Какие maturity questions должна уметь держать хорошая evaluation field?
+- Почему prompt sensitivity, elicitation instability and weak trustworthiness of results являются field-level проблемами?
+
 ## Краткое содержание
 Текст начинается с мотивации: evals уже участвуют в safety-related decisions и потенциально будут связаны с law and policy, а значит, их результатам придется выдерживать гораздо более сильную внешнюю проверку. Дальше Apollo показывает на примере prompt sensitivity и elicitation instability, почему нынешняя практика часто больше похожа на искусство, чем на зрелую научную дисциплину. После этого пост вводит идею `Science of Evals` через аналогию с maturation process других инженерных полей, особенно авиации: от exploratory phase к informal norms и дальше к standards that are ready for law. Затем текст формулирует вопросы, на которые должна уметь отвечать зрелая evaluation field: что именно измеряется, какое coverage у eval, насколько robust и replicable результаты, возможны ли статистические guarantees и как результаты current evals переносятся на future systems. Финальный блок уже работает как field-building memo: перечисляет ранние примеры полезных meta-evaluation работ и формулирует open questions вокруг conceptual clarity и trustworthiness of results.
+
+## Как читать источник быстро
+- Если нужен overall frame, читай motivation around policy relevance and the analogy to maturation in other engineering fields.
+- Если интересует diagnosis, концентрируйся на examples like prompt sensitivity and elicitation instability.
+- Если нужен research-agenda layer, смотри the list of maturity questions plus the concluding examples of meta-evaluation work.
 
 ## Что источник утверждает прямо
 - Evals уже достаточно важны для deployment и policy, чтобы к ним применялись более жесткие standards of scrutiny.
