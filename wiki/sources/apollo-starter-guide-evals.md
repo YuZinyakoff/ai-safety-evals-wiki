@@ -24,10 +24,16 @@
 ## Краткое содержание
 Текст устроен как стартовый обзор области. Сначала он отвечает на самый общий вопрос: **зачем evals вообще нужны** и почему они полезны как инструмент улучшения решений под неопределенностью. Затем источник последовательно раскладывает поле на несколько базовых distinctions: `red-teaming` и `benchmarking`, `capability evals` и `alignment evals`, а также более общую идею о том, что современные evals в основном работают как **behavioral measurements**. После этого статья делает важную оговорку про limits of behavior-only evidence и только затем переходит к практическому слою: кто такой evaluator, какие у него должны быть навыки и почему работа в evals почти всегда находится на стыке исследования, prompting, scaffolding и software engineering. За счет такой структуры текст работает не только как словарь, но и как первая карта области.
 
+## Структура материала
+- `Why work on evals?`: зачем evals нужны и какие ограничения у них есть уже на входе.
+- `What are model evaluations (evals)?`: distinctions between `red-teaming`, `benchmarking`, `capability evals` и `alignment evals`.
+- `What skills are helpful for evaluators?`: prompting, steering, `SFT` / `RL`, scaffolding, tool use, research и engineering skills.
+- `Potential career paths`: где этот набор навыков применяется на практике.
+
 ## Как читать источник быстро
-- Если нужен быстрый вход в тему, хватит opening sections про `why evals`, distinctions between eval types и короткой оговорки про behavioral limits.
-- Если нужен только operational vocabulary, концентрируйся на блоках про `red-teaming`, `benchmarking`, `capability evals` и `alignment evals`.
-- Если важен practical layer, не пропускай sections про role of evaluator и skills around prompting, scaffolding и engineering.
+- Для первого прохода хватит `Why work on evals?` и `What are model evaluations (evals)?`: там собирается словарь и базовая карта поля.
+- Если нужен только operational vocabulary, иди прямо в `What are model evaluations (evals)?` и не расползайся по skills-блокам.
+- Если интересует роль evaluator'а как практики, читай `What skills are helpful for evaluators?` и затем быстро просматривай `Potential career paths`.
 
 ## Что источник утверждает прямо
 - Evals полезны прежде всего как инструмент улучшения решений под неопределенностью, а не как автоматическая safety guarantee.

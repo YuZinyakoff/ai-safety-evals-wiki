@@ -24,10 +24,17 @@
 ## Краткое содержание
 Статья представляет `MATH` как benchmark для challenging mathematical reasoning, где ответы требуют не только знания фактов, но и многошагового решения. Авторы обсуждают construction dataset, diversity of topics и difficulty relative to competition-style math. Для week-04 текст полезен в первую очередь не детальной empirical частью, а тем, что он объясняет природу benchmark, который затем используется в notebook через subset `MATH-500`.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем authors вообще предлагают `MATH`.
+- `2 Related Work`: контекст относительно других math and reasoning benchmarks.
+- `3 Datasets`: `MATH` и `AMPS`, их состав, topic diversity и difficulty.
+- `4 Experiments`: setup, performance analysis и разбор step-by-step solutions.
+- `5 Conclusion` и appendices: ограничения, дополнительные dataset details и human evaluation notes.
+
 ## Как читать источник быстро
-- Если нужен только benchmark context, читай dataset motivation plus discussion of topic diversity and difficulty.
-- Если вопрос про relevance to agents, смотри, почему exact-answer math tasks still demand multi-step reasoning.
-- Если нужен bridge to the notebook, держи в фокусе how subset choice changes what the eval is really measuring.
+- Если нужен только benchmark context, читай `1 Introduction` и `3 Datasets`.
+- Если вопрос про relevance to agents and reasoning, переходи к `4 Experiments`, особенно к части про step-by-step solutions.
+- Если нужен bridge к notebook и task selection, держи в фокусе `3 Datasets` плюс начало `4 Experiments`: именно там видно, что меняет subset choice.
 
 ## Что источник утверждает прямо
 - `MATH` benchmark ориентирован на competition-style multi-step mathematical reasoning, а не на ordinary fact lookup or short-form QA.

@@ -24,10 +24,19 @@
 ## Краткое содержание
 Статья начинается с постановки проблемы через реальные agent failures и через contrast с safety-critical engineering: в авиации, атомной энергетике и других высокорисковых областях надежность давно понимается как многомерное свойство, а agent evals все еще часто сводятся к mean task success. Затем paper вводит четыре reliability dimensions — `consistency`, `robustness`, `predictability`, `safety` — и подробно объясняет, почему каждое из них operationally важно. После этого авторы предлагают 12 concrete metrics: от outcome/trajectory/resource consistency и prompt/environment/fault robustness до calibration, discrimination и consequence-aware safety scores. В экспериментальной части работа применяет этот framework к 14 agentic models на двух benchmark families и показывает ключевой empirical result: capability gains заметно опережают reliability gains. Финал текста важен тем, что он предлагает смотреть на reliability как на отдельный профиль, а не как на украшение вокруг accuracy.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем reliability для agents отделять от raw capability.
+- `2 A Cross-Domain Perspective of Reliability`: перенос vocabulary из safety-critical engineering.
+- `3 Operationalizing Reliability for AI Agents`: consistency, robustness, predictability, safety и aggregation.
+- `4 Experiments`: setup, main results и связь с real-world failures.
+- `5 Recommendations`, `6 Limitations`, `7 Conclusion`: что authors предлагают делать дальше.
+- Appendices: extended metric definitions, background и detailed protocols.
+
 ## Как читать источник быстро
-- Если нужен conceptual shift, читай motivation versus safety-critical engineering and the four reliability dimensions.
-- Если вопрос про measurement, переходи к the 12 proposed metrics and what each dimension is supposed to capture.
-- Если нужен empirical punchline, смотри experiments showing capability versus reliability divergence.
+- Если нужен conceptual shift, читай `1 Introduction` и `2 A Cross-Domain Perspective of Reliability`.
+- Если вопрос про measurement, основной раздел — `3 Operationalizing Reliability for AI Agents`.
+- Если нужен empirical punchline, переходи к `4 Experiments`, особенно к `Main Results` и `Connection to Real-World Failures`.
+- Если статья нужна как рабочий reference, возвращайся в appendices за деталями метрик и protocol design.
 
 ## Что источник утверждает прямо
 - Capability and reliability are distinct properties and should not be collapsed into one mean success score.

@@ -24,10 +24,17 @@
 ## Краткое содержание
 Survey устроен как попытка посмотреть на evaluation field уже не изнутри одного benchmark family, а на уровне всей evolving practice. Сначала авторы описывают, как классическая benchmark logic работала на более ранних этапах и почему `static benchmarks` долго были удобным default. Затем paper систематизирует основные pressure points LLM era: contamination, saturation, open-ended outputs, high cost of human judgment и growing mismatch между bounded tests и growing model capability. После этого обзор проходит по направлениям ответа: dynamic and time-aware benchmarks, richer task settings, automated evaluators вроде `LLMs-as-a-judge`, а также более широкая идея generalizable assessment across domains like knowledge, reasoning and coding. В финале survey поднимает главный structural question: как строить evaluation pipelines, которые успевают за scaling и дают выводы, generalizing better than today’s static suites.
 
+## Структура материала
+- `1 Introduction`: почему static benchmarks хуже работают в `LLM era`.
+- `2 Core Capabilities and Datasets`: карта capability slices от knowledge и reasoning до safety и general-purpose evaluation.
+- `3 Auto-evaluation`: dynamic benchmarks, automated dataset curation и evaluator design.
+- `4 Open Challenges and Future Directions`: где authors сами видят нерешенные проблемы generalizable evaluation.
+- `5 Conclusion`: сжатое сведение аргумента.
+
 ## Как читать источник быстро
-- Если нужен стратегический обзор, читай introduction и sections on why static benchmarks break in the LLM era.
-- Если интересуют responses, переходи к blocks про dynamic benchmarks, open-ended tasks and `LLM-as-a-judge`.
-- Если нужен слой research agenda, смотри conclusion и future-looking discussion around what it means for conclusions to generalize beyond a suite.
+- Если нужен стратегический обзор, читай `1 Introduction`, затем быстро просматривай `4 Open Challenges and Future Directions` и `5 Conclusion`.
+- Если интересует карта самих evaluation objects, основной блок — `2 Core Capabilities and Datasets`.
+- Если вопрос про responses to benchmark limits, иди в `3 Auto-evaluation`.
 
 ## Что здесь особенно важно
 - **Static benchmarks** полезны, но быстро сталкиваются с contamination, saturation и limited coverage.

@@ -24,10 +24,17 @@
 ## Краткое содержание
 Hardt начинает с очевидной критики benchmark'ов: narrow objectives, gaming, overfitting, weak transfer и ethical problems. Затем он задает более непривычный вопрос — в чем вообще был scientific case for benchmarks — и отвечает на него историческим наблюдением: такие benchmarks, как CIFAR-10 и ImageNet, долго давали surprisingly stable model rankings, а именно rankings, а не absolute scores, и были их главным scientific export. После этого текст переходит к LLM era и показывает, почему старая стабильность исчезает: training data uncontrollable, multitask aggregation нестабильна из-за social-choice-like trade-offs, а `LLM-as-a-judge` не снимает проблему на evaluation frontier. В финале автор призывает не выбрасывать benchmark'и, а строить более зрелую science of benchmarks.
 
+## Структура материала
+- Opening contrast: сначала идут сильные critique of benchmarks, а затем вопрос, почему benchmarks все-таки historically worked.
+- Historical block про ImageNet / CIFAR и раннюю benchmark era.
+- LLM-era departure: training on the internet, contamination / preparation effects и multitask aggregation instability.
+- Frontier evaluation block: `LLM as judge` и limits debiasing at the frontier.
+- Closing call for a more mature science of benchmarks.
+
 ## Как читать источник быстро
-- Если нужен краткий вывод в один проход, читай historical argument about why benchmarks once worked и contrast with the LLM era.
-- Если интересует failure mode, концентрируйся на ranking stability, contamination and multitask aggregation.
-- Если нужен broader relevance, не пропускай closing call for a more mature science of benchmarks.
+- Если нужен краткий вывод в один проход, читай opening contrast, затем historical block и closing call.
+- Если интересует failure mode, концентрируйся на LLM-era block про contamination, multitask aggregation и ranking instability.
+- Если нужен broader relevance, не пропускай финальный переход к `science of benchmarks`: это и есть point статьи.
 
 ## Что источник утверждает прямо
 - Историческая usefulness benchmark'ов частично объяснялась тем, что они долго давали относительно стабильные model rankings, even when absolute scores were less meaningful.

@@ -23,10 +23,17 @@
 ## Краткое содержание
 Лекция сначала коротко собирает предпосылки: предпарадигмальное состояние AI safety и evals, значение эмпирики и общий потенциал evals для накопления знаний. Затем она сужает разговор до двух связок: `central alignment problem` и `ontology identification problem`. После этого появляется основная прикладная линия: если говорить о цели ИИ не как о loss function и не как о внутреннем представлении, а как о паттерне на исходах, то нужно понять, как такой паттерн операционализировать и что именно можно измерять как свидетельство goal-directedness или aimability. В финальных слайдах лекция уже напрямую переводит это в language of evals: `eval` как способ зафиксировать паттерн, `benchmark` как конкретная онтология, prompting/fine-tuning как интерфейс управления, и список исследовательских вопросов, которые из этого следуют.
 
+## Структура материала
+- Opening setup: почему третья лекция уходит от общей методологии к теме `целей от 3 лица`.
+- `Часть 1. Подлежащие концепции и допущения`: предпарадигмальное состояние, роль evals, `central alignment problem`, `ontology identification problem`.
+- Средний блок про то, почему цель нельзя обсуждать вне онтологии и как сюда входят `goal misgeneralization` и specification problems.
+- `Операционализация понятия «цель»`: переход от философской рамки к eval language.
+- `Задача с точки зрения evals` и `Вопросы исследования`: превращение идеи в research agenda.
+
 ## Как читать источник быстро
-- Если нужен conceptual jump, читай slides on ontology identification and the different senses of “goal”.
-- Если важен methodological claim, переходи к the move from patterns on outcomes to what evals can actually operationalize.
-- Если нужен project-idea layer, смотри final slides where the lecture translates ontology questions into eval research questions.
+- Если нужен conceptual jump, читай `Часть 1. Подлежащие концепции и допущения`, особенно блоки `Central alignment problem` и `Ontology identification problem`.
+- Если важен methodological claim, переходи к `Причем здесь онтологии` и `Операционализация понятия «цель»`.
+- Если нужен project-idea layer, дочитывай `Задача с точки зрения evals` и `Вопросы исследования`: именно там лекция превращается в набор исследовательских вопросов.
 
 ## Что источник утверждает прямо
 - Для прикладных исследований безопасности ИИ особенно важно не смешивать разные значения слова "цель": reward/loss, внутреннее представление цели и паттерн на исходах.

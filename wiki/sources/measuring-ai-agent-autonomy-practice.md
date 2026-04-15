@@ -24,10 +24,17 @@
 ## Краткое содержание
 Anthropic анализирует миллионы human-agent interactions в Claude Code и public API, чтобы посмотреть, как фактически используются агенты. Текст сначала объясняет methodological difficulty: трудно даже operationalize, что считать агентом и как наблюдать за ним privacy-preserving способом. Затем работа вводит practical proxies for autonomy and risk и показывает несколько эмпирических паттернов: longest autonomous runs в Claude Code растут, опытные пользователи чаще дают auto-approve, но и чаще прерывают агента, а сами агенты нередко останавливаются и просят clarification. Далее paper показывает, что agentic activity уже появляется и в riskier domains, но пока в основном сосредоточена в software engineering. Финал текста важен рекомендациями: model developers и product developers должны вкладываться в post-deployment monitoring, uncertainty-aware behavior и tooling for oversight.
 
+## Структура материала
+- `Studying agents in the wild`: как authors operationalize autonomy proxies и из каких данных исходят.
+- Наблюдения про реальное использование: `working autonomously for longer`, `auto-approve / interrupt`, `pauses for clarification`.
+- `Agents are used in risky domains, but not yet at scale`: safety-relevant slice findings.
+- `Limitations` и `Looking ahead`: ограничения наблюдений и практические выводы.
+- `Appendix`: дополнительная методическая детализация.
+
 ## Как читать источник быстро
-- Если нужна основная эмпирическая картина, читай methodology for autonomy proxies и ключевые наблюдаемые паттерны использования.
-- Если важен safety angle, переходи к sections on interruption, oversight and riskier domains.
-- Если нужен практический вывод, не пропускай final recommendations on monitoring infrastructure and oversight tooling.
+- Если нужна основная эмпирическая картина, читай `Studying agents in the wild`, а затем три подряд observation sections про autonomy duration, auto-approve / interrupt и clarification pauses.
+- Если важен safety angle, переходи к `Agents are used in risky domains, but not yet at scale`.
+- Если нужен практический вывод, дочитывай `Limitations` и `Looking ahead`.
 
 ## Что источник утверждает прямо
 - Product telemetry можно использовать, чтобы operationalize proxies for autonomy and oversight in real deployments.

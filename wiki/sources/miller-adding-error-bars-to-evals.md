@@ -24,11 +24,19 @@
 ## Краткое содержание
 Статья Miller устроена как попытка перенести обычную статистическую дисциплину на LLM evals. В начале paper задает общую рамку: evaluation questions стоит мыслить как выборку из более широкой `super-population`, а значит score сам по себе — это estimate, а не self-explanatory truth. Затем автор шаг за шагом разбирает базовый statistical toolkit: `standard error`, `confidence intervals` и различие между `unpaired` и `paired analysis` для сравнения моделей. После этого paper добавляет практические extensions: clustered questions, variance reduction через resampling и next-token probabilities, а в финальной части переходит к `power analysis` и `minimum detectable effect` как инструментам планирования eval до запуска. За счет такой структуры текст полезен не только как набор формул, но и как более строгий стандарт чтения benchmark results.
 
+## Структура материала
+- `1 Introduction`: почему point estimates недостаточны и зачем evals нужны `error bars`.
+- `2 Analysis framework`: independent vs clustered questions.
+- `3 Variance reduction`: resampling, next-token probabilities и связанные tricks.
+- `4 Comparing models`: `unpaired` и `paired` analysis.
+- `5 Power analysis`: planning before running the evaluation.
+- `6 Conclusion` и appendices: clustered standard errors и sample-size details.
+
 ## Как читать источник быстро
-- Если нужен главный сдвиг, читай opening sections on `super-population` and why point estimates are insufficient.
-- Если задача про model comparison, переходи к `paired` versus `unpaired` analysis.
-- Если нужен planning layer, концентрируйся на sections про `power analysis` and `minimum detectable effect`.
-- Если benchmark setup richer than iid questions, не пропускай blocks on clustering and variance reduction.
+- Если нужен главный сдвиг, читай `1 Introduction` и затем `2 Analysis framework`.
+- Если задача про model comparison, иди прямо в `4 Comparing models`.
+- Если нужен planning layer, главный раздел — `5 Power analysis`.
+- Если benchmark setup richer than iid questions, не пропускай `2.2 Clustered questions` и appendices про clustered standard errors.
 
 ## Что источник утверждает прямо
 - LLM evaluation results should be interpreted as statistical estimates with uncertainty, not self-explanatory facts.

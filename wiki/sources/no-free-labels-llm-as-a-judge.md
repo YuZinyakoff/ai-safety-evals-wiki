@@ -24,10 +24,18 @@
 ## Краткое содержание
 Paper строит собственную empirical base для проверки correctness-oriented judging. Сначала авторы создают `BFF-Bench` и `VERDICTS`: набор сложных business / finance вопросов, human-written references и expert judgments correctness. Затем работа сравнивает разные automated grading methods и отдельно исследует judge models в single и pairwise settings. Главный анализ идет через очень конкретный вопрос: что происходит с agreement judge'а, если у него нет правильной reference answer? Вывод paper в том, что judge сохраняет высокое agreement с экспертами главным образом там, где сам способен решить underlying question, а human-written reference сильно улучшает результат. Дальше работа показывает, что тип reference и ее correctness важнее, чем просто stylistic resemblance, и что human verification остается критичным даже при использовании сильных judge models.
 
+## Структура материала
+- `Abstract`, `1 Introduction`, `2 Related Work`: постановка correction to `LLM-as-a-judge` hype.
+- `3 Datasets`: `BFF-Bench`, `(C)MT-Bench`, `VERDICTS`.
+- `4 Experimental Setup`: judgment tasks, judges, grading references, baselines.
+- `5 Results`: main empirical comparisons.
+- `6 Analysis`: разбор того, когда judges работают лучше или хуже.
+- `7 Discussion` и appendices: interpretation, prompts, annotator details и sensitivity checks.
+
 ## Как читать источник быстро
-- Если нужна основная коррекция к judge hype, читай setup of correctness-heavy judging and the role of `BFF-Bench` / `VERDICTS`.
-- Если важен mechanism, переходи к comparisons with and without human-grounded reference answers.
-- Если нужен практический вывод, концентрируйся на conclusion that judge competence and reference quality dominate reliability.
+- Если нужна основная коррекция к judge hype, читай `Abstract`, `1 Introduction` и затем `3 Datasets`, чтобы понять, о каких judgment tasks вообще идет речь.
+- Если важен mechanism, основной маршрут — `4 Experimental Setup` и `5 Results`.
+- Если нужен практический вывод, переходи к `6 Analysis` и затем дочитывай `7 Discussion`.
 
 ## Что источник утверждает прямо
 - В correctness-heavy domains judge reliability сильно зависит от того, умеет ли judge сам решать underlying task.

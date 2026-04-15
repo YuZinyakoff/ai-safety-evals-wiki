@@ -24,10 +24,17 @@
 ## Краткое содержание
 Текст построен как последовательный разбор нескольких интуитивных определений слова `evaluation`. Сначала Иванов рассматривает идею “evaluation — это взаимодействие, в котором мы хотим что-то узнать о модели”, затем более узкую версию через **primary intent**, а потом еще одну линию через **consequences** для модели или разработчиков. Для каждого варианта автор показывает, почему он плохо работает как operational definition: люди и в deployment тоже обновляют beliefs о моделях, `intent` смешан и плохо читается из prompt, а последствия могут радикально различаться при одном и том же surface interaction. На этом фоне пост предлагает более полезное разложение проблемы на несколько осей — `intent`, `benchmark-likeness` и `consequences` — и отдельно различает `evaluation awareness` и `consequence awareness`. Итоговый вывод специально сделан приземленным: современные модели, вероятно, распознают не абстрактную “сущность оценки”, а набор surface features, historically correlated with benchmark-like or unusual environments.
 
+## Структура материала
+- `Why I'm writing this`: зачем вообще понадобилось уточнять слово `eval`.
+- Серия candidate definitions: `Eval is what we call an eval`, `Eval is a study of a model`, `Maybe it's about primary intent`.
+- Переход к practical decomposition через `What about the consequences?`
+- Финальный блок `So what can models actually detect?`: про benchmark-like context и surface features.
+- `Takeaways`: сжатый вывод текста.
+
 ## Как читать источник быстро
-- Если нужен only core clarification, читай candidate definitions plus objections to each of them.
-- Если важен практический вывод, сосредоточься на финальном decomposition into `intent`, `benchmark-likeness` and `consequences`.
-- Если вопрос про модельное распознавание eval context, не пропускай concluding move про surface features and benchmark-like environments.
+- Если нужен only core clarification, читай подряд candidate-definition blocks от `Eval is what we call an eval` до `Maybe it's about primary intent`.
+- Если важен практический вывод, переходи к `What about the consequences?` и затем к `Takeaways`.
+- Если вопрос именно про то, как модель распознает eval context, сразу иди в `So what can models actually detect?`
 
 ## Что источник утверждает прямо
 - Определения `evaluation` через intent, consequences и benchmark-likeness не совпадают и дают разные operational predictions.

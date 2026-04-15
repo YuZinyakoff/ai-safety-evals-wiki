@@ -24,10 +24,16 @@
 ## Краткое содержание
 Paper устроен как полноценный benchmark work, а не как короткая заметка про prompt engineering. Сначала авторы мотивируют саму проблему: для одного и того же `information need` небольшие изменения phrasing могут заметно менять answerability, а значит prompt sensitivity стоит изучать как отдельную **measurement problem**. Затем они формализуют задачу `Prompt Sensitivity Prediction` и описывают построение датасета `PromptSET`: берут вопросы из `TriviaQA` и `HotpotQA`, генерируют для каждого набора близкие prompt variations, а затем фильтруют их по semantic similarity и качеству. После этого paper переходит к benchmark layer: сравниваются разные baselines, включая `LLM self-evaluation`, text-classification approaches и query performance prediction methods, чтобы понять, насколько хорошо они предсказывают, какая формулировка окажется answerable. Финальный вывод двоякий: prompt sensitivity действительно систематична и practically important, а существующие методы предсказания этой чувствительности пока довольно слабы. Для week-01 важно именно это: статья превращает интуицию “prompt matters” в отдельный объект измерения и анализа.
 
+## Структура материала
+- `1 Introduction`: почему prompt sensitivity важна как проблема measurement, а не только prompt engineering.
+- `2 Methodology`: как authors operationalize prompt sensitivity и строят benchmark.
+- `3 Experiments and Findings`: baselines, predictors и main empirical findings.
+- `4 Concluding Remarks`: ограничения и выводы для benchmark use.
+
 ## Как читать источник быстро
-- Если нужен core point, читай problem setup and dataset motivation around `information need` versus phrasing.
-- Если интересует benchmark layer, смотри sections про `PromptSET` construction and baselines.
-- Если нужен практический вывод для evals, не пропускай empirical result that current predictors remain weak and conclusions about measurement reliability.
+- Если нужен core point, читай `1 Introduction` и начало `2 Methodology`: там задается различие между `information need` и phrasing.
+- Если интересует benchmark layer, основное чтение — `2 Methodology` и затем `3 Experiments and Findings`.
+- Если нужен практический вывод для evals, не пропускай конец `3 Experiments and Findings` и `4 Concluding Remarks`.
 
 ## Что источник утверждает прямо
 - Небольшие изменения phrasing могут заметно менять answerability, even when the underlying information need is fixed.

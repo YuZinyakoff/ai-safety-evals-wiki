@@ -24,10 +24,17 @@
 ## Краткое содержание
 Это обзорный, но довольно хорошо структурированный текст о `specification gaming`. Сначала DeepMind вводит саму проблему через базовую интуицию: система может буквально выполнить objective и при этом не сделать того, что имел в виду человек. Затем статья проходит по нескольким характерным примерам — вроде `Lego stacking` и `Coast Runners` — чтобы показать, как agent exploit-ит loopholes в задаче или reward shaping. После этого текст расширяет рамку: проблема не сводится к одной reward function, а включает более широкий слой misspecification — hidden assumptions, simulator details, proxy metrics и even `reward tampering`. В заключительной части статья делает более общий вывод о том, что по мере усиления optimization pressure цена маленькой ошибки в specification растет, и кратко намечает направления ответа: better reward modeling, incentive design и более principled approaches to specifying desired outcomes.
 
+## Структура материала
+- Opening definition и первые case studies: что такое `specification gaming` и как proxy success расходится с intended outcome.
+- Контраст двух перспектив: benchmarking / RL success versus alignment failure.
+- Блок про то, почему специфицировать intent трудно и почему с ростом capabilities misspecification становится важнее.
+- Классы проблем: reward misspecification, learned reward / human feedback, simulator bugs и ложные assumptions.
+- Финальный блок про reward tampering и три открытые challenge, которыми текст заканчивается.
+
 ## Как читать источник быстро
-- Если нужен только core intuition, читай opening definition plus первые case studies: они уже показывают, как proxy success расходится с intended outcome.
-- Если интересуют механизмы, концентрируйся на переходе от reward hacking к более широкой misspecification story.
-- Если нужен практический вывод, посмотри финальный блок про mitigation directions и связь с broader objective design.
+- Если нужна только core intuition, читай opening definition и первые case studies: они уже делают главный тезис наглядным.
+- Если интересуют механизмы, переходи к середине текста, где статья идет от reward misspecification к simulator bugs и reward tampering.
+- Если нужен practical takeaway, дочитывай финальный summary с тремя challenges: там текст собирается обратно в design agenda.
 
 ## Что источник утверждает прямо
 - Systems can optimize proxy objectives while still missing intended outcomes.

@@ -24,11 +24,17 @@
 ## Краткое содержание
 Статья устроена как систематический разбор роли evals внутри более широкого `safety case`. Сначала авторы задают рамку вопроса: какие именно catastrophic-risk claims мы вообще хотим поддерживать с помощью evaluations. Затем они раскладывают обсуждение по двум осям — `existing vs future models` и `misuse vs autonomous / misaligned risks` — и на этой матрице показывают, где современные behavior-based evals действительно дают полезный сигнал. В средней части paper подробно разбираются ограничения: `under-elicitation`, зависимость от threat modeling, невозможность надежно получить **upper bounds** на capabilities, слабость precursor-style forecasting и особые трудности для autonomy / misalignment scenarios, где становятся важны sandbagging, hidden propensities и unknown unknowns. Финал текста важен тем, что он не остается на уровне критики: авторы обсуждают, какие compensating measures и governance moves вроде audits, conservative red lines и defense in depth имеют смысл даже при признании фундаментальных limits evals.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: постановка вопроса и различение типов claims, которые люди хотят получать от evals.
+- `2 What AI evaluations can do (given sufficient effort)`: lower bounds, misuse risk и другие задачи, где evals реально дают полезную информацию.
+- `3 What AI evaluations cannot do`: upper bounds, forecasting future capabilities, misalignment / autonomy и проблема `unknown unknowns`.
+- `4 Conclusion` и `5 Preliminary recommendations`: практические выводы про роль evals внутри larger safety stack.
+
 ## Как читать источник быстро
-- Если нужен только основной вывод, смотри `abstract`, `introduction` и `conclusion`: там уже видно, что paper строится вокруг different claim types, а не вокруг общего лозунга про limits.
-- Если нужен структурный frame, найди место, где авторы раскладывают discussion по осям `existing vs future models` и `misuse vs autonomy / misalignment`.
-- Если вопрос про то, почему `upper bounds` слабы, иди сразу в sections про `under-elicitation`, forecasting и limits of behavioral evidence.
-- Если нужен практический вывод, не пропускай финальные sections про compensating measures, governance и роль evals внутри larger safety stack.
+- Если нужен только основной вывод, достаточно `Abstract`, `1 Introduction` и `4 Conclusion`: там уже видно, что paper спорит не с evals вообще, а с чрезмерно сильными выводами из них.
+- Если нужен структурный frame, читай подряд `2 What AI evaluations can do...` и `3 What AI evaluations cannot do`: именно там проходит главная граница paper.
+- Если вопрос про слабость `upper bounds`, иди сразу в `3 What AI evaluations cannot do`, особенно в места про forecasting, autonomy / misalignment и limits of behavioral evidence.
+- Если нужен практический takeaway, добирай `5 Preliminary recommendations`.
 
 ## Что источник утверждает прямо
 - Current behavior-based evals сильнее поддерживают `lower bounds` на уже продемонстрированные capabilities, чем надежные `upper bounds`.

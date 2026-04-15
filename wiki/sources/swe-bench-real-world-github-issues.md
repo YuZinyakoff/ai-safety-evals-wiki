@@ -24,10 +24,18 @@
 ## Краткое содержание
 Статья вводит `SWE-bench` как benchmark из реальных GitHub issues и merged pull requests по 12 Python repositories. Сначала авторы объясняют, как собирают instances: issue text связывается с PR, тестами и repository snapshot. Затем paper формулирует task: агент получает issue description и codebase, генерирует patch, а итог оценивается execution-based через `FAIL_TO_PASS` и `PASS_TO_PASS` tests. Дальше работа показывает, что benchmark реалистичен, но сложен: нужен retrieval of relevant files, длинный context и способность менять несколько мест в большом репозитории. Empirical часть важна исторически: ранние модели решали лишь малую долю задач, даже при oracle retrieval. Для week-04 текст полезен как пример сильного agent benchmark с большим epistemic и engineering overhead.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: постановка benchmark problem.
+- `2 SWE-bench`: construction, task formulation и features of the benchmark.
+- `3 SWE-Llama`: baseline model adaptation to the benchmark.
+- `4 Experimental Setup`: retrieval approach, input format, models.
+- `5 Results`: main quantitative and qualitative findings.
+- `6 Related Work`, `7 Discussion` и appendices: broader context, limits и benchmark details.
+
 ## Как читать источник быстро
-- Если нужно определение задачи, читай dataset construction и benchmark protocol around issues, repos and tests.
-- Если важен evaluation layer, концентрируйся на execution-based verification with `FAIL_TO_PASS` and `PASS_TO_PASS`.
-- Если нужен reading с упором на ограничения, смотри discussion around retrieval difficulty, long context и harness overhead.
+- Если нужно определение задачи, читай `1 Introduction` и затем `2 SWE-bench`.
+- Если важен evaluation layer, не пропускай `2.1 Benchmark Construction`, `2.2 Task Formulation` и `Appendix A.3 Execution-Based Validation`.
+- Если нужен reading с упором на ограничения, переходи к `7 Discussion`, а затем при необходимости в appendices про retrieval and evaluation procedure.
 
 ## Что источник утверждает прямо
 - `SWE-bench` формулирует repository-scale coding task на основе реальных GitHub issues, pull requests, repository snapshots and tests.

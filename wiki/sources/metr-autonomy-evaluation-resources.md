@@ -24,10 +24,17 @@
 ## Краткое содержание
 Resource page описывает набор связанных компонентов для оценки potentially dangerous autonomous capabilities. Сначала идет `task suite`: задачи с human-time difficulty estimates, quality indicators и упором на domains, где frontier models уже сравнительно сильны. Затем описываются `guidelines for capability elicitation`, `task standard and workbench`, `example evaluation protocol` и исследовательский блок `measuring the impact of elicitation`. Важен общий смысл: METR пытается построить не просто benchmark, а целый measurement stack, где tasks, scaffolding, protocol and interpretation layer поддерживают друг друга.
 
+## Структура материала
+- `Task suite`: сами tasks, через которые METR предлагает измерять autonomy.
+- `Guidelines for capability elicitation`: как elicitation должна сопровождать evaluation.
+- `Task standard and “workbench”`: infrastructure layer и стандарт постановки задач.
+- `Example evaluation protocol`: образец полного evaluation flow.
+- `Measuring the impact of elicitation`: отдельный блок про то, как проверять эффект самого elicitation.
+
 ## Как читать источник быстро
-- Если нужна карта этого stack, просто пройди top-level components: task suite, guidelines, workbench, example protocol и elicitation research.
-- Если вопрос про methodology, смотри сначала links around elicitation and example evaluation protocol.
-- Если нужен инженерный слой, концентрируйся на task standard и workbench as infrastructure pieces.
+- Если нужна карта stack'а, пройди материал сверху вниз по его пяти top-level blocks.
+- Если вопрос про methodology, сначала смотри `Guidelines for capability elicitation` и `Example evaluation protocol`.
+- Если нужен инженерный слой, концентрируйся на `Task standard and “workbench”`, а затем возвращайся к `Task suite`.
 
 ## Что здесь особенно важно
 - **Task suite** здесь связан с difficulty estimates and human-time framing.

@@ -24,10 +24,18 @@
 ## Краткое содержание
 Paper формализует ситуацию, в которой model-as-judge дает дешевые proxy scores, а human / expert labels остаются дорогим ground truth. Сначала авторы показывают, что judge bias может серьезно искажать rankings, даже если agreement judge'а выглядит высоким. Затем работа вводит debiasing setup, близкий к `prediction-powered inference`: небольшое количество ground-truth labels используется для корректировки большого числа cheap proxy judgments. После этого paper приходит к главному теоретическому результату: когда judge model не лучше evaluated model, correlation between proxy and ground truth не позволяет сэкономить больше чем примерно вдвое по объему ground-truth data. В финале авторы проверяют это эмпирически на MMLU и MT-Bench и показывают, что на практике выигрыш часто еще скромнее.
 
+## Структура материала
+- `Abstract`, `1 Introduction`, `1.1 Our contributions`: постановка main claim.
+- `2 Formal setup and motivation`: judge bias и почему high agreement rate insufficient.
+- `3 Debiasing LLM judgments`: PPI, sample efficiency factor `tau` и theoretical limits.
+- `4 Going beyond binary evaluation`: расширение beyond the binary case плюс experiments on `MMLU`.
+- `5 Related work` и `6 Discussion`: positioning and implications.
+- Appendices: дополнительные proofs и experiment details.
+
 ## Как читать источник быстро
-- Если нужен главный результат, читай setup judge/proxy versus ground truth and the statement of the two-times limit.
-- Если интересует mechanism, смотри sections on bias, proxy-ground-truth correlation and the debiasing setup.
-- Если нужен reality check, не пропускай empirical validation on MMLU and MT-Bench.
+- Если нужен главный результат, читай `Abstract`, `1 Introduction` и затем `2 Formal setup and motivation`.
+- Если интересует mechanism, основной раздел — `3 Debiasing LLM judgments`.
+- Если нужен reality check, не пропускай `3.7 Experiments` и `4 Going beyond binary evaluation`.
 
 ## Что источник утверждает прямо
 - Высокий agreement proxy judge'а с ground truth сам по себе не гарантирует cheap scalable evaluation.

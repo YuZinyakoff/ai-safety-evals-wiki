@@ -24,10 +24,18 @@
 ## Краткое содержание
 Paper сначала ставит проблему `neural toxic degeneration`: language models могут продолжать нейтральные или слабо токсичные prompts токсичным текстом. Затем авторы создают `RealToxicityPrompts`, большой набор из 100K естественных web prompts с toxicity scores, чтобы систематически оценивать эту склонность. После построения dataset работа показывает, что популярные pretrained models действительно систематически уходят в токсичные generations и что вероятность токсичного continuation связана не только с prompt toxicity, но и с характером pretraining corpora. Дальше paper сравнивает разные controllable generation / detoxification approaches и показывает, что часть методов помогает, но безопасного универсального решения нет. В конце авторы переходят к более широкому выводу: benchmark design для toxicity должен учитывать и limits of detector tools вроде Perspective API, и социально нагруженный характер самих toxicity labels.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: постановка проблемы `neural toxic degeneration`.
+- `2 Operationalizing Toxicity`: чем paper измеряет toxicity и какие limits есть у detector layer.
+- Empirical middle block: unprompted generations, generation toxicity и сравнение model behaviors.
+- `4 REALTOXICITYPROMPTS`: construction and properties of the prompt dataset.
+- Поздние sections про detoxification methods, анализ pretraining corpora и `7 Discussion and Recommendations`.
+- `8 Related Work` и appendices: дополнительные примеры, corpus analyses и generation details.
+
 ## Как читать источник быстро
-- Если нужна основная benchmark idea, читай problem setup и construction of `RealToxicityPrompts`.
-- Если вопрос про mechanism, переходи к results linking prompt toxicity, pretraining data and generation behavior.
-- Если важен evaluation-methodology layer, не пропускай discussion of detector limits and socially loaded toxicity labels.
+- Если нужна основная benchmark idea, читай `Abstract`, `1 Introduction` и `4 REALTOXICITYPROMPTS`.
+- Если вопрос про mechanism, переходи к empirical middle block и к section про анализ pretraining corpora.
+- Если важен evaluation-methodology layer, не пропускай `2 Operationalizing Toxicity` и `7 Discussion and Recommendations`.
 
 ## Что источник утверждает прямо
 - Pretrained language models могут уходить в toxic continuations даже от relatively innocuous prompts.

@@ -24,10 +24,18 @@
 ## Краткое содержание
 Статья начинается с постановки проблемы: обычные benchmarks плохо улавливают человеческое предпочтение в multi-turn и open-ended assistant settings. Затем авторы вводят два benchmark-like evaluation assets: `MT-Bench` как curated набор многоходовых вопросов и `Chatbot Arena` как crowdsourced platform с pairwise battles. После этого paper делает главный ход: предлагает использовать сильные LLMs как judges и систематически сравнивает их решения с human preferences. В средней части статьи авторы разбирают failure modes judge models: position bias, verbosity bias, self-enhancement bias и ограниченную reasoning ability, а затем показывают mitigation ideas вроде chain-of-thought и reference-guided judging. В финальной части paper сравнивает agreement judge models и humans и получает сильный результат для GPT-4 на preference-style evaluation, одновременно предлагая hybrid view: capability benchmarks и preference benchmarks нужны вместе.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем нужен open-ended evaluation beyond single-answer benchmarks.
+- `2 MT-Bench and Chatbot Arena`: motivation и устройство двух benchmark settings.
+- `3 LLM as a Judge`: types, advantages, limitations, mitigations и multi-turn judge.
+- `4 Agreement Evaluation`: setup и agreement-with-humans results.
+- `5 Human Preference Benchmark and Standardized Benchmark`, `6 Discussion`, `7 Conclusion`: synthesis of what each evaluation mode gives.
+- Appendices: prompts, case studies и additional bias analyses.
+
 ## Как читать источник быстро
-- Если нужна общая картина, читай motivation for open-ended evaluation plus what `MT-Bench` and `Chatbot Arena` are for.
-- Если вопрос про judge reliability, переходи к sections on biases and mitigation strategies.
-- Если нужен финальный практический claim, смотри agreement-with-humans results и hybrid conclusion about preference plus capability benchmarks.
+- Если нужна общая картина, читай `1 Introduction` и затем `2 MT-Bench and Chatbot Arena`.
+- Если вопрос про judge reliability, основной раздел — `3 LLM as a Judge`, а затем `4 Agreement Evaluation`.
+- Если нужен финальный практический claim, дочитывай `5 Human Preference Benchmark and Standardized Benchmark` и `7 Conclusion`.
 
 ## Что источник утверждает прямо
 - Авторы предлагают `MT-Bench` и `Chatbot Arena` как preference-oriented evaluation assets для open-ended assistant settings, где обычные closed-form benchmarks слишком узки.

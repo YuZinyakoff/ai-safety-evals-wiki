@@ -24,11 +24,19 @@
 ## Краткое содержание
 Статья сначала задает мотивацию: language models уже стали общим интерфейсом для множества задач, а привычные benchmark practices дают слишком фрагментарную картину их способностей, рисков и trade-offs. Затем авторы формулируют три элемента `holistic evaluation`: широкое покрытие с явным признанием неполноты, multi-metric measurement и стандартизацию условий сравнения. После этого paper переходит от общей рамки к HELM как конкретной реализации: вводит taxonomy сценариев и метрик, объясняет выбор core и targeted evaluations, показывает, почему одни и те же модели надо сравнивать по множеству desiderata, а не только по accuracy. В завершающей части работа обсуждает ограничения покрытия и подчеркивает, что HELM должен быть living benchmark, который со временем расширяется и делает свои пробелы явными.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем authors вводят `HELM` и какие три принципа считают центральными.
+- `2 Preliminaries`: definitions для `scenarios`, `adaptation` и `metrics`.
+- `3 Core scenarios`, `4 General metrics`, `5 Targeted evaluations`: собственно каркас HELM.
+- `6 Models` и `7 Adaptation via prompting`: правила сравнения и setup.
+- `8 Experiments and results`: empirical layer.
+- `9 Related work and discussion`, `10 What is missing`, `11 Limitations and future work`, `12 Conclusion`: reflexive and critical layer.
+
 ## Как читать источник быстро
-- Если нужен first-pass на 10 минут, открой `abstract`, `contents`, `summary findings`, начало `introduction` и `conclusion`.
-- Если вопрос именно про рамку HELM, переходи сразу к sections про `taxonomy`, `scenarios`, `metrics` и `targeted evaluations`.
-- Если интересует empirical слой, смотри `experiments` и таблицы по scenario slices и metric categories, не пытаясь читать весь appendix линейно.
-- Если нужен критический reading, не пропускай `what is missing`, `limitations` и признание `incompleteness`: там лучше всего видно, что HELM понимает свои границы.
+- Если нужен first-pass на 10 минут, открой `Abstract`, `1.1 HELM`, `1.2 Empirical findings` и `12 Conclusion`.
+- Если вопрос именно про рамку HELM, переходи в `2 Preliminaries`, затем читай `3 Core scenarios`, `4 General metrics` и `5 Targeted evaluations`.
+- Если интересует empirical слой, основной раздел — `8 Experiments and results`; appendices нужны уже точечно.
+- Если нужен критический reading, не пропускай `10 What is missing` и `11 Limitations and future work`.
 
 ## Что здесь особенно важно
 - **Taxonomy before benchmark.** Сначала нужно явно сказать, что вообще считаем значимыми сценариями и метриками, а уже потом выбирать конкретную реализацию.

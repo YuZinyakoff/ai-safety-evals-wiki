@@ -24,10 +24,18 @@
 ## Краткое содержание
 Пост устроен как попытка поднять стандарт разговора о safety evaluations. Сначала Hubinger отмечает, что область быстро движется к формализации standards и evaluations для advanced AI, но ставит под сомнение предпосылку, что **purely behavioral tests** могут быть достаточным safety standard. Затем идет центральный аргумент через deception: если модель потенциально умеет стратегически выглядеть безопасной, то надежно проверять это по surface behavior может быть труднее, чем вообще не допустить такую систему. После этого текст вводит идею **understanding-based evaluations** как более сильного типа evidence: нужно проверять не только outputs, но и то, насколько разработчики понимают, какую модель получили, почему именно такую и почему считают ее безопасной. В финальной части пост обсуждает, как такой standard мог бы сочетаться с capability evals, почему он должен быть method-agnostic, и какие частичные research directions вроде `causal scrubbing`, `auditing games` и `prediction-based evaluation` могут быть его компонентами, но не готовым решением.
 
+## Структура материала
+- Opening motivation: почему behavioral safety evals могут быть insufficient against deception.
+- Proposal section: что автор называет `understanding-based evaluations`.
+- Desiderata: каким должен быть такой standard, чтобы он был method-agnostic и capability-scaled.
+- Review of candidate ingredients: causal scrubbing, auditing games, prediction-based evaluation и их limits.
+- Финальный блок: как understanding-based evals должны сочетаться с behavioral evals, а не заменять их.
+
 ## Как читать источник быстро
-- Если нужен главный аргумент, читай opening sections, где Hubinger связывает deception с limits of behavioral testing.
-- Если вопрос про сам стандарт, переходи к sections про `understanding-based evaluations` и method-agnostic framing.
-- Если нужен practical reading, смотри финальные examples of possible components and research directions, но не путай их с готовым solution.
+- Если нужен главный аргумент, читай opening motivation и первый блок про `understanding-based evaluations`: там формулируется core move текста.
+- Если вопрос про сам standard, иди в desiderata-блок и смотри, какие свойства автор считает обязательными.
+- Если нужен practical reading, дочитывай review candidate ingredients, но держи в уме, что это не готовые solutions, а скорее negative screening of options.
+- Если важен balance, не пропускай финальный блок про сочетание understanding-based и behavioral evals.
 
 ## Что источник утверждает прямо
 - Purely behavioral tests могут быть принципиально недостаточными как safety standard for advanced systems.

@@ -40,11 +40,19 @@
 ## Интерпретация для курса
 Для логики курса этот источник делает первый и самый важный шаг недели: он показывает, что `AI safety benchmark` — это не просто "benchmark на safety topic", а отдельный measurement problem с более высокой epistemic нагрузкой. Именно через него становится видно, почему финальная неделя курса уходит от обычной логики leaderboard и переходит к разговорам о high-stakes measurement.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: постановка вопроса, чем safety benchmarking отличается от ordinary benchmarking.
+- `2 The Uniqueness of Safety Benchmarking` и `3 Risk & Safety in Engineering vs Benchmarking`: conceptual setup.
+- `4 Method`: scoping review design.
+- `5 Dealing with Safety Construct Coverage`, `6 Benchmarking Safety via Risk Attributes`, `7 Aligning Safety with Measurement Theory`: три центральные аналитические оси paper.
+- `8 Case Study`, `9 Discussion`, `10 Conclusion`: application and synthesis.
+- Appendices: method details, risk / measurement appendices и checklist instrument.
+
 ## Как читать источник быстро
-- Если нужен общий frame, читай `abstract`, `introduction`, `conclusion` и sections, где authors объясняют отличие safety benchmark'ов от ordinary benchmark'ов.
-- Если нужен диагностический слой, концентрируйся на трех модулях: `construct coverage`, `risk quantification` и `measurement validity`.
-- Если нужен operational takeaway, смотри блок с рекомендациями `R1–R10` и финальный checklist / case analysis.
-- Если важно оценить, насколько critique grounded, не пропускай sections про scoping review design и ограничения самих authors.
+- Если нужен общий frame, читай `Abstract`, `1 Introduction`, `2 The Uniqueness of Safety Benchmarking` и `10 Conclusion`.
+- Если нужен диагностический слой, основной маршрут — `5 -> 6 -> 7`: именно там paper раскладывает safety benchmark design.
+- Если нужен operational takeaway, после этого переходи в `8 Case Study` и `Appendix D Checklist Instrument and Worked Example`.
+- Если важно оценить, насколько critique grounded, не пропускай `4 Method` и `Appendix A Method`.
 
 ## Что стоит запомнить при повторении
 - **Safety benchmark должен документировать blind spots, а не притворяться полным safety verdict.**

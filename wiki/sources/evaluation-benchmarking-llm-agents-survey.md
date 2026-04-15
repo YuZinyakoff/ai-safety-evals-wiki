@@ -24,10 +24,18 @@
 ## Краткое содержание
 Статья устроена как широкий survey по области agent evaluation. Сначала авторы объясняют, почему стандартные LLM evals плохо переносятся на агента, который действует в динамической среде, использует tools и может идти по длинной траектории. Затем paper вводит двухмерную taxonomy: по оси `evaluation objectives` обсуждаются `behavior`, `capabilities`, `reliability` и `safety`; по оси `evaluation process` — `interaction modes`, `datasets and benchmarks`, `metrics`, `tooling` и `contexts`. После этого текст проходит по каждому блоку подробнее: чем task completion отличается от оценки planning, tool use, memory или multi-agent collaboration; почему для агентов важны both offline and online evaluation; какие benchmark families и tooling ecosystems уже существуют; и какие enterprise-specific constraints вроде RBAC, compliance и long-term interaction field пока плохо закрывает. Paper больше полезен как карта и vocabulary, чем как законченный стандарт.
 
+## Структура материала
+- `1 Introduction`: зачем вообще нужен отдельный survey про agent evaluation.
+- `2 Taxonomy for LLM-based Agent Evaluation`: общая карта поля.
+- `3 Evaluation Objectives`: behavior, capabilities, reliability и safety / alignment.
+- `4 Evaluation Process`: interaction mode, evaluation data, metrics, tooling и contexts.
+- `5 Enterprise-Specific Challenges`: отдельный блок про production-like constraints.
+- `6 Future Research Directions`: незакрытые вопросы и дальнейшие направления.
+
 ## Как читать источник быстро
-- Если нужен общий frame, читай introduction and the two-axis taxonomy around `evaluation objectives` and `evaluation process`.
-- Если вопрос про concrete agent properties, переходи к sections on behavior, capabilities, reliability and safety.
-- Если нужен practical benchmarking layer, смотри parts on benchmarks, metrics, tooling and context constraints.
+- Если нужен общий frame, читай `1 Introduction`, `2 Taxonomy for LLM-based Agent Evaluation` и затем по диагонали `6 Future Research Directions`.
+- Если вопрос про concrete agent properties, основной блок — `3 Evaluation Objectives`.
+- Если нужен practical benchmarking layer, переходи к `4 Evaluation Process`, а затем при необходимости к `5 Enterprise-Specific Challenges`.
 
 ## Что здесь особенно важно
 - **Что оценивать** и **как оценивать** здесь разделены явно, и это помогает не путать target of evaluation с самой процедурой.

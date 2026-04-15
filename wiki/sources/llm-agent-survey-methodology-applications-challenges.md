@@ -24,10 +24,18 @@
 ## Краткое содержание
 Статья строит широкий ecosystem view на `LLM agents`. Сначала она предлагает methodology-centered taxonomy и раскладывает агентские системы по осям `construction`, `collaboration` и `evolution`. Затем подробно обсуждаются role/profile definition, memory mechanisms, planning, tool use, centralized / decentralized / hybrid multi-agent architectures и разные формы self-improvement. Отдельный блок посвящен `evaluation and tools`, то есть benchmark and tooling ecosystem. Для week-04 особенно полезно то, что paper показывает: agent behavior зависит от большого числа design choices задолго до evaluation stage.
 
+## Структура материала
+- `1 Introduction`: общая постановка survey.
+- `2 Agent Methodology`: construction, collaboration и evolution как три большие оси.
+- `3 Evaluation and Tools`: benchmarks, datasets и tooling layer.
+- `4 Real-World Issues`: security, privacy, ethical concerns.
+- `5 Applications`: scientific discovery, gaming, social science, productivity tools.
+- `6 Challenges and Future Trends` и `7 Conclusion`: куда authors двигают field дальше.
+
 ## Как читать источник быстро
-- Если нужен high-level map, читай taxonomy around `construction`, `collaboration` and `evolution`.
-- Если вопрос про specific agent properties, переходи к sections on memory, planning, tool use and multi-agent architectures.
-- Если интересует direct relevance to the week, смотри evaluation-and-tools block and use it as bridge back to agent eval papers.
+- Если нужен high-level map, читай `2 Agent Methodology`: там лучше всего видно, как survey раскладывает agents по архитектурным блокам.
+- Если вопрос про specific agent properties, заходи внутрь `2 Agent Methodology`, особенно в подблоки про memory, planning, action execution и collaboration.
+- Если интересует direct relevance to the week, сначала смотри `3 Evaluation and Tools`, а уже потом при необходимости возвращайся к applications или risks.
 
 ## Что источник утверждает прямо
 - LLM agents существенно различаются по dimensions like construction, collaboration, evolution, memory, planning and tool use.

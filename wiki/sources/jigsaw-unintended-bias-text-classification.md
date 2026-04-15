@@ -24,10 +24,17 @@
 ## Краткое содержание
 Статья вводит понятие `unintended bias` в контексте text classification и сразу отделяет его от более широкой социальной проблемы fairness. Затем авторы разбирают конкретный кейс: toxicity classifier на Wikipedia Talk data начал переассоциировать отдельные identity terms вроде “gay” с toxicity, потому что в training data эти terms были непропорционально представлены в toxic comments. После постановки проблемы paper предлагает способ измерять bias на специальных slices и сравнивать поведение модели на identity-related examples с общим quality level. Далее работа показывает простой mitigation path через балансировку данных и добавление strategically chosen examples. В финале paper проверяет, что bias mitigation действительно уменьшает unintended bias without collapsing overall model quality.
 
+## Структура материала
+- `Abstract` и `Introduction`: постановка проблемы identity-term bias и различение unintended bias versus overall quality.
+- `Related Work` и working definition of unintended bias in text classification.
+- Блоки про test setup: general held-out test set, synthetic identity phrase templates и measurement metrics.
+- Mitigation section: balancing data and related bias reduction technique.
+- Results, `Conclusion`, `Future Work` и `Appendix`.
+
 ## Как читать источник быстро
-- Если нужен core lesson, читай problem setup around identity-term bias and why overall accuracy misses it.
-- Если важен measurement layer, переходи к sections on slice-based metrics and identity-related examples.
-- Если нужен практический вывод, смотри mitigation experiment and trade-offs with overall quality.
+- Если нужен core lesson, читай `Abstract`, `Introduction` и кусок, где paper вводит working definition of unintended bias.
+- Если важен measurement layer, переходи к блокам про test setup и metrics: именно там текст становится полезным для benchmark design.
+- Если нужен практический вывод, дочитывай mitigation section и `Conclusion`, чтобы увидеть trade-offs with overall quality.
 
 ## Что источник утверждает прямо
 - Aggregate classifier metrics могут выглядеть сильными и одновременно скрывать systematic errors on identity-related slices.

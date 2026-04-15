@@ -24,10 +24,17 @@
 ## Краткое содержание
 Explainer устроен как аккуратное введение в design logic safety evaluations. Сначала он делит оценки на две большие группы: **model safety evaluations**, которые спрашивают в первую очередь про свойства outputs модели, и **contextual safety evaluations**, которые пытаются понять влияние доступа к модели на реальные действия и outcomes. Затем текст вводит простую, но полезную рамку проектирования: сначала решить **что именно измерять**, потом **как это измерять**, а затем отдельно разобрать, **что полученный результат вообще означает**. Внутри этой рамки explainer обсуждает capability testing, benchmarking, red-teaming и uplift studies, а в конце отдельно подчеркивает ограничения proxy metrics и риск переинтерпретации результатов.
 
+## Структура материала
+- `Model Safety Evaluations vs. Contextual Safety Evaluations`: базовая таксономия того, что вообще можно оценивать.
+- `Designing an Evaluation Strategy`: переход от общей карты к выбору конкретного evaluation setup.
+- `1. What to measure`: выбор объекта и признаков оценки.
+- `2. How to measure it`: выбор методов, proxies и operationalization.
+- `3. What the results mean`: интерпретация результатов и limits inference.
+
 ## Как читать источник быстро
-- Если нужен only basic map, читай two main taxonomy sections about model-side and contextual evaluations.
-- Если важна design frame, сосредоточься на `what / how / what it means`.
-- Если нужен cautionary layer, не пропускай concluding discussion on proxy metrics and over-interpretation.
+- Если нужен только базовый map, читай `Model Safety Evaluations vs. Contextual Safety Evaluations`, а затем быстро просматривай `Designing an Evaluation Strategy`.
+- Если важна design frame, иди по тройке `What to measure -> How to measure it -> What the results mean` именно в этом порядке.
+- Если нужен cautionary layer, не пропускай `What the results mean`: там лучше всего видно, где explainer ограничивает силу выводов.
 
 ## Что источник утверждает прямо
 - Safety evaluations fall into materially different families, especially model-side and contextual protocols.

@@ -24,10 +24,18 @@
 ## Краткое содержание
 OpenAI разбирает `SWE-bench` как важный benchmark для model autonomy, а затем показывает, где он может недооценивать capabilities. Текст выделяет три класса проблем: overly specific or misaligned unit tests, underspecified issue descriptions и unreliable environment setup. Затем описывается human annotation campaign, где профессиональные разработчики вручную проверяли quality samples, и на этой основе выделяется `SWE-bench Verified` — subset из 500 более надежных задач. Важный смысл работы не в новом score как таковом, а в methodological claim: если benchmark construction плох, то benchmark systematically distorts what we think the models can do.
 
+## Структура материала
+- `Background on SWE-bench`: с какого benchmark paper стартует текст.
+- `Adapting SWE-bench as a Preparedness Evaluation`: зачем authors меняют framing.
+- `SWE-bench Verified`: что именно представляет собой verified subset.
+- `Our Approach`: annotation criteria и dataset construction.
+- `Annotation Results` и `Performance on SWE-bench Verified`: что изменилось после quality control.
+- `Data downloads`: practical access layer.
+
 ## Как читать источник быстро
-- Если нужна основная коррекция, читай the three artifact classes: tests, issue descriptions and environment instability.
-- Если интересует method, переходи к human annotation / verification process and how the subset was formed.
-- Если нужен более широкий вывод, держи фокус на claim that benchmark quality control can materially change capability conclusions.
+- Если нужна основная коррекция, читай `Background on SWE-bench`, затем `SWE-bench Verified` и `Performance on SWE-bench Verified`.
+- Если интересует method, основной раздел — `Our Approach`, особенно `Annotation Criteria` и `Dataset construction`.
+- Если нужен более широкий вывод, держи фокус на переходе от `Annotation Results` к `Performance on SWE-bench Verified`: там лучше всего видно, как benchmark quality control меняет capability conclusions.
 
 ## Что источник утверждает прямо
 - Original `SWE-bench` содержит artifacts вроде overly specific tests, underspecified issue descriptions and unstable environments.

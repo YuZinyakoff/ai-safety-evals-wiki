@@ -24,10 +24,18 @@
 ## Краткое содержание
 Paper сначала вводит саму идею `benchmark lottery`: perceived superiority метода часто зависит не только от его “объективной” силы, но и от выбора задач, агрегации результатов и текущих норм benchmark ecosystem. Затем авторы проходят по основным источникам такой хрупкости. Сначала обсуждается `task selection bias` на case studies вроде SuperGLUE, VTAB, Long Range Arena и RL Unplugged: разные подмножества задач могут менять ranking моделей. После этого paper переходит к `community bias` и показывает, что benchmark'и направляют коллективное внимание и определяют, какие свойства вообще становятся заметными. Далее появляется идея stateful benchmarks: benchmark меняется вместе с сообществом, tooling и историей участия. В финале авторы обсуждают “rigging the lottery” и дают более практические рекомендации: guidelines, significance testing и living benchmarks как частичные ответы на хрупкость benchmark process.
 
+## Структура материала
+- `1 Introduction`: введение понятия `benchmark lottery`.
+- `2 Background`: life cycle benchmark'а и общий background для аргумента.
+- `3 Task selection bias`: case studies, rank aggregation и human evaluation bias.
+- `4 Community bias` и `5 Benchmarks are stateful`: социальная и временная зависимость benchmark effects.
+- `6 Rigging the lottery: making your own luck`: как labs и subfields начинают подстраивать benchmark reality под себя.
+- `7 What can we do?`, `8 Epilogue` и appendices: ответы authors и checklist-like layer.
+
 ## Как читать источник быстро
-- Если нужен core frame, читай introduction и sections, где authors определяют `benchmark lottery`.
-- Если важны механизмы, переходи к case studies around task selection bias and community bias.
-- Если нужен takeaway, смотри discussion on stateful benchmarks, `rigging the lottery` and living-benchmark responses.
+- Если нужен core frame, читай `1 Introduction`, затем быстро проходи `2 Background` и `7 What can we do?`.
+- Если важны механизмы, основной блок — `3 Task selection bias`, `4 Community bias` и `5 Benchmarks are stateful`.
+- Если нужен takeaway про responses, дочитывай `6 Rigging the lottery...` и `7 What can we do?`; appendices нужны уже как reference.
 
 ## Что источник утверждает прямо
 - Benchmark outcomes and perceived superiority of methods depend partly on the specific task mix and ecosystem around the benchmark.

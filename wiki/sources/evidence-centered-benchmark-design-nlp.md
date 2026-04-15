@@ -24,11 +24,18 @@
 ## Краткое содержание
 Paper переносит логику `evidence-centered design` из educational testing в benchmark design для NLP. Сначала авторы объясняют, почему у поля нет систематического способа анализировать design decisions benchmark'а и их влияние на validity. Затем они вводят ECBD как рамку из пяти модулей: `capability`, `content`, `adaptation`, `assembly` и `evidence`. После формализации paper предлагает guiding questions и worksheet, который можно использовать как при создании нового benchmark'а, так и при критике уже существующего. В заключительной части авторы применяют эту рамку к BoolQ, SuperGLUE и HELM и показывают повторяющиеся проблемы: слабое определение capability, недостаточную аргументацию выбора данных, слабое описание assembly decisions и привычку оправдывать метрики тем, что они “стандартные”, а не тем, что они действительно извлекают нужное evidence.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем benchmark design переводить в evidence-centered language.
+- `2 Background & Related Work`: benchmarking critiques, measurement theory и связь с `Evidence-Centered Design`.
+- `3 Evidence-Centered Benchmark Design`: пять модулей `intended use`, `capability`, `content`, `adaptation`, `assembly`, `evidence`.
+- `4 Case Studies`: применение рамки к существующим benchmark cases.
+- `5 Conclusion`, `Limitations` и `Appendix A Worksheet Template`: общий вывод, limits и рабочий worksheet.
+
 ## Как читать источник быстро
-- Если нужен общий frame, хватит `abstract`, `introduction`, figure / table с пятью модулями и `conclusion`.
-- Если вопрос про саму рамку, концентрируйся на sections с определениями `capability`, `content`, `adaptation`, `assembly` и `evidence`.
-- Если нужен practical reading, найди `guiding questions` и `worksheet`: именно там paper становится не манифестом, а рабочим инструментом.
-- Если важно понять ценность paper, посмотри application sections на BoolQ, SuperGLUE и HELM: там видно, как authors применяют рамку к знакомым benchmark cases.
+- Если нужен общий frame, хватит `Abstract`, `1 Introduction`, `3 Evidence-Centered Benchmark Design` и `5 Conclusion`.
+- Если вопрос про саму рамку, концентрируйся на `3.1–3.5`: именно там задаются модули.
+- Если нужен practical reading, переходи к `4 Case Studies`, а затем к `Appendix A Worksheet Template`.
+- Если важно понять limits paper, не пропускай `Limitations`.
 
 ## Что здесь особенно важно
 - **Capability** нужно не просто назвать, а определить и привязать к intended use.

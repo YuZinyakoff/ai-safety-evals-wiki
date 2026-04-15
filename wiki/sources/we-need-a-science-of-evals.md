@@ -24,10 +24,17 @@
 ## Краткое содержание
 Текст начинается с мотивации: evals уже участвуют в safety-related decisions и потенциально будут связаны с law and policy, а значит, их результатам придется выдерживать гораздо более сильную внешнюю проверку. Дальше Apollo показывает на примере prompt sensitivity и elicitation instability, почему нынешняя практика часто больше похожа на искусство, чем на зрелую научную дисциплину. После этого пост вводит идею `Science of Evals` через аналогию с maturation process других инженерных полей, особенно авиации: от exploratory phase к informal norms и дальше к standards that are ready for law. Затем текст формулирует вопросы, на которые должна уметь отвечать зрелая evaluation field: что именно измеряется, какое coverage у eval, насколько robust и replicable результаты, возможны ли статистические guarantees и как результаты current evals переносятся на future systems. Финальный блок уже работает как field-building memo: перечисляет ранние примеры полезных meta-evaluation работ и формулирует open questions вокруг conceptual clarity и trustworthiness of results.
 
+## Структура материала
+- `What do we mean by “Science of Evals”?`: базовое определение и мотивация.
+- `Maturation process of a field`: аналогия с тем, как field moves from ad hoc practice to disciplined methodology.
+- `Current work in the direction of Science of Evals`: примеры уже существующего meta-evals work.
+- `Next steps`: отдельно `Field building` и `Open research questions`.
+- `Conclusion`: сжатая сборка аргумента.
+
 ## Как читать источник быстро
-- Если нужен overall frame, читай motivation around policy relevance and the analogy to maturation in other engineering fields.
-- Если интересует diagnosis, концентрируйся на examples like prompt sensitivity and elicitation instability.
-- Если нужен research-agenda layer, смотри the list of maturity questions plus the concluding examples of meta-evaluation work.
+- Если нужен overall frame, читай `What do we mean by “Science of Evals”?` и `Maturation process of a field`.
+- Если интересует diagnosis of current field, переходи к `Current work in the direction of Science of Evals`.
+- Если нужен research-agenda layer, основной блок — `Next steps`, особенно `Open research questions`.
 
 ## Что источник утверждает прямо
 - Evals уже достаточно важны для deployment и policy, чтобы к ним применялись более жесткие standards of scrutiny.

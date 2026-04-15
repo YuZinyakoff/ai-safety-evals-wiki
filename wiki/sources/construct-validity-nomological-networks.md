@@ -24,10 +24,16 @@
 ## Краткое содержание
 Paper начинает с критики распространенной практики: researchers приписывают LLM human-like capabilities на основании benchmark results без достаточной теории того, что benchmark вообще измеряет. Затем автор сравнивает три account of construct validity — causal, inferential и nomological — и утверждает, что для текущего LLM research лучше всего подходит именно `nomological account`, потому что она не требует слишком сильных онтологических обязательств, но при этом дает substantive framework. Во второй части paper автор применяет эту рамку к reasoning capability: обсуждает task benchmarks, content validity, convergent и discriminant analysis, а также риск `theoretical–empirical mismatch`, когда observed benchmark relations плохо согласуются с заявленной network of capabilities. Итоговый вывод: capability benchmarks требуют не только scores, но и richer theoretical web, которая ограничивает допустимые интерпретации.
 
+## Структура материала
+- `1 Introduction`: почему capability benchmarks требуют более сильной теории validity.
+- `2 The nomological account is the best available framework for conceptualizing LLM capabilities`: сравнение causal, inferential и nomological accounts.
+- `3 Implications of the nomological account for LLM benchmark design`: design of nomological networks, validation, convergent / discriminant analysis и theory–measurement conflict.
+- `4 Conclusion`: сжатое сведение argument.
+
 ## Как читать источник быстро
-- Если нужен main claim, читай sections comparing the three validity accounts and the defense of a nomological approach.
-- Если важен application layer, переходи к reasoning benchmark case and discussion of `theoretical–empirical mismatch`.
-- Если статья кажется слишком abstract, держи вопрос не “какая теория лучшая”, а “какой additional evidence нужен, чтобы capability label был оправдан”.
+- Если нужен main claim, читай `1 Introduction` и затем `2 The nomological account...`.
+- Если важен application layer, основной раздел — `3 Implications of the nomological account for LLM benchmark design`.
+- Если статья кажется слишком abstract, заходи в `2.3 Nomological Networks as a middle ground...`, а затем в `3.1–3.3`: там theory быстрее цепляется за benchmark practice.
 
 ## Что источник утверждает прямо
 - Capability labels вроде `reasoning` не становятся валидными автоматически только потому, что benchmark так назван.

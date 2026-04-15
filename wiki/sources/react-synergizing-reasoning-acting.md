@@ -24,10 +24,17 @@
 ## Краткое содержание
 Работа вводит `ReAct` как паттерн, в котором модель чередует internal reasoning и external actions, а затем использует observation from tools or environment для следующего шага. Paper показывает это на нескольких task families и противопоставляет подход как чистому chain-of-thought reasoning, так и purely acting-style agents. По смыслу текст важен не отдельными числами, а тем, что он делает явным structural idea: tool result должен входить обратно в цикл принятия решений, а не просто приклеиваться к ответу.
 
+## Структура материала
+- `Abstract` и `1 Introduction`: зачем interleave reasoning, action и observation.
+- `2 Synergizing Reasoning + Acting`: сама схема `ReAct`.
+- `3 Knowledge-Intensive Reasoning Tasks`: setup, methods и results on reasoning-style tasks.
+- `4 Decision Making Tasks`: `ALFWorld`, `WebShop` и comparison on decision-making settings.
+- `5 Related Work`, `6 Conclusion` и appendices: positioning, prompts, trajectories и extra analysis.
+
 ## Как читать источник быстро
-- Если нужна основная идея, читай opening explanation of thought/action/observation interleaving и contrast with other patterns.
-- Если интересуют empirical examples, смотри a couple of case studies rather than all reported results.
-- Если нужна relevance to the week, держи в уме не “does ReAct win”, а “what kind of trajectory structure it induces”.
+- Если нужна основная идея, читай `1 Introduction` и `2 Synergizing Reasoning + Acting`.
+- Если интересуют empirical examples, выбери один блок из `3 Knowledge-Intensive Reasoning Tasks` и один из `4 Decision Making Tasks`, а не читай все reported results подряд.
+- Если нужна relevance to the week, держи фокус на `2` плюс sample trajectories из appendices: вопрос здесь не только “wins or not”, а какой trajectory structure метод создает.
 
 ## Что источник утверждает прямо
 - `ReAct` организует траекторию как interleaving thought, action and observation rather than pure reasoning or pure acting.

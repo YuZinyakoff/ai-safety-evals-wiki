@@ -24,10 +24,18 @@
 ## Краткое содержание
 Документ начинается с мотивации: risk-relevant evaluation должен учитывать не только модель "как есть", но и те capabilities, которые plausibly reachable через prompting, tooling, finetuning и scaffolding. Затем METR предлагает пример процесса. Сначала делается `basic elicitation`: модель получает достаточно сильный baseline agent setup. После этого оставшиеся failures не сваливаются в одну кучу, а классифицируются как `spurious bottlenecks`, `real bottlenecks` и `tradeoffs`. Дальше документ объясняет, как работать с dev set: spurious failures надо устранять, real failures — честно пытаться улучшать, а tradeoffs — либо фиксить как локальные узкие места, либо явно считать tradeoff. Отдельный слой текста — это red flags: признаки overfitting, gaming, task-level problems и misleading score aggregation. Финал важен тем, что протокол требует не только итоговый score, но и evaluation report с qualitative failure analysis и attestation о том, что evaluators не знают простых способов резко повысить performance.
 
+## Структура материала
+- `1 Overview`: зачем нужен capability elicitation protocol и где он sits inside evaluation.
+- `Guidelines`: `basic elicitation`, обработка remaining failures, red flags, baselining, report and attestation.
+- `3 Categorizing failure types`: три большие корзины `spurious / real / tradeoff`.
+- `4 Full failure type lists`: расширенный справочник failure modes.
+- `5 Recommendations for avoiding overestimation of capabilities`: отдельный блок про memorization и другие риски.
+
 ## Как читать источник быстро
-- Если нужен main protocol, читай sections on `basic elicitation` and the failure taxonomy `spurious / real / tradeoff`.
-- Если вопрос про methodology, переходи к dev-set workflow and red flags.
-- Если нужен deployment-relevant takeaway, не пропускай reporting requirements and the final attestation logic.
+- Если нужен main protocol, читай `1 Overview`, затем внутри `Guidelines` блоки `basic elicitation` и `Produce evaluation report and attestation`.
+- Если вопрос про methodology, не пропускай середину `Guidelines`, где идут remaining failures, red flags и baselining.
+- Если нужен failure taxonomy, переходи в `3 Categorizing failure types`, а `4 Full failure type lists` используй уже как reference.
+- Если интересует overclaim prevention, дочитывай `5 Recommendations for avoiding overestimation of capabilities`.
 
 ## Что источник утверждает прямо
 - Weak prompting, scaffolding and setup can systematically underestimate reachable agent capability.

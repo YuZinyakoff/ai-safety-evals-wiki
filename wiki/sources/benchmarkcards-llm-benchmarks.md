@@ -24,10 +24,18 @@
 ## Краткое содержание
 Paper начинает с проблемы: benchmark'ов много, их metadata scattered, и пользователю сложно понять, какой benchmark вообще подходит под его задачу и как интерпретировать результаты. Затем авторы предлагают `BenchmarkCards` как documentation framework, который стандартизирует benchmark objectives, methodology, data sources, assumptions, limitations и related benchmarks. После описания template paper переходит к user studies с benchmark users и benchmark authors, чтобы проверить две вещи: полезность такой формы документации и адекватность автоматически сгенерированных cards. В финале работа обсуждает результаты этих studies, идеи community-driven repository и ограничения самого подхода, включая необходимость поддерживать cards актуальными и риск того, что подробное описание limitations может облегчать gaming.
 
+## Структура материала
+- `1 Introduction`: проблема scattered benchmark metadata и мотивация стандартизированной документации.
+- `2 Related Work`: откуда proposal растет.
+- `3 BenchmarkCards`: сам template и его поля.
+- `4 Demonstrative Examples`: как authors показывают template в действии.
+- `5 User Study`: проверка usefulness для benchmark users и authors.
+- `6 Discussion` и `7 Conclusion`: costs, limits, maintenance и broader implications.
+
 ## Как читать источник быстро
-- Если нужен общий смысл, читай problem statement and the proposed `BenchmarkCards` template.
-- Если интересует practical value, переходи к user-study sections with benchmark users and authors.
-- Если нужен критический reading, не пропускай discussion of maintenance costs, stale metadata and gaming concerns.
+- Если нужен общий смысл, читай `1 Introduction` и `3 BenchmarkCards`.
+- Если интересует practical value, переходи к `4 Demonstrative Examples` и `5 User Study`.
+- Если нужен критический reading, не пропускай `6 Discussion`: именно там собраны maintenance costs, stale metadata и gaming concerns.
 
 ## Что источник утверждает прямо
 - Авторы утверждают, что benchmark users часто плохо видят intended use, assumptions, data sources и limitations, потому что эта информация рассыпана по paper, appendix и external resources.
