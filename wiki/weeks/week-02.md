@@ -26,8 +26,8 @@
 
 ## Если нужно быстро вспомнить неделю
 - Если нужен **taxonomy / design frame**, начни с [CSET explainer](../sources/cset-ai-safety-evaluations-explainer.md), [model safety evals](../concepts/model-safety-evals.md) и [contextual safety evals](../concepts/contextual-safety-evals.md).
-- Если нужен **statistical core**, смотри [Miller](../sources/miller-adding-error-bars-to-evals.md), [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md) и [statistical rigor in evals](../concepts/statistical-rigor-in-evals.md).
-- Если нужен **взгляд beyond benchmarks**, открывай [survey](../sources/cao-generalizable-evaluation-llm-era.md), [benchmarking](../concepts/benchmarking.md), [evaluation generalization](../concepts/evaluation-generalization.md) и [synthesis](../syntheses/benchmarking-beyond-single-scores.md).
+- Если нужен **статистический слой**, смотри [Miller](../sources/miller-adding-error-bars-to-evals.md), [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-02.md) и [statistical rigor in evals](../concepts/statistical-rigor-in-evals.md).
+- Если нужен **взгляд за пределы benchmark suites**, открывай [survey](../sources/cao-generalizable-evaluation-llm-era.md), [benchmarking](../concepts/benchmarking.md), [evaluation generalization](../concepts/evaluation-generalization.md) и [синтез](../syntheses/benchmarking-beyond-single-scores.md).
 - Если нужен **landscape-wide каталог**, переходи к [Awesome LLM Eval](../sources/awesome-llm-eval.md).
 
 ## Если у тебя конкретный вопрос

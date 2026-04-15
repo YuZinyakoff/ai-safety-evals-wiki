@@ -1,17 +1,17 @@
 # Capability Elicitation
 
 ## Коротко
-> **Capability elicitation** — это попытка измерять не только "как модель работает в исходном setup", но и какие способности разумно достижимы через prompting, tooling, scaffolding и другие умеренные enhancements.
+> **Capability elicitation** — это попытка измерять не только "как модель работает в исходной конфигурации", но и какие способности разумно достижимы через prompting, tooling, scaffolding и другие умеренные улучшения.
 
 ## Почему это важный концепт
 Week-04 показывает, что agent eval легко занижает реальные capabilities. Если слабый prompt, неудачный tool interface или плохой loop structure мешают агенту проявить свои способности, итоговый score будет частично измерять ошибку evaluators.
 
 ## Что сюда обычно входит
-- Базовый, но не заведомо слабый agent setup.
-- Iteration on dev set, а не на final test set.
+- Базовая, но не заведомо слабая конфигурация агента.
+- Итерация на dev set, а не на финальном test set.
 - Разбор failures по типам: `spurious`, `real`, `tradeoff`.
-- Checks на overfitting, gaming и benchmark artifacts.
-- Финальный report с qualitative explanation of failures.
+- Проверки на overfitting, gaming и benchmark artifacts.
+- Финальный отчет с качественным разбором failures.
 
 ## Что именно здесь ломает наивный вывод
 - **"Модель не справилась"** легко означает **"процедура плохо раскрыла capability"**.
@@ -22,7 +22,7 @@ Week-04 показывает, что agent eval легко занижает ре
 Полезно держать три вопроса:
 - Что здесь является легко устранимым bottleneck?
 - Что похоже на реальное capability limit?
-- Какие fixes улучшают этот task distribution ценой ухудшения elsewhere?
+- Какие исправления улучшают этот task distribution ценой ухудшения в других режимах?
 
 Именно здесь полезна тройка `spurious failure` / `real failure` / `tradeoff`.
 

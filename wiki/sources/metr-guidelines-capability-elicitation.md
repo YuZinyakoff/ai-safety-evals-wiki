@@ -13,7 +13,7 @@
 Это главный методический текст недели. Он нужен не как "финальный стандарт", а как concrete proposal того, как именно проводить autonomy-focused eval так, чтобы не слишком недооценить reachable performance. Через него становится ясно, что elicitation — это часть measurement discipline, а не только способ улучшить результат.
 
 ## Эпистемический статус и как на него смотреть
-Это protocol proposal from METR, а не neutral description of current best practice. Его полезно читать как disciplined recipe for reducing underestimation risk, while remembering that it also encodes trade-offs about labor, overfitting risk and acceptable elicitation intensity.
+Это protocol proposal from METR, а не neutral description of current best practice. Его полезно читать как disciplined recipe for reducing underestimation risk, помня, что он также зашивает trade-offs about labor, overfitting risk и acceptable elicitation intensity.
 
 ## На какие вопросы источник помогает отвечать
 - Почему weak scaffolding может систематически занижать measured agent capability?

@@ -16,7 +16,7 @@
 Это deployment-measurement research note using product telemetry, а не benchmark paper. Его полезно читать как источник другого типа evidence: what autonomy looks like in practice, not just in pre-deployment tasks.
 
 ## На какие вопросы источник помогает отвечать
-- Как operationalize autonomy and oversight in real product use?
+- Как operationalize autonomy и oversight в реальном использовании продукта?
 - Какие empirical patterns authors видят в Claude Code and public API usage?
 - Почему post-deployment monitoring дает другой тип evidence, чем benchmark scores?
 - Как user behavior and product design со-конструируют visible autonomy?
@@ -25,13 +25,13 @@
 Anthropic анализирует миллионы human-agent interactions в Claude Code и public API, чтобы посмотреть, как фактически используются агенты. Текст сначала объясняет methodological difficulty: трудно даже operationalize, что считать агентом и как наблюдать за ним privacy-preserving способом. Затем работа вводит practical proxies for autonomy and risk и показывает несколько эмпирических паттернов: longest autonomous runs в Claude Code растут, опытные пользователи чаще дают auto-approve, но и чаще прерывают агента, а сами агенты нередко останавливаются и просят clarification. Далее paper показывает, что agentic activity уже появляется и в riskier domains, но пока в основном сосредоточена в software engineering. Финал текста важен рекомендациями: model developers и product developers должны вкладываться в post-deployment monitoring, uncertainty-aware behavior и tooling for oversight.
 
 ## Как читать источник быстро
-- Если нужен main empirical picture, читай methodology for autonomy proxies and the core observed patterns in product usage.
+- Если нужна основная эмпирическая картина, читай methodology for autonomy proxies и ключевые наблюдаемые паттерны использования.
 - Если важен safety angle, переходи к sections on interruption, oversight and riskier domains.
-- Если нужен practical takeaway, не пропускай final recommendations on monitoring infrastructure and oversight tooling.
+- Если нужен практический вывод, не пропускай final recommendations on monitoring infrastructure and oversight tooling.
 
 ## Что источник утверждает прямо
 - Product telemetry можно использовать, чтобы operationalize proxies for autonomy and oversight in real deployments.
-- В observed usage Claude Code and public API longest autonomous runs grow, oversight patterns vary across users, and software engineering remains a central domain.
+- В наблюдаемом использовании Claude Code и public API длина автономных прогонов растет, паттерны oversight различаются между пользователями, а software engineering остается центральным доменом.
 - Real-world autonomy определяется не только model capability, но и user behavior, product design and intervention patterns.
 - Post-deployment monitoring and oversight tooling are necessary complements to pre-deployment evals.
 

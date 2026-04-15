@@ -1,14 +1,14 @@
 # From Evals To Reliable AI Safety Evals
 
 ## Короткий тезис
-> **Дуга курса идет от полезного, но ограниченного language of evals к более жесткому вопросу: когда evaluation вообще заслуживает доверия как часть safety-relevant decision-making.** Каждая неделя добавляет не новый isolated topic, а новый фильтр на силу выводов.
+> **Дуга курса идет от полезного, но ограниченного языка evals к более жесткому вопросу: когда evaluation вообще заслуживает доверия как часть safety-relevant decision-making.** Каждая неделя добавляет не новую изолированную тему, а новый фильтр на силу выводов.
 
 ## Как устроена дуга курса
 - **Week-01** вводит базовый corrective: evals полезны, но они не равны safety guarantee.
 - **Week-02** делает следующий шаг и спрашивает, как вообще выбирать evaluation frame и как честно интерпретировать benchmark result статистически.
 - **Week-03** показывает, что benchmark design сам конструирует evidence и влияет на incentives поля.
 - **Week-04** добавляет agent layer: траектории, scaffolding, elicitation и deployment behavior делают measurement еще более хрупким.
-- **Week-05** поднимает стандарт до safety and field level: нужны measurement validity, risk quantification, more mature science of evals и research taste.
+- **Week-05** поднимает стандарт до уровня safety и состояния самого поля: нужны measurement validity, risk quantification, more mature science of evals и research taste.
 
 ## Что дает каждая неделя
 - **Week-01: limits of claims.** После нее уже трудно путать observed behavior с полным understanding модели и делать сильные claims из слабого evidence.

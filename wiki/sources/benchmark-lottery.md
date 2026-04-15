@@ -43,7 +43,7 @@ Paper сначала вводит саму идею `benchmark lottery`: perceiv
 - **Living benchmark** — не магическое решение, но более честный ответ, чем вера в static leaderboard.
 
 ## Интерпретация для курса
-Для курса этот paper важен как reminder that benchmark criticism is not only about validity at the level of one paper. It is also about how fields organize incentives, what gets optimized, and what starts to count as progress. That makes it a bridge from benchmark design to research governance.
+Для курса этот paper важен как напоминание, что benchmark criticism относится не только к validity на уровне одного paper. Он еще и про то, как поле организует incentives, что именно начинает оптимизироваться и что вообще засчитывается как progress. Поэтому текст служит мостом от benchmark design к research governance.
 
 ## Что это добавляет к теме недели
 Если HELM и ECBD говорят о том, как benchmark можно строить лучше, то `The Benchmark Lottery` показывает, почему benchmark process в принципе хрупок и socially loaded. Это важный контрвес против слишком спокойного отношения к benchmark leaderboards и “общепринятым” evaluation suites.

@@ -27,7 +27,7 @@
 ## Как читать источник быстро
 - Если нужен только core intuition, читай opening definition plus первые case studies: они уже показывают, как proxy success расходится с intended outcome.
 - Если интересуют механизмы, концентрируйся на переходе от reward hacking к более широкой misspecification story.
-- Если нужен practical takeaway, посмотри финальный блок про mitigation directions и связь с broader objective design.
+- Если нужен практический вывод, посмотри финальный блок про mitigation directions и связь с broader objective design.
 
 ## Что источник утверждает прямо
 - Systems can optimize proxy objectives while still missing intended outcomes.

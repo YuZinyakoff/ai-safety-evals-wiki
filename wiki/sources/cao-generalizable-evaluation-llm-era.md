@@ -25,9 +25,9 @@
 Survey устроен как попытка посмотреть на evaluation field уже не изнутри одного benchmark family, а на уровне всей evolving practice. Сначала авторы описывают, как классическая benchmark logic работала на более ранних этапах и почему `static benchmarks` долго были удобным default. Затем paper систематизирует основные pressure points LLM era: contamination, saturation, open-ended outputs, high cost of human judgment и growing mismatch между bounded tests и growing model capability. После этого обзор проходит по направлениям ответа: dynamic and time-aware benchmarks, richer task settings, automated evaluators вроде `LLMs-as-a-judge`, а также более широкая идея generalizable assessment across domains like knowledge, reasoning and coding. В финале survey поднимает главный structural question: как строить evaluation pipelines, которые успевают за scaling и дают выводы, generalizing better than today’s static suites.
 
 ## Как читать источник быстро
-- Если нужен strategic overview, читай introduction and sections on why static benchmarks break in the LLM era.
+- Если нужен стратегический обзор, читай introduction и sections on why static benchmarks break in the LLM era.
 - Если интересуют responses, переходи к blocks про dynamic benchmarks, open-ended tasks and `LLM-as-a-judge`.
-- Если нужен research agenda layer, смотри conclusion and future-looking discussion around what it means for conclusions to generalize beyond a suite.
+- Если нужен слой research agenda, смотри conclusion и future-looking discussion around what it means for conclusions to generalize beyond a suite.
 
 ## Что здесь особенно важно
 - **Static benchmarks** полезны, но быстро сталкиваются с contamination, saturation и limited coverage.

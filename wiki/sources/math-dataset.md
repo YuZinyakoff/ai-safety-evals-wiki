@@ -18,22 +18,22 @@
 ## На какие вопросы источник помогает отвечать
 - Что именно benchmark `MATH` пытается измерять?
 - Почему competition-style math tasks отличаются от ordinary QA?
-- Как topic mix and difficulty profile влияют на usefulness tools and scaffolding?
+- Как topic mix и difficulty profile влияют на полезность tools и scaffolding?
 - Что меняется, когда из `MATH` берут subsets вроде `MATH-500`?
 
 ## Краткое содержание
 Статья представляет `MATH` как benchmark для challenging mathematical reasoning, где ответы требуют не только знания фактов, но и многошагового решения. Авторы обсуждают construction dataset, diversity of topics и difficulty relative to competition-style math. Для week-04 текст полезен в первую очередь не детальной empirical частью, а тем, что он объясняет природу benchmark, который затем используется в notebook через subset `MATH-500`.
 
 ## Как читать источник быстро
-- Если нужен benchmark context only, читай dataset motivation plus discussion of topic diversity and difficulty.
+- Если нужен только benchmark context, читай dataset motivation plus discussion of topic diversity and difficulty.
 - Если вопрос про relevance to agents, смотри, почему exact-answer math tasks still demand multi-step reasoning.
 - Если нужен bridge to the notebook, держи в фокусе how subset choice changes what the eval is really measuring.
 
 ## Что источник утверждает прямо
 - `MATH` benchmark ориентирован на competition-style multi-step mathematical reasoning, а не на ordinary fact lookup or short-form QA.
 - Topic mix and difficulty structure matter for what exactly the benchmark reveals about a model or agent.
-- Exact-answer scoring упрощает verification, but does not capture the full reasoning process.
-- Subset choice вроде `MATH-500` already changes the distribution of tasks and therefore the scope of the claim.
+- Exact-answer scoring упрощает verification, но не передает reasoning process целиком.
+- Subset choice вроде `MATH-500` уже меняет распределение задач и тем самым сужает или расширяет сам claim.
 
 ## Что здесь особенно важно
 - **Math benchmark** не эквивалентен simple exact-answer QA.

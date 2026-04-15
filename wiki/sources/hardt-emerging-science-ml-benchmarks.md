@@ -25,7 +25,7 @@
 Hardt начинает с очевидной критики benchmark'ов: narrow objectives, gaming, overfitting, weak transfer и ethical problems. Затем он задает более непривычный вопрос — в чем вообще был scientific case for benchmarks — и отвечает на него историческим наблюдением: такие benchmarks, как CIFAR-10 и ImageNet, долго давали surprisingly stable model rankings, а именно rankings, а не absolute scores, и были их главным scientific export. После этого текст переходит к LLM era и показывает, почему старая стабильность исчезает: training data uncontrollable, multitask aggregation нестабильна из-за social-choice-like trade-offs, а `LLM-as-a-judge` не снимает проблему на evaluation frontier. В финале автор призывает не выбрасывать benchmark'и, а строить более зрелую science of benchmarks.
 
 ## Как читать источник быстро
-- Если нужен one-shot takeaway, читай historical argument about why benchmarks once worked and the contrast with the LLM era.
+- Если нужен краткий вывод в один проход, читай historical argument about why benchmarks once worked и contrast with the LLM era.
 - Если интересует failure mode, концентрируйся на ranking stability, contamination and multitask aggregation.
 - Если нужен broader relevance, не пропускай closing call for a more mature science of benchmarks.
 

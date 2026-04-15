@@ -28,11 +28,11 @@
 - Если нужен только основной вывод, смотри `abstract`, `introduction` и `conclusion`: там уже видно, что paper строится вокруг different claim types, а не вокруг общего лозунга про limits.
 - Если нужен структурный frame, найди место, где авторы раскладывают discussion по осям `existing vs future models` и `misuse vs autonomy / misalignment`.
 - Если вопрос про то, почему `upper bounds` слабы, иди сразу в sections про `under-elicitation`, forecasting и limits of behavioral evidence.
-- Если нужен practical takeaway, не пропускай финальные sections про compensating measures, governance и роль evals внутри larger safety stack.
+- Если нужен практический вывод, не пропускай финальные sections про compensating measures, governance и роль evals внутри larger safety stack.
 
 ## Что источник утверждает прямо
 - Current behavior-based evals сильнее поддерживают `lower bounds` на уже продемонстрированные capabilities, чем надежные `upper bounds`.
-- Misuse-risk claims, future-capability forecasting и especially autonomy / misalignment claims supported by evals much more weakly.
+- Claims про misuse risk, прогнозирование будущих capabilities и особенно autonomy / misalignment поддерживаются evals гораздо слабее.
 - Threat modeling and elicitation limits create structural blind spots, especially for unknown unknowns and hidden dangerous propensities.
 - Evals полезны как часть larger safety stack, но не как self-sufficient safety case.
 

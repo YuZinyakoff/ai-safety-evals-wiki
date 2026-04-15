@@ -7,7 +7,7 @@
 Week-03 использует toxicity как хороший прикладной полигон для benchmark design. На нем видно, как быстро ломаются наивные представления о score: aggregate classifier quality скрывает identity-term bias, а generative evaluation упирается в prompt distribution, pretraining data и detector limitations.
 
 ## Что здесь особенно важно
-- **Classifier toxicity** и **generative toxicity** — разные evaluation regimes.
+- **Classifier toxicity** и **generative toxicity** — разные режимы оценки.
 - **Identity-related slices** нужны, иначе локальные harms останутся спрятанными.
 - **Detector tools** вроде Perspective API сами вносят measurement assumptions и biases.
 - **Prompt set** в generative setting — часть benchmark design, а не нейтральный фон.
@@ -15,7 +15,7 @@ Week-03 использует toxicity как хороший прикладной
 ## Что именно здесь ломает наивный вывод
 - Высокая aggregate quality не гарантирует низкий harm.
 - Одна toxicity metric легко скрывает разные формы ошибки: over-censorship, false negatives, context failures.
-- Хороший score на one-shot toxicity benchmark плохо переносится на реальные interaction settings.
+- Хороший score на одном toxicity benchmark плохо переносится на реальные interaction settings.
 
 ## Практическая интуиция
 Полезно спрашивать: **что именно здесь измеряется — токсичность как label, как risk of harmful continuation, как policy violation, как human judgment, или как proxy detector score?**
@@ -32,7 +32,7 @@ Week-03 использует toxicity как хороший прикладной
 
 ## Открытые вопросы
 - Как лучше совмещать slice-based classifier evaluation и generative harm evaluation?
-- Когда toxicity evaluation должна быть model-side, а когда contextual and deployment-aware?
+- Когда toxicity evaluation должна быть model-side, а когда учитывать context и deployment?
 
 ## Связанные страницы
 - [concepts/benchmark-design](benchmark-design.md)

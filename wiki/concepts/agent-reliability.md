@@ -34,7 +34,7 @@ Week-04 проводит важное различие между capability и 
 - [LLM Agents Survey](../sources/evaluation-benchmarking-llm-agents-survey.md)
 
 ## Открытые вопросы
-- Какие reliability metrics practical для реальных agent deployments, а какие остаются mainly academic?
+- Какие reliability metrics практичны для реальных agent deployments, а какие остаются в основном академическими?
 - Какие dimensions reliability важнее в разных task families: coding, research, operations, customer service?
 
 ## Связанные страницы

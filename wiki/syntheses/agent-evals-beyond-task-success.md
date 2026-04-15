@@ -13,7 +13,7 @@
 - **LLM Agents Survey** задает широкую карту поля и отделяет `what to evaluate` от `how to evaluate`.
 - **Princeton reliability paper** делает карту строже и показывает, какие важные свойства исчезают при сведении оценки к одному success rate.
 - **METR elicitation guidelines** добавляют еще один уровень: measured score может быть сильным under-estimate, если процедура плохо раскрывает capability.
-- **Anthropic autonomy in practice** переносит разговор из lab settings в deployment and monitoring layer.
+- **Anthropic autonomy in practice** переносит разговор из lab settings в слой deployment и monitoring.
 - **SWE-bench и SWE-bench Verified** показывают, что benchmark quality control тоже влияет на итоговый capability claim.
 - **Notebook и ReAct** связывают весь спор с concrete scaffolding decisions, а не только с высокоуровневой методологией.
 
@@ -27,7 +27,7 @@
 
 ## Где остается напряжение
 - **As-is evaluation vs elicited performance.** Если делать слишком слабый setup, мы занижаем capability; если слишком сильный — рискуем потерять comparability и realism.
-- **Product-like setup vs maximal capability probing.** Для deployment questions и for capability forecasting могут быть нужны разные protocols.
+- **Product-like setup vs maximal capability probing.** Для deployment questions и для capability forecasting могут быть нужны разные protocols.
 - **Single benchmark vs richer profile.** Богатый reliability profile полезнее, но сложнее для коммуникации и сравнения.
 - **Pre-deployment vs post-deployment evidence.** Benchmarking удобно и воспроизводимо, а monitoring ближе к реальности, но хуже контролируется.
 

@@ -26,7 +26,7 @@
 
 ## Если нужно быстро вспомнить неделю
 - Если нужен **входной словарь**, начни с [Apollo](../sources/apollo-starter-guide-evals.md) и [concepts/evals](../concepts/evals.md).
-- Если нужен **самый сильный аргумент про пределы behavioral evidence**, смотри [Hubinger](../sources/hubinger-understanding-based-safety-evals.md), [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) и [synthesis](../syntheses/evals-scope-and-limits.md).
+- Если нужен **самый сильный аргумент про пределы behavioral evidence**, смотри [Hubinger](../sources/hubinger-understanding-based-safety-evals.md), [Barnett-Thiergart](../sources/barnett-thiergart-evals-catastrophic-risks.md) и [синтез](../syntheses/evals-scope-and-limits.md).
 - Если нужно вернуть **механизмы, из-за которых eval ломается**, переходи к [Ivanov](../sources/igor-ivanov-what-is-an-evaluation.md), [Prompt Sensitivity](../sources/prompt-sensitivity-benchmark.md) и [Specification Gaming](../sources/deepmind-specification-gaming.md).
 - Если нужен **практический слой**, открывай [Inspect AI tutorial](../sources/inspect-ai-tutorial-week-01.md) и [concepts/inspect-ai](../concepts/inspect-ai.md).
 

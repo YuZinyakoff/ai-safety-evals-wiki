@@ -152,3 +152,8 @@
 - Явное разведение `Что источник утверждает прямо` и `Интерпретация для курса` расширено на paper-heavy `extra` source pages по week-01, week-03 и week-04, чтобы applied papers и research notes тоже было легче читать без смешения source claims и wiki framing
 - Hub-pages `wiki/weeks/week-01..05.md` усилены секциями `Если у тебя конкретный вопрос`, которые маршрутизируют к нужным source pages не только по теме недели, но и по типу вопроса пользователя
 - Тем самым week pages стали лучше работать как navigation layer к уже обновленным question-driven source pages
+
+## 2026-04-15 | polish | wording, policy alignment and consistency checks
+- Policy-файлы `AGENTS.md` и `README.md`, а также верхняя навигация `wiki/home.md` и `index.md` выровнены по формулировкам: убран лишний руглиш в мета-слое, уточнены роли страниц и сохранен текущий wiki-workflow
+- Проведен широкий polish-pass по concept pages, syntheses, week pages и набору source pages; сокращен избыточный англоязычный хвост там, где он мешал чтению, при сохранении нужных технических терминов и названий
+- Проверено соответствие базы текущим правилам: `41/41` source pages имеют question-driven секции, `31` страниц имеют explicit split `Что источник утверждает прямо / Интерпретация для курса`, `4/4` notebook pages покрыты notebook-стандартом, `5/5` week pages имеют routing-sections `Если у тебя конкретный вопрос`, orphan pages не обнаружены

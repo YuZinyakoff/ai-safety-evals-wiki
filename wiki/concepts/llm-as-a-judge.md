@@ -10,7 +10,7 @@ Week-03 показывает, что judge model — это не просто д
 - Open-ended generation, где обычный exact match мало что говорит.
 - Pairwise preference evaluation.
 - Scalable filtering или triage до более дорогой human review.
-- Judge-audited pipelines в tooling вроде `Inspect AI`.
+- Judge-audited pipelines в инструментах вроде `Inspect AI`.
 
 ## Что именно здесь ломает наивный вывод
 - **Высокий agreement** не гарантирует низкий bias.

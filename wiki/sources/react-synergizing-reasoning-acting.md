@@ -25,9 +25,9 @@
 Работа вводит `ReAct` как паттерн, в котором модель чередует internal reasoning и external actions, а затем использует observation from tools or environment для следующего шага. Paper показывает это на нескольких task families и противопоставляет подход как чистому chain-of-thought reasoning, так и purely acting-style agents. По смыслу текст важен не отдельными числами, а тем, что он делает явным structural idea: tool result должен входить обратно в цикл принятия решений, а не просто приклеиваться к ответу.
 
 ## Как читать источник быстро
-- Если нужен core idea, читай opening explanation of thought/action/observation interleaving and the contrast with other patterns.
+- Если нужна основная идея, читай opening explanation of thought/action/observation interleaving и contrast with other patterns.
 - Если интересуют empirical examples, смотри a couple of case studies rather than all reported results.
-- Если нужен relevance to the week, держи в уме not “does ReAct win”, but “what kind of trajectory structure it induces”.
+- Если нужна relevance to the week, держи в уме не “does ReAct win”, а “what kind of trajectory structure it induces”.
 
 ## Что источник утверждает прямо
 - `ReAct` организует траекторию как interleaving thought, action and observation rather than pure reasoning or pure acting.
@@ -41,7 +41,7 @@
 - **Trace visibility** делает agent behavior легче для анализа и debugging.
 
 ## Интерпретация для курса
-Для курса этот paper важен не как recipe for maximum score, а как reminder that scaffolding pattern is part of what the eval measures. Если один и тот же model backbone ведет себя по-разному под другим loop structure, то вывод об “агентских способностях” нельзя отделять от выбранной процедуры.
+Для курса этот paper важен не как recipe for maximum score, а как напоминание, что scaffolding pattern is part of what the eval measures. Если один и тот же model backbone ведет себя по-разному под другим loop structure, то вывод об “агентских способностях” нельзя отделять от выбранной процедуры.
 
 ## Что это добавляет к теме недели
 ReAct помогает week-04 не потерять инженерный смысл. Он показывает, что agent evaluation неизбежно зависит от того, как вообще устроен цикл действий агента.

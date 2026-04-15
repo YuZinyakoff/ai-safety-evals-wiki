@@ -25,14 +25,14 @@
 Статья вводит `SWE-bench` как benchmark из реальных GitHub issues и merged pull requests по 12 Python repositories. Сначала авторы объясняют, как собирают instances: issue text связывается с PR, тестами и repository snapshot. Затем paper формулирует task: агент получает issue description и codebase, генерирует patch, а итог оценивается execution-based через `FAIL_TO_PASS` и `PASS_TO_PASS` tests. Дальше работа показывает, что benchmark реалистичен, но сложен: нужен retrieval of relevant files, длинный context и способность менять несколько мест в большом репозитории. Empirical часть важна исторически: ранние модели решали лишь малую долю задач, даже при oracle retrieval. Для week-04 текст полезен как пример сильного agent benchmark с большим epistemic и engineering overhead.
 
 ## Как читать источник быстро
-- Если нужен task definition, читай dataset construction and the benchmark protocol around issues, repos and tests.
+- Если нужно определение задачи, читай dataset construction и benchmark protocol around issues, repos and tests.
 - Если важен evaluation layer, концентрируйся на execution-based verification with `FAIL_TO_PASS` and `PASS_TO_PASS`.
-- Если нужен limitation-oriented reading, смотри discussion around retrieval difficulty, long context and harness overhead.
+- Если нужен reading с упором на ограничения, смотри discussion around retrieval difficulty, long context и harness overhead.
 
 ## Что источник утверждает прямо
 - `SWE-bench` формулирует repository-scale coding task на основе реальных GitHub issues, pull requests, repository snapshots and tests.
 - Execution-based verification через `FAIL_TO_PASS` and `PASS_TO_PASS` делает evaluation сильнее simple string matching.
-- Реальная сложность benchmark'а partly lives in retrieval, context localization, environment setup and harness quality.
+- Реальная сложность benchmark'а частично живет в retrieval, context localization, environment setup и harness quality.
 - Итоговый score здесь характеризует не “чистую coding intelligence”, а связку model, procedure and repository interaction.
 
 ## Что здесь особенно важно

@@ -12,7 +12,7 @@
 Это практическая опора недели для benchmark evaluation и статистической интерпретации результатов. Ноутбук нужен не ради финального числа, а как scaffold, который показывает, как превратить benchmark run в осмысленный statistical analysis.
 
 ## Эпистемический статус и как на него смотреть
-Это учебный analysis notebook, а не finished benchmark report. Его полезно читать как guided workflow from run logs to uncertainty estimates, model comparison and sample-size planning.
+Это учебный ноутбук для анализа, а не finished benchmark report. Его полезно читать как пошаговый workflow от run logs к uncertainty estimates, model comparison и sample-size planning.
 
 ## На какие вопросы источник помогает отвечать
 - Как превратить `EvalLog` в analysis-ready object, а не оставить его сырым output?
@@ -24,7 +24,7 @@
 Notebook устроен как постепенный tutorial по статистически более взрослому benchmarking workflow. В начале он показывает, как загрузить `MMLU`-данные, собрать `Task` в `Inspect AI` и получить `EvalLog`. Затем tutorial переводит run logs в tabular form и шаг за шагом добавляет analysis layer: `confidence intervals`, визуализацию того, как uncertainty уменьшается при росте числа вопросов и повторов, `paired comparison` двух моделей, interval estimation для разницы, `power analysis` и `required sample size`. В финальных заданиях notebook просит сравнить baseline с `chain_of_thought` и отдельно подумать про `clustered standard errors`. Это не finished experiment, а учебный каркас, который показывает, как benchmark перестает быть просто запуском модели и становится reproducible analysis pipeline.
 
 ## Как читать источник быстро
-- Если нужен shortest route, смотри sections `MMLU task -> EvalLog -> DataFrame -> confidence intervals`.
+- Если нужен самый короткий маршрут, смотри sections `MMLU task -> EvalLog -> DataFrame -> confidence intervals`.
 - Если интересует model comparison, переходи сразу к paired comparison and interval estimation blocks.
 - Если нужен pre-run discipline layer, не пропускай power analysis, required sample size and note on clustered standard errors.
 
@@ -33,7 +33,7 @@ Notebook устроен как постепенный tutorial по статис
 - **`n` и `K`** снижают uncertainty разными способами.
 - **`Paired tests`** особенно важны для честного comparison на одном и том же question set.
 - **Planning matters.** `Power analysis` и `required sample size` лучше делать до следующего дорогого запуска.
-- **Notebook intentionally incomplete.** Он полезен именно как scaffold с `# YOUR CODE HERE`.
+- **Notebook intentionally incomplete.** Он полезен именно как учебный scaffold с `# YOUR CODE HERE`.
 
 ## Цель ноутбука
 - Превратить benchmark run в reproducible analysis workflow.

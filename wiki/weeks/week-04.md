@@ -44,7 +44,7 @@
 - **Survey про LLM agents** задает карту поля и делает видимым, что у agent evaluation больше измерений, чем у model evaluation.
 - **Reliability paper** показывает, что capability growth не равна reliability growth, и что meaningful profile требует нескольких осей оценки.
 - **METR elicitation guidelines** переводят разговор от "что мерить" к "как не испортить measurement procedure" и "как не занизить reachable capability".
-- **ReAct и notebook** заземляют это в concrete scaffolding choices: prompts, tools, loop structure, limits, dev/test split.
+- **ReAct и notebook** заземляют это в конкретных scaffolding choices: prompts, tools, loop structure, limits, dev/test split.
 - **SWE-bench и SWE-bench Verified** показывают, что agent benchmark сам по себе тоже нуждается в критической проверке и что underestimation / unfairness может исходить от benchmark design.
 - **Anthropic autonomy post** добавляет deployment layer: pre-deployment evals недостаточны без наблюдения за тем, как autonomy и oversight реально устроены в использовании.
 

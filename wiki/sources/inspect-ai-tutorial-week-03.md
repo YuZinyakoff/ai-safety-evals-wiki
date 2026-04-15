@@ -24,15 +24,15 @@
 Notebook построен как tutorial по созданию собственной judge-based evaluation pipeline на `Jigsaw Toxic Comment` dataset. Сначала он объясняет общую постановку: один model выступает как classifier, а второй как judge, который решает, приемлем ли этот label. Затем tutorial загружает dataset, собирает `Task` в `Inspect AI` и показывает важную деталь: judge надо делать действительно blind к ground-truth label. После первого запуска notebook переходит к error analysis и просит отдельно считать сбои classifier и judge, включая `judge_fp_rate`, `judge_fn_rate` и format failures. Дальше задания заставляют сравнить разные classifier–judge пары, посмотреть на влияние model families, попробовать prompt interventions для classifier и judge, а затем запустить “реалистичный” режим judge-based evaluation без доступа к ground truth. В конце добавляется domain-specific scoring layer и предложение перенести весь pipeline на другой dataset.
 
 ## Как читать источник быстро
-- Если нужен shortest route, смотри setup of classifier and judge, then blind-prompt requirement and first run.
+- Если нужен самый короткий маршрут, смотри setup of classifier and judge, затем blind-prompt requirement и первый run.
 - Если интересует reliability layer, переходи к error analysis with `judge_fp_rate`, `judge_fn_rate` and format failures.
-- Если нужен practical experimentation layer, смотри blocks on model-family comparisons, prompt interventions and domain-specific scoring.
+- Если нужен практический экспериментальный слой, смотри blocks on model-family comparisons, prompt interventions и domain-specific scoring.
 
 ## Что здесь особенно важно
 - **Judge blind spot** — это не абстрактная проблема, а конкретный prompt / scorer choice.
 - **Classifier errors и judge errors** надо разносить, а не смешивать в один итоговый failure.
 - **Judge reliability** зависит и от model family, и от prompt design.
-- **Notebook intentionally incomplete.** Это scaffold с `# YOUR CODE HERE`, а не finished experiment.
+- **Notebook intentionally incomplete.** Это учебный scaffold с `# YOUR CODE HERE`, а не законченный experiment.
 
 ## Цель ноутбука
 - Собрать classifier-judge pipeline в `Inspect AI`.
@@ -44,13 +44,13 @@ Notebook построен как tutorial по созданию собствен
 - **Среда:** Python 3 / Jupyter notebook.
 - **Инструмент:** `Inspect AI`.
 - **Dataset:** `Jigsaw Toxic Comment`.
-- **Режим:** tutorial scaffold with incomplete cells and guided experiments.
+- **Режим:** учебный scaffold with incomplete cells и guided experiments.
 
 ## Данные / задача / модели / scorer
 - **Основная задача:** toxicity classification plus judge-based verification.
 - **Pipeline:** classifier model, judge model, blind prompt, error analysis.
-- **Метрики:** `judge_fp_rate`, `judge_fn_rate`, format failures and related comparison slices.
-- **Эксперименты:** model-family comparisons, prompt interventions, domain-specific scoring and transfer to another dataset.
+- **Метрики:** `judge_fp_rate`, `judge_fn_rate`, format failures и связанные comparison slices.
+- **Эксперименты:** model-family comparisons, prompt interventions, domain-specific scoring и transfer to another dataset.
 
 ## Что это добавляет к теме недели
 Этот notebook делает week-03 инженерной. Он показывает, что вопросы про benchmark design, evidence и validity не заканчиваются на paper-level discussion: они всплывают в конкретных решениях о blind prompts, judge policy, error metrics и domain-specific scoring.

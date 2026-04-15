@@ -27,12 +27,12 @@
 ## Как читать источник быстро
 - Если нужен core lesson, читай problem setup around identity-term bias and why overall accuracy misses it.
 - Если важен measurement layer, переходи к sections on slice-based metrics and identity-related examples.
-- Если нужен practical takeaway, смотри mitigation experiment and trade-offs with overall quality.
+- Если нужен практический вывод, смотри mitigation experiment and trade-offs with overall quality.
 
 ## Что источник утверждает прямо
 - Aggregate classifier metrics могут выглядеть сильными и одновременно скрывать systematic errors on identity-related slices.
-- Correlations between identity terms and toxicity in training data ведут к unintended false positives.
-- Slice-based measurements делают эти harms visible better than whole-dataset aggregates.
+- Корреляции между identity terms и toxicity in training data ведут к unintended false positives.
+- Slice-based measurements делают эти harms заметнее, чем whole-dataset aggregates.
 - Authors показывают, что data balancing и carefully chosen augmentation могут уменьшать unintended bias without collapsing overall quality.
 
 ## Что здесь особенно важно

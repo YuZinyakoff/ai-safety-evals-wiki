@@ -25,9 +25,9 @@
 Paper строит собственную empirical base для проверки correctness-oriented judging. Сначала авторы создают `BFF-Bench` и `VERDICTS`: набор сложных business / finance вопросов, human-written references и expert judgments correctness. Затем работа сравнивает разные automated grading methods и отдельно исследует judge models в single и pairwise settings. Главный анализ идет через очень конкретный вопрос: что происходит с agreement judge'а, если у него нет правильной reference answer? Вывод paper в том, что judge сохраняет высокое agreement с экспертами главным образом там, где сам способен решить underlying question, а human-written reference сильно улучшает результат. Дальше работа показывает, что тип reference и ее correctness важнее, чем просто stylistic resemblance, и что human verification остается критичным даже при использовании сильных judge models.
 
 ## Как читать источник быстро
-- Если нужен main correction to the hype, читай setup of correctness-heavy judging and the role of `BFF-Bench` / `VERDICTS`.
+- Если нужна основная коррекция к judge hype, читай setup of correctness-heavy judging and the role of `BFF-Bench` / `VERDICTS`.
 - Если важен mechanism, переходи к comparisons with and without human-grounded reference answers.
-- Если нужен practical takeaway, концентрируйся на conclusion that judge competence and reference quality dominate reliability.
+- Если нужен практический вывод, концентрируйся на conclusion that judge competence and reference quality dominate reliability.
 
 ## Что источник утверждает прямо
 - В correctness-heavy domains judge reliability сильно зависит от того, умеет ли judge сам решать underlying task.

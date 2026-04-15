@@ -18,14 +18,14 @@
 ## На какие вопросы источник помогает отвечать
 - Чем generative toxicity evaluation отличается от classifier-style toxicity measurement?
 - Зачем нужен `RealToxicityPrompts` и что именно он делает измеримым?
-- Как prompt distribution, pretraining data and decoding interact in toxicity outcomes?
+- Как prompt distribution, pretraining data и decoding взаимодействуют в toxicity outcomes?
 - Почему detector tools and toxicity labels сами становятся частью benchmark design?
 
 ## Краткое содержание
 Paper сначала ставит проблему `neural toxic degeneration`: language models могут продолжать нейтральные или слабо токсичные prompts токсичным текстом. Затем авторы создают `RealToxicityPrompts`, большой набор из 100K естественных web prompts с toxicity scores, чтобы систематически оценивать эту склонность. После построения dataset работа показывает, что популярные pretrained models действительно систематически уходят в токсичные generations и что вероятность токсичного continuation связана не только с prompt toxicity, но и с характером pretraining corpora. Дальше paper сравнивает разные controllable generation / detoxification approaches и показывает, что часть методов помогает, но безопасного универсального решения нет. В конце авторы переходят к более широкому выводу: benchmark design для toxicity должен учитывать и limits of detector tools вроде Perspective API, и социально нагруженный характер самих toxicity labels.
 
 ## Как читать источник быстро
-- Если нужен main benchmark idea, читай problem setup and the construction of `RealToxicityPrompts`.
+- Если нужна основная benchmark idea, читай problem setup и construction of `RealToxicityPrompts`.
 - Если вопрос про mechanism, переходи к results linking prompt toxicity, pretraining data and generation behavior.
 - Если важен evaluation-methodology layer, не пропускай discussion of detector limits and socially loaded toxicity labels.
 
@@ -42,7 +42,7 @@ Paper сначала ставит проблему `neural toxic degeneration`: 
 - **Detox methods** помогают частично, но не дают fail-safe guarantee.
 
 ## Интерпретация для курса
-Для курса этот paper важен как напоминание, что harm benchmark в generative setting не сводится к “подсчитать долю токсичных ответов”. Здесь нужно отдельно думать о prompt distribution, detector choice и том, что именно benchmark принимает за harm evidence.
+Для курса этот paper важен как напоминание, что harm benchmark в generative setting не сводится к “подсчитать долю токсичных ответов”. Здесь нужно отдельно думать о prompt distribution, detector choice и том, что именно benchmark принимает за evidence of harm.
 
 ## Что это добавляет к теме недели
 Этот paper расширяет week-03 от benchmark design в абстрактном смысле к конкретному generative harm setting. Он полезен как пример того, что benchmark для risk evaluation нужно строить так, чтобы он отражал реальный interaction between prompts, training data and generation procedure, а не только удобно считаемый score.

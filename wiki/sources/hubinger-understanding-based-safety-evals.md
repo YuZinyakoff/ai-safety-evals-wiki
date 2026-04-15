@@ -32,7 +32,7 @@
 ## Что источник утверждает прямо
 - Purely behavioral tests могут быть принципиально недостаточными как safety standard for advanced systems.
 - Deception and strategic adaptation make it too easy for dangerous systems to look safe under behavior-only evaluation.
-- Более сильный standard of evidence should involve understanding of what the system is and why developers believe it is safe.
+- Более сильный standard of evidence должен включать understanding of what the system is and why developers believe it is safe.
 - Such a standard should be method-agnostic and not collapse into one particular interpretability technique.
 
 ## Что здесь особенно важно

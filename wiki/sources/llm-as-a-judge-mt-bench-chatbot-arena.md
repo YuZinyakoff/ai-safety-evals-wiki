@@ -25,9 +25,9 @@
 Статья начинается с постановки проблемы: обычные benchmarks плохо улавливают человеческое предпочтение в multi-turn и open-ended assistant settings. Затем авторы вводят два benchmark-like evaluation assets: `MT-Bench` как curated набор многоходовых вопросов и `Chatbot Arena` как crowdsourced platform с pairwise battles. После этого paper делает главный ход: предлагает использовать сильные LLMs как judges и систематически сравнивает их решения с human preferences. В средней части статьи авторы разбирают failure modes judge models: position bias, verbosity bias, self-enhancement bias и ограниченную reasoning ability, а затем показывают mitigation ideas вроде chain-of-thought и reference-guided judging. В финальной части paper сравнивает agreement judge models и humans и получает сильный результат для GPT-4 на preference-style evaluation, одновременно предлагая hybrid view: capability benchmarks и preference benchmarks нужны вместе.
 
 ## Как читать источник быстро
-- Если нужен big picture, читай motivation for open-ended evaluation plus what `MT-Bench` and `Chatbot Arena` are for.
+- Если нужна общая картина, читай motivation for open-ended evaluation plus what `MT-Bench` and `Chatbot Arena` are for.
 - Если вопрос про judge reliability, переходи к sections on biases and mitigation strategies.
-- Если нужен final practical claim, смотри agreement-with-humans results and the hybrid conclusion about preference plus capability benchmarks.
+- Если нужен финальный практический claim, смотри agreement-with-humans results и hybrid conclusion about preference plus capability benchmarks.
 
 ## Что источник утверждает прямо
 - Авторы предлагают `MT-Bench` и `Chatbot Arena` как preference-oriented evaluation assets для open-ended assistant settings, где обычные closed-form benchmarks слишком узки.

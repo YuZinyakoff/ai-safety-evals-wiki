@@ -4,14 +4,14 @@
 > **Agent autonomy** — это степень самостоятельности, с которой система действует без непосредственного участия человека: сколько шагов она делает сама, какие действия может предпринимать и как устроены остановки, подтверждения и вмешательства.
 
 ## Почему это важный концепт
-Week-04 показывает, что autonomy нельзя читать только как capability number. В реальном использовании она складывается из модели, продукта, настроек approvals, user habits и agent-initiated stops.
+Week-04 показывает, что autonomy нельзя читать только как capability number. В реальном использовании она складывается из модели, продукта, настроек подтверждения, пользовательских привычек и agent-initiated stops.
 
 ## Что сюда обычно входит
 - Scope действий, которые агент может предпринимать.
 - Длина автономной траектории.
 - Степень human oversight и approval.
 - Reversibility и riskiness действий.
-- Способность агента самостоятельно останавливаться или запрашивать clarification.
+- Способность агента самостоятельно останавливаться или запрашивать уточнение.
 
 ## Что именно здесь ломает наивный вывод
 - **Высокая capability** не обязательно означает высокую exercised autonomy.
@@ -28,7 +28,7 @@ Week-04 показывает, что autonomy нельзя читать толь
 ## С чем легко перепутать
 - Autonomy легко спутать с полной автоматизацией.
 - Ее легко понимать только как long-horizon capability, забывая про oversight structure.
-- Ее легко читать как purely technical property, хотя она partly product and user interaction property.
+- Ее легко читать как чисто техническое свойство, хотя она частично определяется продуктом и взаимодействием пользователя с системой.
 
 ## Где смотреть дальше
 - [Anthropic autonomy in practice](../sources/measuring-ai-agent-autonomy-practice.md)
@@ -37,7 +37,7 @@ Week-04 показывает, что autonomy нельзя читать толь
 
 ## Открытые вопросы
 - Какие proxies autonomy достаточно хороши для safety-relevant monitoring?
-- Как связывать autonomy measurements in deployment с pre-deployment evaluation claims?
+- Как связывать измерения autonomy in deployment с pre-deployment evaluation claims?
 
 ## Связанные страницы
 - [concepts/agent-evaluation](agent-evaluation.md)

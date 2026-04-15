@@ -1,7 +1,7 @@
 # Measurement Validity
 
 ## Коротко
-> **Measurement validity** — это вопрос о том, действительно ли evaluation output связан с тем real-world property, ради которого оценка вообще делалась. В safety context этого мало свести к "метрика выглядит разумной".
+> **Measurement validity** — это вопрос о том, действительно ли evaluation output связан с тем свойством реального мира, ради которого оценка вообще делалась. В safety context этого мало свести к "метрика выглядит разумной".
 
 ## Почему это важный концепт
 Week-03 уже вводила `construct validity`, но week-05 делает шаг дальше: для safety evals важно не только то, как benchmark связан с abstract construct, но и то, как measured proxy связан с harm, deployment context и real consequences. Поэтому `measurement validity` здесь шире, чем просто корректное название capability.

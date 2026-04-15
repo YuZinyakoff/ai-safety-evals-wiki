@@ -22,7 +22,7 @@ Week-02 учила статистически аккуратнее читать 
 Полезно держать такую формулу: **риск — это не только частота, но и тяжесть, а еще то, насколько lab measurement переносится в реальное использование**. Поэтому safety report без разговора о severity, uncertainty и generalization limits почти всегда недосказан.
 
 ## С чем легко перепутать
-- Risk quantification легко свести к confidence interval calculation.
+- Risk quantification легко свести к простому подсчету доверительных интервалов.
 - Ее легко спутать с ranking models by score.
 - Ее легко понимать как purely mathematical step, игнорируя normative choices about what counts as severe harm.
 

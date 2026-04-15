@@ -26,14 +26,14 @@
 
 ## Как читать источник быстро
 - Если нужен only core clarification, читай candidate definitions plus objections to each of them.
-- Если важен практический takeaway, сосредоточься на финальном decomposition into `intent`, `benchmark-likeness` and `consequences`.
+- Если важен практический вывод, сосредоточься на финальном decomposition into `intent`, `benchmark-likeness` and `consequences`.
 - Если вопрос про модельное распознавание eval context, не пропускай concluding move про surface features and benchmark-like environments.
 
 ## Что источник утверждает прямо
 - Определения `evaluation` через intent, consequences и benchmark-likeness не совпадают и дают разные operational predictions.
 - `Evaluation awareness` и `consequence awareness` стоит различать, а не использовать как взаимозаменяемые labels.
-- Модели plausibly detect surface features of benchmark-like environments better than human intent.
-- Для research on awareness нужна decomposition along multiple axes rather than one essentialized definition of evaluation.
+- Модели plausibly detect surface features of benchmark-like environments лучше, чем человеческий intent.
+- Для research on awareness нужна декомпозиция по нескольким осям, а не одна эссенциализированная definition of evaluation.
 
 ## Что здесь особенно важно
 - **Определение влияет на исследование.** Пока неясно, что такое evaluation, трудно и говорить об `evaluation awareness`.
